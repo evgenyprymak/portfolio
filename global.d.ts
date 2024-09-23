@@ -1,7 +1,10 @@
 declare module './js/BlurScrollEffect.js' {
-    export function BlurScrollEffect(): void;
-  }
+  const blurScrollEffect: () => void;
+  export default blurScrollEffect;
+
+}
 
 declare module './js/sectionoverlay.jsx' {
-  export function SectionOverlay(): void;
+  const SectionOverlay: () => void;
+  export default SectionOverlay;
 }

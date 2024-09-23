@@ -5,7 +5,7 @@ import App from './App';
 import Menu from './Menu';
 import Project from './Project'
 import './css/index.css';
-import { SectionOverlay } from './js/SectionOverlay'
+import { SectionOverlay } from './js/sectionoverlay';
 
 
 const rootElement = document.getElementById('root');
@@ -15,6 +15,7 @@ if (rootElement) {
     <StrictMode>
       <Menu />
       <App />
+      {/* <SectionOverlay /> */}
 
       <div className='row projects-list'>
       <Project 
