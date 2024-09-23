@@ -35,8 +35,11 @@
 }
 
 .card h1{
+  font-family: ObjectSans;
+  font-weight: 700;
+  max-width: 750px;
   padding: 2em;
-  height: 900px;
+  height: 30vh;
 }
 
 .read-the-docs {

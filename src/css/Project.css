@@ -1,19 +1,53 @@
 @import './index.css';
 
+
+
 .project_card{
     font-family: ObjectSans;
-    max-width: 600px;
-    background-color: aqua;
+    width: 100%;
+    max-width: 800px;
     display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+    /* border-bottom: 2px solid black; */
+    padding: 0px;
+}
+
+.project_image_wrapper{
+    overflow: hidden;
+    /* border-radius: 8px; */
+}
+
+.project_card img{
+    transition: all 0.65s;
+    will-change: transform;
+
+}
+
+.project_card:hover img{
+    transform: scale(1.05);
+}
+
+.project_card p{
+    margin-bottom: 0;
+}
+
+.project_card a{
+    text-decoration: none;
+    display: flex;
+    align-items: start;
     flex-direction: column;
 }
 
 .project_title{
     font-size: 24px;
+    font-weight: 700;
+    padding: 12px 0px 0px 0px;
 }
 
-.project_desciption{
-    font-size: 16px;
+.project_description{
+    font-size: 14px;
+    color: grey;
 }
 .project_year{
     font-size: 12px;
