@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import './App.css'
+import { useEffect } from 'react'
 import React from 'react'
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className='test'>Vite 11 React</h1>
+      <h1>Awwwards — интернет-сайт конкурса профессиональных веб-дизайнеров и разработчиков. Основной целью является признание и поощрение лучших инновационных решений в веб-дизайне. Ежегодно на конференции и церемонии награждения Awwwards, проводимой в больших городах США и Европы, представлены лучшие сайты за весь год.</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
