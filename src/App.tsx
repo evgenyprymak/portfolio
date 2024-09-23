@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { BlurScrollEffect } from './js/blurScrollEffect.js'
 import React from 'react'
 import './App.css'
 
