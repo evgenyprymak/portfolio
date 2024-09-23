@@ -3,56 +3,73 @@ import { TextSplitter } from '../js/textSplitter';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Defines a class to create scroll-triggered animation effects on text.
 export class BlurScrollEffect {
-  constructor(textElement) {
-    // Check if the provided element is valid.
+  constructor(textElement, isClickable = false) {
     if (!textElement || !(textElement instanceof HTMLElement)) {
       throw new Error('Invalid text element provided.');
     }
 
     this.textElement = textElement;
+    this.isClickable = isClickable;
 
-    // Set up the effect for the provided text element.
     this.initializeEffect();
   }
 
-  // Sets up the initial text effect on the provided element.
   initializeEffect() {
-    // Callback to re-trigger animations on resize.
     const textResizeCallback = () => this.scroll();
-
-    // Split text for animation and store the reference.
     this.splitter = new TextSplitter(this.textElement, {
       resizeCallback: textResizeCallback,
-      splitTypeTypes: 'words'
+      splitTypeTypes: 'words, chars'
     });
-    
-    // Trigger the initial scroll effect.
-    this.scroll();
+
+    if (this.isClickable) {
+      this.setupClickAnimation(); // Настройка анимации клика
+    } else {
+      this.setupScrollAnimation(); // Настройка анимации прокрутки
+    }
   }
 
-  // Animates text based on the scroll position.
-  scroll() {
-    // Query all individual words for animation.
-    const words = this.splitter.getWords();
-    gsap.fromTo(words, {
-      opacity: 0,
-      skewX: -20,
-      willChange: 'filter, transform',
-      filter: 'blur(8px)'
+  setupScrollAnimation() {
+    const chars = this.splitter.getChars();
+    gsap.set(chars, { autoAlpha: 0 }); // Скрываем текст изначально
+
+    gsap.fromTo(chars, {
+      scaleY: 0.1,
+      scaleX: 1.2,
+      filter: 'blur(20px) brightness(10%)',
+      willChange: 'filter, transform'
     }, {
-      ease: 'sine', // Animation easing.
-      opacity: 1,
-      skewX: 0,
-      filter: 'blur(0px)',
-      stagger: 0.04, // Delay between starting animations for each word.
+      ease: 'none',
+      scaleY: 1,
+      scaleX: 1,
+      filter: 'blur(0px) brightness(100%)',
+      stagger: 0.01,
       scrollTrigger: {
-        trigger: this.textElement, // Element that triggers the animation.
-        start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
-        end: 'bottom center+=15%', // Animation ends in the center of the viewport.
-        scrub: true, // Animation progress tied to scroll position.
+        trigger: this.textElement,
+        start: 'top bottom-=15%',
+        end: 'bottom center+=15%',
+        scrub: true,
+        onEnter: () => gsap.to(chars, { autoAlpha: 1 }), // Показываем текст при входе в триггер
       },
+    });
+  }
+
+  setupClickAnimation() {
+    const chars = this.splitter.getChars();
+    
+    this.textElement.addEventListener('click', () => {
+      gsap.fromTo(chars, {
+        scaleY: 0.1,
+        scaleX: 1.2,
+        filter: 'blur(20px) brightness(10%)',
+        willChange: 'filter, transform'
+      }, {
+        ease: 'none',
+        scaleY: 1,
+        scaleX: 1,
+        filter: 'blur(0px) brightness(100%)',
+        stagger: 0.01,
+      });
     });
   }
 }

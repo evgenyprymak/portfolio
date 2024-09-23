@@ -34,8 +34,9 @@
   }
 }
 
-.card {
+.card h1{
   padding: 2em;
+  height: 900px;
 }
 
 .read-the-docs {

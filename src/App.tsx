@@ -1,28 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BlurScrollEffect } from './js/blurScrollEffect';
 import SplitType from 'split-type';
 import './App.css';
 
 const App: React.FC = () => {
-  const textRef = useRef<HTMLHeadingElement | null>(null); // Ссылка на текстовый элемент
+  const scrollTextRef = useRef<HTMLHeadingElement | null>(null);
+  const clickTextRef = useRef<HTMLHeadingElement | null>(null);
 
-  const handleClick = () => {
-    if (textRef.current) {
-      // Создание экземпляра SplitType при клике
-      const splitInstance = new SplitType(textRef.current, { types: 'words' });
-      console.log('Words:', splitInstance.words); // Выводим слова в консоль
-
-      // Создание экземпляра BlurScrollEffect при клике
-      new BlurScrollEffect(textRef.current);
+  useEffect(() => {
+    if (scrollTextRef.current) {
+      new SplitType(scrollTextRef.current, { types: 'words' });
+      new BlurScrollEffect(scrollTextRef.current); // Для анимации прокрутки
     }
-  };
+
+    if (clickTextRef.current) {
+      new SplitType(clickTextRef.current, { types: 'words' });
+      new BlurScrollEffect(clickTextRef.current, true); // Для анимации клика
+    }
+  }, []);
 
   return (
-    <div>
-      <h1 ref={textRef} onClick={handleClick}>
+    <div className='card'>
+
+      <h1 ref={clickTextRef}>
+        Нажми на этот текст, чтобы увидеть эффект размытия при клике!
+      </h1>
+
+      <h1 ref={scrollTextRef}>
         Прокручивай, чтобы увидеть эффект размытия текста при прокрутке!
       </h1>
-      {/* Другие элементы контента */}
     </div>
   );
 };
