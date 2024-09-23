@@ -12,12 +12,13 @@ if (rootElement) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
+      <Menu />
       <App />
       <div className='row projects-list'>
       <Project 
               title="Lyte Dashboard"
               year={2019}
-              description="Product Design, Web"
+              description="Unlocking Data & Events Management for clients. Product Design, Web"
       />
             <Project 
               title="Quasar"
@@ -26,8 +27,6 @@ if (rootElement) {
               description="This is a description of the component."
       />
             </div>
-
-
     </StrictMode>
   );
 } else {

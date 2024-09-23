@@ -20,10 +20,9 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className='card'>
-
+    <div className='hero'>
       <h1 ref={clickTextRef}>
-        Нажми на этот текст, чтобы увидеть эффект размытия при клике!
+      Hi, I’m Evgeny. I design products that solve real problems and create value for both users and businesses. Every project is a journey toward success.
       </h1>
     </div>
   );
