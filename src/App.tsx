@@ -6,7 +6,6 @@ function App() {
 
   return (
     <>
-
       <h1 className='test' >Vite 11 React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
