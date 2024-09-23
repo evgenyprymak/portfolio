@@ -1,0 +1,8 @@
+.menu {
+    background-color: #222222;
+    color: #DDD;
+    width: 100%;
+    display: flex;
+    padding: 16px 12px;
+    border-radius: 999px;
+}
