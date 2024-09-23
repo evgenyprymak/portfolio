@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
+import { BlurScrollEffect } from './js/BlurScrollEffect.js';
+import { useEffect } from 'react';
 import './App.css'
 
 function App() {

@@ -5,8 +5,9 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "esModuleInterop": true
+    "allowJs": true,           // Разрешить импорт JavaScript файлов
+    "checkJs": false,          // Не проверять типы в JS файлах
+    "esModuleInterop": true,   // Позволяет использовать стандартный синтаксис импорта
+    "moduleResolution": "node" // Использование нодового резолвера модулей
   }
 }
