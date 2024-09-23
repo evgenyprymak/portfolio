@@ -11,7 +11,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Inter', sans-serif; 
+       @supports (font-variation-settings: normal) {
+         :root { font-family: 'Inter var', sans-serif; }
+       }
 }
+
+
+
+
+.test {
+  font-family: Inter;
+  font-weight: 900;
+  font-size: 28px;
+  font-variation-settings: 'slnt' 50 !important;
+}
+
+
+
 
 a {
   font-weight: 500;
