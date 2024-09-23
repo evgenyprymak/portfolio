@@ -1,5 +1,7 @@
 // Import the TextSplitter class for handling text splitting.
 import { TextSplitter } from '../js/textSplitter';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Defines a class to create scroll-triggered animation effects on text.
 export class BlurScrollEffect {

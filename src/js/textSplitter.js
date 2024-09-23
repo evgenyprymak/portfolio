@@ -1,3 +1,6 @@
+import SplitType from 'split-type';
+import { debounce } from './common';
+
 export class TextSplitter {
     // Constructor for TextScrollEffect which sets up the text animation.
     // Parameters:

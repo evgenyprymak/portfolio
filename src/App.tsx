@@ -1,30 +1,30 @@
-import React from 'react';
-import { useState } from 'react';
-import { BlurScrollEffect } from './js/BlurScrollEffect.js';
-import { useEffect } from 'react';
-import './App.css'
+import React, { useRef } from 'react';
+import { BlurScrollEffect } from './js/blurScrollEffect';
+import SplitType from 'split-type';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const textRef = useRef<HTMLHeadingElement | null>(null); // Ссылка на текстовый элемент
+
+  const handleClick = () => {
+    if (textRef.current) {
+      // Создание экземпляра SplitType при клике
+      const splitInstance = new SplitType(textRef.current, { types: 'words' });
+      console.log('Words:', splitInstance.words); // Выводим слова в консоль
+
+      // Создание экземпляра BlurScrollEffect при клике
+      new BlurScrollEffect(textRef.current);
+    }
+  };
 
   return (
-    <>
-      <h1>Awwwards — интернет-сайт конкурса профессиональных веб-дизайнеров и разработчиков. Основной целью является признание и поощрение лучших инновационных решений в веб-дизайне. Ежегодно на конференции и церемонии награждения Awwwards, проводимой в больших городах США и Европы, представлены лучшие сайты за весь год.</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <h1>yo</h1>
-      <div className='logo'/>
-    </>
-  )
-}
+    <div>
+      <h1 ref={textRef} onClick={handleClick}>
+        Прокручивай, чтобы увидеть эффект размытия текста при прокрутке!
+      </h1>
+      {/* Другие элементы контента */}
+    </div>
+  );
+};
 
-export default App
+export default App;
