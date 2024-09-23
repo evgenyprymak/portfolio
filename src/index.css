@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,12 +18,34 @@
        }
 }
 
-.test {
-  font-family: Inter;
-  font-weight: 900;
-  font-size: 28px;
-  font-variation-settings: 'slnt' 50 !important;
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/src/fonts/ObjectSans/PPObjectSans-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/src/fonts/ObjectSans/PPObjectSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/src/fonts/ObjectSans/PPObjectSans-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  src: url('/src/fonts/ObjectSans/PPObjectSans-Thin.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 a {
   font-weight: 500;
@@ -37,7 +59,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
