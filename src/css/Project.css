@@ -1,0 +1,26 @@
+@import './index.css';
+
+.project_card{
+    font-family: ObjectSans;
+    max-width: 600px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_title{
+    font-size: 24px;
+}
+
+.project_desciption{
+    font-size: 16px;
+}
+.project_year{
+    font-size: 12px;
+}
+
+.project_image {
+    src: './src/assets/desktop_5.jpg';
+    width: 100%;
+    background-color: red;
+}
