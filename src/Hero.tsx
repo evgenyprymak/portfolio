@@ -23,7 +23,7 @@ const App: React.FC = () => {
   return (
     <div className='hero'>
       <h1 ref={clickTextRef}>
-      Hi, I’m Evgeny. I design products that solve real problems and create value for both users and businesses. Every project is a journey toward success.
+      111Hi, I’m Evgeny. I design products that solve real problems and create value for both users and businesses. Every project is a journey toward success.
       </h1>
     </div>
   );
