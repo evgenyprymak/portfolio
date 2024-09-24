@@ -5,6 +5,7 @@ import App from './App';
 import Menu from './Menu';
 import Project from './Project'
 import './css/index.css';
+import { SectionOverlay } from './js/sectionoverlay';
 
 
 const rootElement = document.getElementById('root');
@@ -14,6 +15,8 @@ if (rootElement) {
     <StrictMode>
       <Menu />
       <App />
+      {/* <SectionOverlay /> */}
+
       <div className='row projects-list'>
       <Project 
               title="Lyte Dashboard"
@@ -27,6 +30,7 @@ if (rootElement) {
               description="This is a description of the component."
       />
             </div>
+
     </StrictMode>
   );
 } else {

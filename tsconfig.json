@@ -8,6 +8,8 @@
     "allowJs": true,           // Разрешить импорт JavaScript файлов
     "checkJs": false,          // Не проверять типы в JS файлах
     "esModuleInterop": true,   // Позволяет использовать стандартный синтаксис импорта
-    "moduleResolution": "node" // Использование нодового резолвера модулей
+    "moduleResolution": "node", // Использование нодового резолвера модулей
+    "typeRoots": ["./types", "./node_modules/@types"]
+
   }
 }
