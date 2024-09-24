@@ -1,3 +1,4 @@
+import React from 'react';
 import './css/Project.css';
 import exampleImage from './assets/desktop_5.jpg';
 
