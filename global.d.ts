@@ -1,10 +1,8 @@
-declare module './js/BlurScrollEffect.js' {
-  const blurScrollEffect: () => void;
-  export default blurScrollEffect;
-
-}
-
-declare module './js/sectionoverlay.jsx' {
-  const SectionOverlay: () => void;
-  export default SectionOverlay;
+declare module 'js/BlurScrollEffect' {
+  export class BlurScrollEffect {
+    constructor(textElement: HTMLElement, isClickable?: boolean);
+    initializeEffect(): void;
+    setupScrollAnimation(): void;
+    setupClickAnimation(): void;
+  }
 }
