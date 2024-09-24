@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createRoot } from 'react-dom/client';
-import App from './App';
+import Hero from './Hero';
 import Menu from './Menu';
 import Project from './Project'
 import './css/index.css';
@@ -14,7 +14,7 @@ if (rootElement) {
   root.render(
     <StrictMode>
       <Menu />
-      <App />
+      <Hero />
       {/* <SectionOverlay /> */}
 
       <div className='row projects-list'>

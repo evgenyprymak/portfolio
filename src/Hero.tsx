@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { BlurScrollEffect } from './js/blurScrollEffect';
 import SplitType from 'split-type';
-import './css/App.css';
+import './css/Hero.css';
 
 const App: React.FC = () => {
   const scrollTextRef = useRef<HTMLHeadingElement | null>(null);
