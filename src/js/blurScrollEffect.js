@@ -72,4 +72,37 @@ export class BlurScrollEffect {
       });
     });
   }
+
+  showTextAnimation() {
+    const chars = this.splitter.getChars();
+  
+    // Скрываем текст перед анимацией
+    gsap.set(chars, {
+      scaleY: 0.1,
+      scaleX: 1.2,
+      filter: 'blur(20px) brightness(10%)'
+    });
+  
+    // Анимация появления текста
+    gsap.fromTo(chars, {
+      scaleY: 0.1,
+      scaleX: 1.2,
+      filter: 'blur(20px) brightness(10%)'
+    }, {
+      ease: 'power2.out',
+      scaleY: 1,
+      scaleX: 1,
+      filter: 'blur(0px) brightness(100%)',
+      stagger: 0.05,
+      duration: 1, // Длительность анимации
+      onComplete: () => {
+        console.log('Текст показан!');
+      }
+    });
+  }
+
 }
+
+window.addEventListener('load', () => {
+  this.showTextAnimation();
+});

@@ -22,9 +22,12 @@ const App: React.FC = () => {
 
   return (
     <div className='hero'>
-      <h1 ref={clickTextRef}>
-      111Hi, I’m Evgeny. I design products that solve real problems and create value for both users and businesses. Every project is a journey toward success.
-      </h1>
+      <p ref={clickTextRef}>
+      <strong>Hi, I’m Evgeny.</strong> 
+      </p>
+      <p ref={clickTextRef}>
+      I design products that solve real problems and create value for both users and businesses. Every project is a journey toward success.
+      </p>
     </div>
   );
 };

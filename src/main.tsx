@@ -18,7 +18,7 @@ if (rootElement) {
       <Hero />
       {/* <SectionOverlay /> */}
 
-      <div className='row projects-list'>
+      <div className='row projects-list container-fluid'>
       <Project 
               title="Lyte Dashboard"
               year={2019}

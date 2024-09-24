@@ -1,34 +1,27 @@
 #root {
-  max-width: 1360px;
+  /* max-width: 1360px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 .hero{
   display: flex;
-  height: 50%;
-  align-items: center;
+  height: 80%;
+  align-items:start;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero h1{
-  color: #CCC;
+.hero p{
+  color: #efefef;
   font-family: ObjectSans;
   font-weight: 500;
-  max-width: 950px;
+  font-size: 72px;
+  line-height: 120%;
+  width: 900px;
+  /* max-width: 950px; */
   font-size: 48px;
   text-align: left;
 }

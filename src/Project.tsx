@@ -1,9 +1,8 @@
-// @ts-ignore
+//@ts-ignore
 //@ts-nocheck 
 
 import React from 'react';
 import './css/Project.css';
-import exampleImage from './assets/desktop_5.jpg';
 
 interface ProjectProps {
   link?: URL;
@@ -14,7 +13,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({
-    image = exampleImage,
+    image = './assets/desktop_5.jpg',
     link = './project_quasar.html',
     title,
     year,
