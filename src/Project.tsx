@@ -19,7 +19,7 @@ const Project: React.FC<ProjectProps> = ({
     return (
       <div className='project_card'>
         {link && (
-          <a href={link.toString()} target="_blank" rel="noopener noreferrer">
+          <a href={link.toString()} target="_self" rel="noopener noreferrer">
             <div className='project_image_wrapper'>
               <img
                 src={image}
