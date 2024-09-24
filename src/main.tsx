@@ -5,7 +5,7 @@ import Hero from './Hero';
 import Menu from './Menu';
 import Project from './Project'
 import './css/index.css';
-import { SectionOverlay } from './js/sectionoverlay';
+// import { SectionOverlay } from './js/sectionoverlay';
 
 
 const rootElement = document.getElementById('root');

@@ -11,7 +11,7 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({
     image = exampleImage,
-    link = '#',
+    link = 'quasar.html',
     title,
     year,
     description,
