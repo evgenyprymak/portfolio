@@ -10,3 +10,13 @@
     padding-top: 40px;
     max-width: 960px;
 }
+
+li{
+    background-color: #333;
+    padding: 16px;
+    margin: 4px;
+}
+
+ul{
+    gap: 1;
+}
