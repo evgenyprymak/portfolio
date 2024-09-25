@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/hero.tsx","./src/mainpage.tsx","./src/menu.tsx","./src/project.tsx","./src/projectdetails.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.6.2"}
+{"root":["./src/app.tsx","./src/hero.tsx","./src/mainpage.tsx","./src/menu.tsx","./src/project.tsx","./src/projectdetails.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/metric1.tsx","./src/components/project_header.tsx"],"version":"5.6.2"}

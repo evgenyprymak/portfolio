@@ -1,0 +1,25 @@
+
+
+.metric1_card{
+    margin-top: 40px;
+    border-top: 1px solid white;
+    /* background-color: aqua; */
+}
+.metric1_above{
+    margin: 0px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.metric1_main_number{
+    margin: 0px;
+    padding: 0px;
+    font-size: 80px;
+    line-height: 100%;
+    color: var(--project-quasar)
+}
+.metric1_below{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    max-width: 420px;
+}

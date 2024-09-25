@@ -5,12 +5,9 @@
 .project_card{
     font-family: ObjectSans;
     width: 100%;
-    max-width: 800px;
-    display: flex;
-    gap: 16px;
     margin-bottom: 40px;
-    /* border-bottom: 2px solid black; */
     padding: 0px;
+    background-color: #000000;
 }
 
 .project_image_wrapper{
@@ -19,7 +16,7 @@
 }
 
 .project_card img{
-    transition: all 0.65s;
+    transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
     will-change: transform;
 
 }
@@ -42,11 +39,14 @@
 .project_title{
     font-size: 24px;
     font-weight: 700;
-    padding: 12px 0px 0px 0px;
+    padding: 24px;
+    padding-bottom: 12px;
 }
 
 .project_description{
-    font-size: 14px;
+    padding: 24px;
+    padding-top: 0px;
+    font-size: 16px;
     color: grey;
 }
 .project_year{
@@ -58,3 +58,12 @@
     width: 100%;
     background-color: red;
 }
+
+a.project_card {
+    font-weight: 500;
+    color: #d7d7d7;
+    text-decoration: none;
+  }
+a.project_card:hover {
+    color: #17c22e;
+  }

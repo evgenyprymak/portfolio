@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import MainPage from './MainPage';
 import ProjectDetails from './ProjectDetails';
 
+
+
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio_react">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/:id" element={<ProjectDetails />} />

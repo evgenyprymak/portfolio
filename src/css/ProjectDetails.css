@@ -1,0 +1,12 @@
+.pd-title{
+    font-size: 72px;
+    font-weight: 500;
+    color: white;
+    padding-top: 50vh;
+    max-width: 960px;
+}
+.pd-description{
+    font-size: 24px;
+    padding-top: 40px;
+    max-width: 960px;
+}

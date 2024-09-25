@@ -4,8 +4,10 @@
 import React from 'react';
 import './css/Project.css';
 
+import { Link } from 'react-router-dom';
+
 interface ProjectProps {
-  link?: URL;
+  link?: string;
   image?: string; 
   title: string;
   year: number;
@@ -13,16 +15,15 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({
-    image = 'portfolio_react/assets/desktop_5.jpg',
-    link = './project_quasar.html',
+    link,
+    image,
     title,
     year,
     description,
   }) => {
     return (
-      <div className='project_card'>
-        {link && (
-          <a href={link.toString()} target="_self" rel="noopener noreferrer">
+      <div className='project_card container-xxl'>
+          <Link to={link.toString()} className='a.project_card'>
             <div className='project_image_wrapper'>
               <img
                 src={image}
@@ -33,8 +34,7 @@ const Project: React.FC<ProjectProps> = ({
             <p className='project_title'>{title}</p>
             <p className='project_description'>{description}</p>
             {/* <p className='project_year'>{year}</p> */}
-          </a>
-        )}
+      </Link>
       </div>
     );
   };
