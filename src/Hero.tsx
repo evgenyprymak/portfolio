@@ -4,7 +4,7 @@ import { BlurScrollEffect } from './js/blurScrollEffect';
 import SplitType from 'split-type';
 import './css/Hero.css';
 
-const App: React.FC = () => {
+const Hero: React.FC = () => {
   const scrollTextRef = useRef<HTMLHeadingElement | null>(null);
   const clickTextRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -32,4 +32,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Hero;

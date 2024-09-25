@@ -1,17 +1,11 @@
-#root {
-  /* max-width: 1360px; */
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-
 .hero{
   display: flex;
   height: 80%;
   align-items:start;
   flex-direction: column;
   justify-content: center;
+  height: 760px;
+  transition: all 0s;
 }
 
 .hero p{

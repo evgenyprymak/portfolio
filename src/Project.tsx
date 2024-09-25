@@ -13,7 +13,7 @@ interface ProjectProps {
 }
 
 const Project: React.FC<ProjectProps> = ({
-    image = './assets/desktop_5.jpg',
+    image = 'portfolio_react/assets/desktop_5.jpg',
     link = './project_quasar.html',
     title,
     year,

@@ -1,1 +1,1 @@
-{"root":["./src/hero.tsx","./src/menu.tsx","./src/project.tsx","./src/project_details.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.6.2"}
+{"root":["./src/app.tsx","./src/hero.tsx","./src/mainpage.tsx","./src/menu.tsx","./src/project.tsx","./src/projectdetails.tsx","./src/main.tsx","./src/vite-env.d.ts"],"version":"5.6.2"}

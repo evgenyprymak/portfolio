@@ -1,3 +1,5 @@
+
+
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
@@ -57,12 +59,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  /* place-items: center; */
+  width: 100%;
   min-width: 360px;
-  min-height: 100vh;
   color: rgba(226, 226, 226, 0.87);
-  background-color: #1B1B1B;
+  background-color: #852020;
 }
 
 .projects-list{
@@ -70,3 +70,6 @@ body {
   width: 100%;
 }
 
+.bg-da{
+  background-color: #1B1B1B;
+}
