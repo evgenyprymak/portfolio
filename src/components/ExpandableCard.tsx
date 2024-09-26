@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { IoAddSharp } from "react-icons/io5";
+import '../css/ExpandableCard.css'; // Подключаем CSS файл
 
 interface CardProps {
   className?: string;
@@ -20,55 +21,30 @@ const ExpandableCard: React.FC<CardProps> = ({ className, title, description }) 
   };
 
   return (
-    <div style={styles.card} className={`col align-self-start ${className || ''}`}>
-      <div style={styles.header} onClick={toggleExpand}>
+    <div 
+      className={`expandable-card col align-self-start ${isExpanded ? 'expandable-card--expanded' : ''} ${className || ''}`}
+      onClick={toggleExpand}
+    >
+      <div className="expandable-card__header">
         <p>{title}</p>
-        {/* Иконка с динамическим классом для поворота */}
         <IoAddSharp
-          style={{
-            transform: `rotate(${isExpanded ? 45 : 0}deg)`, // Поворот на 45 градусов
-            transition: 'transform 0.3s ease', // Анимация поворота
-          }}
+          className="expandable-card__icon"
+          style={{ transform: `rotate(${isExpanded ? 45 : 0}deg)` }} // Поворот иконки
           size={40} // Размер иконки
         />
       </div>
       <div
         ref={contentRef}
+        className="expandable-card__content"
         style={{
-          ...styles.contentWrapper,
           height: `${height}px`,
           opacity: isExpanded ? 1 : 0,
         }}
       >
-        <p style={styles.description}>{description}</p>
+        <p className="expandable-card__description">{description}</p>
       </div>
     </div>
   );
-};
-
-const styles = {
-  card: {
-    fontFamily: 'ObjectSans',
-    borderRadius: '12px',
-    padding: '16px',
-    margin: '8px auto',
-    backgroundColor: '#222',
-  },
-  header: {
-    fontSize: '16px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    cursor: 'pointer',
-  },
-  contentWrapper: {
-    overflow: 'hidden',
-    transition: 'height 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s cubic-bezier(0.87, 0, 0.13, 1)',
-  },
-  description: {
-    marginTop: '16px',
-    color: '#eee',
-  },
 };
 
 export default ExpandableCard;

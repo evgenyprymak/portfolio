@@ -1,3 +1,5 @@
+@import './typography.css';
+
 html {
   overflow-y:scroll;
 }
@@ -23,33 +25,7 @@ html {
   --project-quasar: #b7ff58;
 }
 
-@font-face {
-  font-family: 'ObjectSans';
-  src: url('/fonts/ObjectSans/PPObjectSans-Regular.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'ObjectSans';
-  src: url('/fonts/ObjectSans/PPObjectSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ObjectSans';
-  src: url('/fonts/ObjectSans/PPObjectSans-Heavy.woff2') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ObjectSans';
-  src: url('/fonts/ObjectSans/PPObjectSans-Thin.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-}
 
 
 a {

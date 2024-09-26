@@ -1,0 +1,46 @@
+.expandable-card {
+    font-family: 'ObjectSans';
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px auto;
+    background-color: #222;
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+  }
+  
+  .expandable-card:hover {
+    box-shadow: 0 0px 0px 2px var(--project-quasar); /* Эффект при наведении */
+    color: white;
+    
+  }
+  
+  .expandable-card--expanded {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Более выраженная тень при развернутом состоянии */
+    background-color: #333; /* Изменение фона для развернутой карточки */
+  }
+
+
+  .expandable-card__header {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .expandable-card__icon {
+    transition: transform 0.3s ease; /* Поворот иконки */
+  }
+  
+  .expandable-card__content {
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  
+  .expandable-card__description {
+    margin-top: 16px;
+    color: #eee;
+  }
+  

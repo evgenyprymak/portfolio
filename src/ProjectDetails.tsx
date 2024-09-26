@@ -25,38 +25,37 @@ const ProjectDetails = () => {
         <h3>Design Activities Performed</h3>
         <div className='row gap-4 px-3'>
           <ExpandableCard
-            title="Reviewing user patterns and behaviors to identify issues or areas for improvement."
+            title="Reviewing user patterns and behaviors to identify issues or areas for improvement"
             description="Performed by observing user behaviors through screen recordings in Clarity and FullStory, analyzing how users interact with the product. Reviewing analytics data in Mixpanel and Looker to find drop-off points or areas with low engagement."
           />
           <ExpandableCard
-            title="Collecting data through collaboration with the Data team."
+            title="Collecting data through collaboration with the Data team"
             description="Это текст, который появится при разворачивании карточки."
           />
           <ExpandableCard
-            title="Constant collaboration with Product Managers (PMs)."
+            title="Constant collaboration with Product Managers (PMs)"
             description="Это текст, который появится при разворачивании карточки."
           />
         </div>
         <div className='row gap-4 px-3'>
           <ExpandableCard
-            title="User journey mapping to identify pain points and opportunities."
+            title="User journey mapping to identify pain points and opportunities"
             description="Performed by observing user behaviors through screen recordings in Clarity and FullStory, analyzing how users interact with the product. Reviewing analytics data in Mixpanel and Looker to find drop-off points or areas with low engagement."
           />
           <ExpandableCard
-            title="Competitor analysis to identify strengths and weaknesses."
+            title="Competitor analysis to identify strengths and weaknesses"
             description="Это текст, который появится при разворачивании карточки."
           />
           <ExpandableCard
-            title="Conducting design ideation sprints to generate collaborative ideas."
-            description="Это текст, который появится при разворачивании карточки."
+            title="Conducting design ideation sprints to generate collaborative ideas"
+            description="Это текст, который появится при разворачивании карточки"
           />
           <ExpandableCard
-            title="Stakeholder interviews to understand needs and expectations."
+            title="Stakeholder interviews to understand needs and expectations"
             description="Это текст, который появится при разворачивании карточки."
           />
         </div>
-
-
+        <div className='dropdown-divider'>1</div>
         <ul>
           <li>Formulating and redefining problem statements.</li>
           <li>Clustering and grouping problem statements.</li>
