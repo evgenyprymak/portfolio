@@ -12,7 +12,7 @@ import './css/index.css';
 const MainPage = () => {
   return (
     <div className="container-fliud px-4">
-      <section id='menu' className='container-xxl py-4'><Menu /></section>
+      <Menu />
       <section id='hero' className='container-xxl'>
         <Hero />
       </section>

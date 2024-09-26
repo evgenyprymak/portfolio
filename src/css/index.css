@@ -54,3 +54,7 @@ body {
 .bg-da{
   background-color: #1B1B1B;
 }
+
+.row{
+  margin: 0px;
+}

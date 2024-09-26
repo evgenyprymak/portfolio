@@ -1,13 +1,22 @@
 .expandable-card {
     font-family: 'ObjectSans';
-    border-radius: 12px;
-    padding: 16px;
-    margin: 8px auto;
+    /* border-radius: 12px; */
+    padding: 16px 12px 16px 16px;
+    margin: 2px auto;
     background-color: #222;
     transition: transform 0.3s ease, box-shadow 0.5s ease;
     display: flex;
     flex-direction: column;
-    min-height: 120px;
+    cursor: pointer;
+    min-height: none;
+    color: #dedede;
+  }
+
+  @media (min-width: 992px) {
+    .expandable-card {
+      min-height: 140px;
+    }
+
   }
   
   .expandable-card:hover {
@@ -17,30 +26,56 @@
   }
   
   .expandable-card--expanded {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Более выраженная тень при развернутом состоянии */
     background-color: #333; /* Изменение фона для развернутой карточки */
   }
 
 
   .expandable-card__header {
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    align-items: flex-start;
   }
   
+.expandable-card__icon-wrapper{
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 4px;
+  position: relative;
+  width: 24px; /* Ширина иконки, можно изменить под размер */
+  height: 24px; /* Высота иконки, можно изменить под размер */
+}
+
   .expandable-card__icon {
-    transition: transform 0.3s ease; /* Поворот иконки */
+    transition: opacity 0.3s cubic-bezier(0.87, 0, 0.13, 1), transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+    position: absolute; /* Чтобы иконки накладывались друг на друга */
   }
   
+  .expandable-card__icon--visible {
+    opacity: 0.5;
+    transform: scale3d(1, 1, 1);
+  }
+
   .expandable-card__content {
     overflow: hidden;
     transition: height 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s cubic-bezier(0.87, 0, 0.13, 1);
   }
   
   .expandable-card__description {
+    /* border-top: 1px solid rgb(138, 138, 138);
+    padding-top: 16px; */
+    font-size: 16px;
     margin-top: 16px;
-    color: #eee;
+    margin-right: 16px;
+
   }
   
+  .hidden {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  
+  .visible {
+    opacity: 0.5;
+    transform: scaleY(1);
+  }

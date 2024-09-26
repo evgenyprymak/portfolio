@@ -1,14 +1,16 @@
 import React, { useState, useRef } from 'react';
-import { IoAddSharp } from "react-icons/io5";
+import { IoAddSharp, IoRemoveSharp } from "react-icons/io5"; // Импортируем сразу две иконки
+
 import '../css/ExpandableCard.css'; // Подключаем CSS файл
 
 interface CardProps {
+  wrapperclassName?: string;
   className?: string;
   title: string;
   description: string;
 }
 
-const ExpandableCard: React.FC<CardProps> = ({ className, title, description }) => {
+const ExpandableCard: React.FC<CardProps> = ({ wrapperclassName, className, title, description }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [height, setHeight] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -21,27 +23,37 @@ const ExpandableCard: React.FC<CardProps> = ({ className, title, description }) 
   };
 
   return (
-    <div 
-      className={`expandable-card col align-self-start ${isExpanded ? 'expandable-card--expanded' : ''} ${className || ''}`}
-      onClick={toggleExpand}
-    >
-      <div className="expandable-card__header">
-        <p>{title}</p>
-        <IoAddSharp
-          className="expandable-card__icon"
-          style={{ transform: `rotate(${isExpanded ? 45 : 0}deg)` }} // Поворот иконки
-          size={40} // Размер иконки
-        />
-      </div>
+    <div className={`'card-gap-10' ${wrapperclassName || ''}`}>
       <div
-        ref={contentRef}
-        className="expandable-card__content"
-        style={{
-          height: `${height}px`,
-          opacity: isExpanded ? 1 : 0,
-        }}
+        className={`expandable-card align-self-start ${isExpanded ? 'expandable-card--expanded' : ''} ${className || ''}`}
+        onClick={toggleExpand}
       >
-        <p className="expandable-card__description">{description}</p>
+        <div className="expandable-card__header">
+          <div>{title}</div>
+          <div className='expandable-card__icon-wrapper'>
+            {isExpanded ? (
+              <IoRemoveSharp
+                className="expandable-card__icon expandable-card__icon--visible"
+                size={24}
+              />
+            ) : (
+              <IoAddSharp
+                className="expandable-card__icon expandable-card__icon--visible"
+                size={24}
+              />
+            )}
+          </div>
+        </div>
+        <div
+          ref={contentRef}
+          className="expandable-card__content"
+          style={{
+            height: `${height}px`,
+            opacity: isExpanded ? 1 : 0,
+          }}
+        >
+          <p className="expandable-card__description">{description}</p>
+        </div>
       </div>
     </div>
   );
