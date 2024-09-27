@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const ProjectDetails = () => {
   useEffect(() => {
     ScrollTrigger.normalizeScroll(true);
-  
+
     // Сглаженная прокрутка к .box-c
     const smoothScroll = () => {
       gsap.to(window, {
@@ -29,14 +29,14 @@ const ProjectDetails = () => {
         ease: "power2.inOut"
       });
     };
-  
+
     const button = document.querySelector('button');
     if (button) {
       button.addEventListener('click', smoothScroll);
     }
-  
+
     // Анимация карточек с задержкой
-    gsap.fromTo('.expandable-card', 
+    gsap.fromTo('.expandable-card',
       { opacity: 0, y: 150, scaleY: 1.5 }, // Начальное состояние
       {
         opacity: 1,
@@ -55,7 +55,7 @@ const ProjectDetails = () => {
         }
       }
     );
-  
+
     return () => {
       if (button) {
         button.removeEventListener('click', smoothScroll);
@@ -68,17 +68,19 @@ const ProjectDetails = () => {
     <div className="container-fluid">
       <Menu />
       <button className="scroll-button">Scroll to Box</button>
-      <div id='header' className='pd-header container-xxl' data-speed="clamp(0.5)">
+      <div id='header' className='pd-header container-xxl'>
         <h1 className='pd-title'>Quasar</h1>
         <p className='pd-description'>The goal of the Quasar project was to create the best fan experience in the ticketing world. The project supported various event states, such as Demand Aggregation, On Sale, Exchange, P2P exchanges, and more. Each flow had its own unique and shared features, which posed a design challenge in creating a scalable product and delivering a great user experience.</p>
+      </div>
+      <div className='container-xxl'>
+
         <div className='row row-gap-10'>
           <Metric1 className='col-12 col-md-4 card-gap-10' above='About' mainmetric='750' color='var(--project-quasar)' below='Events used Quasar to sell their tickets' />
           <Metric1 className='col-12 col-md-4 card-gap-10' above='More than' mainmetric='5.7M' color='var(--project-quasar)' below='Tickets sold per year' />
           <Metric1 className='col-12 col-md-4 card-gap-10' above='Up to' mainmetric='73%' color='var(--project-quasar)' below='Conversion rate' />
         </div>
       </div>
-
-      <div className='container-xxl px-0 py-4'>
+      <div className='container-xxl px-0'>
         <img src='../assets/some_screens_1.png' className='py-4 container-fluid'></img>
       </div>
 
