@@ -1,0 +1,51 @@
+
+.tabs-wrapper{
+    font-size: 18px;
+}
+
+.tabs-list{
+    border-bottom: 1px solid var(--div-dark);
+    margin-bottom: 20px;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs-tab{
+    background-color: transparent;
+    margin: 20px 0px 20px 0px;
+    border: none;
+    padding: 0px;
+    color: #acacac;
+    position: relative;
+    width: 100%;
+}
+
+.tabs-tab:hover{
+    color: white;
+}
+
+.base--selected{
+    color: white;
+}
+
+.base--selected::before{
+    content: '';
+    position: absolute; /* Абсолютное позиционирование псевдоэлемента */
+    bottom: -21px; /* Подчеркивание будет ниже текста */
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid var(--active-tab);
+}
+
+@media (min-width: 560px) {
+    .tabs-wrapper {
+        font-size: 24px;
+    }
+    .tabs-list{
+        gap: 40px;
+    }
+    .tabs-tab{
+        width: auto;
+    }
+}

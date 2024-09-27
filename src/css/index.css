@@ -1,7 +1,7 @@
 @import './typography.css';
 
 html {
-  overflow-y:scroll;
+  overflow-y:auto;
 }
 
 :root {
@@ -23,9 +23,18 @@ html {
        }
 
   --project-quasar: #b7ff58;
+  --div-bright: #A0A0A0;
+  --div-dark: #4F4F4F;
+  --active-tab: #FFFFFF;
+
 }
 
+@media (min-width: 992px) {
+  html {
+    overflow-y:visible;
+  }
 
+}
 
 
 a {

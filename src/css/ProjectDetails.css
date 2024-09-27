@@ -13,7 +13,7 @@ body, html {
 }
 
 .pd-title{
-    font-size: 72px;
+    font-size: clamp(60px, 6vw, 72px);
     font-weight: 500;
     color: white;
     /* padding-top: 50vh; */
@@ -21,9 +21,11 @@ body, html {
     top: 10vh;
 }
 .pd-description{
-    font-size: 24px;
-    padding-top: 40px;
+    font-size: clamp(16px, 4vw, 22px);
+    padding-top: 20px;
+    padding-bottom: 40px;
     max-width: 960px;
+    text-wrap: balance;
 }
 
 li{

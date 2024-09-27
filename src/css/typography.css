@@ -76,3 +76,48 @@
   font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'PP Right Gothic Wide';
+  src: url('/fonts/PPRightGothic/PPRightGothic-WideFine.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Right Gothic Wide';
+  src: url('/fonts/PPRightGothic/PPRightGothic-WideMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Right Gothic Wide';
+  src: url('/fonts/PPRightGothic/PPRightGothic-WideBlack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk/PPRightGrotesk-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk/PPRightGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  src: url('/fonts/PPRightGrotesk/PPRightGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
