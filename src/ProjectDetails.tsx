@@ -3,10 +3,11 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
 import Menu from './Menu';
 import Metric1 from './components/Metric1';
-import './css/ProjectDetails.css';
 import ExpandableCard from './components/ExpandableCard';
+import Header from './components/Header';
 
 import { Tab } from '@mui/base/Tab';
 import { TabsList } from '@mui/base/TabsList';
@@ -14,6 +15,8 @@ import { TabPanel } from '@mui/base/TabPanel';
 import { Tabs } from '@mui/base/Tabs';
 
 import './css/MUI-tabs.css'
+import './css/ProjectDetails.css';
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -21,7 +24,6 @@ const ProjectDetails = () => {
   useEffect(() => {
     ScrollTrigger.normalizeScroll(true);
 
-    // Сглаженная прокрутка к .box-c
     const smoothScroll = () => {
       gsap.to(window, {
         scrollTo: { y: ".box-c", autoKill: false },
@@ -65,13 +67,14 @@ const ProjectDetails = () => {
   }, []);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid px-0">
       <Menu />
       <button className="scroll-button">Scroll to Box</button>
-      <div id='header' className='pd-header container-xxl'>
-        <h1 className='pd-title'>Quasar</h1>
-        <p className='pd-description'>The goal of the Quasar project was to create the best fan experience in the ticketing world. The project supported various event states, such as Demand Aggregation, On Sale, Exchange, P2P exchanges, and more. Each flow had its own unique and shared features, which posed a design challenge in creating a scalable product and delivering a great user experience.</p>
-      </div>
+      <Header
+        wrapperclassName="header container-xxl"
+        size="large"
+        title="Quasar"
+        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}/>
       <div className='container-xxl'>
 
         <div className='row row-gap-10'>
@@ -84,12 +87,31 @@ const ProjectDetails = () => {
         <img src='../assets/some_screens_1.png' className='py-4 container-fluid'></img>
       </div>
 
-      <div className='container-xxl px-0 py-4'>
-        <div>The work</div>
-      </div>
+      <div className='my-80 py-80'>
+      <Header
+        wrapperclassName="container-xxl py-4"
+        size="medium"
+        title="My Role"
+        description={
+          <span>
+            I joined the Quasar project in 2020. Prior to this, I had been working on internal tools, client portals, and client experiences to help the business accelerate and scale. By the end of 2020, I took on the responsibility of managing all product design work in the company.
+            <br /><br />The Quasar project was built using the Xenolyte design system, which primarily focused on fan-facing interfaces. Consequently, I also took charge of managing this design system. It comprised over 50 components, ranging from basic elements to complex design components like data tables.
+            <br /><br />During my tenure on this project, I had the pleasure of collaborating with an exceptional Product Manager and brilliant Frontend, Backend, and QA engineers. We frequently communicated with other departments in the company, including Data, Marketing, and Fan Experience.
+            <br /><br />As part of my role, I interviewed and onboarded new designers to the project. To streamline this process and support ongoing design work, I created and maintained a "Design Club" space in Notion. This resource not only ensured a more consistent and straightforward onboarding process but also served as an up-to-date repository for new information and resources.
+          
+          </span>
+        }
+      />
 
 
-      <Tabs defaultValue={1} id='double_diamond' className='container-xxl py-4 tabs-wrapper'>
+
+
+      <Header
+        wrapperclassName="container-xxl pt-4"
+        size="medium"
+        title="My top activities"
+      />
+      <Tabs defaultValue={1} id='double_diamond' className='container-xxl pb-4 tabs-wrapper'>
         <TabsList className='tabs-list'>
           <Tab value={1} id='dd_discover' className='tabs-tab'>Discover</Tab>
           <Tab value={2} id='dd_define' className='tabs-tab'>Define</Tab>
@@ -238,11 +260,10 @@ const ProjectDetails = () => {
 
           </div>
         </TabPanel>
-
       </Tabs>
 
-
-      <div style={{ height: '1400px' }} className="box-c">222</div>
+      </div>
+      <div style={{ height: '400px' }} className="box-c">222</div>
 
 
 

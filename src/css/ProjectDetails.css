@@ -1,41 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Задаем высоту для html и body */
-}
-
-
-.pd-header{
-    height: calc(100vh - 150px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.pd-title{
-    font-size: clamp(60px, 6vw, 72px);
-    font-weight: 500;
-    color: white;
-    /* padding-top: 50vh; */
-    max-width: 960px;
-    top: 10vh;
-}
-.pd-description{
-    font-size: clamp(16px, 4vw, 22px);
-    padding-top: 20px;
-    padding-bottom: 40px;
-    max-width: 960px;
-    text-wrap: balance;
-}
-
-li{
-    background-color: #333;
-    padding: 16px;
-    margin: 4px;
-}
-
-ul{
-    gap: 1;
+    height: 100%;
 }
 
 .row-gap-10{

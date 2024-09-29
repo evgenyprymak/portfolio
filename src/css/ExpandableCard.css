@@ -3,13 +3,13 @@
   /* border-radius: 12px; */
   padding: 16px 12px 16px 16px;
   margin: 2px auto;
-  background-color: #222;
+  background-color: #2c2c2c;
   transition: box-shadow 0.5s ease;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   min-height: none;
-  color: #dedede;
+  color: #dedee0;
 }
 
 @media (min-width: 992px) {
@@ -22,7 +22,6 @@
 .expandable-card:hover {
   box-shadow: 0 0px 0px 2px var(--project-quasar);
   /* Эффект при наведении */
-  color: white;
 
 }
 
