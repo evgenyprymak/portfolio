@@ -1,61 +1,9 @@
-.header-title {
-    margin: 0;
-}
-
-.header-description {
-    margin-top: 40px;
-    opacity: 0.8;
-}
-
-span br{
-
-    white-space: pre-line; /* сохраняет переносы строк */
-    line-height: 1.5; /* регулирует вертикальные отступы между строками */
-}
-
-/* Размеры для заголовка и описания */
-.large {
-    font-size: clamp(60px, 6vw, 72px);
-    font-weight: 500;
-    color: white;
-    max-width: 960px;
-}
-
-.large+.header-description {
-    font-size: clamp(16px, 4vw, 22px);
-
-}
-
-.medium {
-    text-wrap: balance;
-    font-size: clamp(28px, 5vw, 40px);
-    font-weight: 500;
-    color: white;
-    max-width: 960px;
-    /* Заголовок */
-}
-
-.medium+.header-description {
-    font-size: 18px;
-    line-height: 155%;
-    /* Описание для среднего заголовка */
-}
-
-.small {
-    font-size: 24px;
-    /* Заголовок */
-}
-
-.small+.header-description {
-    font-size: 14px;
-    /* Описание для маленького заголовка */
-}
-
-
-.header{
+.page-header{
     height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+
+
 

@@ -121,3 +121,47 @@
   font-weight: 500;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'Neue Machina Inktrap';
+  src: url('/fonts/NeueMachinaInktrap/PPNeueMachina-InktrapRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina Inktrap';
+  src: url('/fonts/NeueMachinaInktrap/PPNeueMachina-InktrapMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina Inktrap';
+  src: url('/fonts/NeueMachinaInktrap/PPNeueMachina-InktrapUltrabold.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Neue Machina Plain';
+  src: url('/fonts/NeueMachinaPlain/PPNeueMachina-PlainRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina Plain';
+  src: url('/fonts/NeueMachinaPlain/PPNeueMachina-PlainMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina Plain';
+  src: url('/fonts/NeueMachinaPlain/PPNeueMachina-PlainUltrabold.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
