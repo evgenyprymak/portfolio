@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .accordion-section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .details-section {
+    width: 400px; /* Фиксированная ширина для правой части */
+    height: 400px; /* Фиксированная высота для правой части */
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание текста по левому краю */
+    height: 100%;
+  }
+  

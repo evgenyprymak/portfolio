@@ -35,6 +35,8 @@ html {
   --bg-light-1: #ECF0F4;
 
   --txt-light-1: #FFFFFF;
+  
+  --txt-dark-1: #000000;
 }
 
 @media (min-width: 992px) {

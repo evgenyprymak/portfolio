@@ -8,17 +8,39 @@ import Menu from './Menu';
 import Metric1 from './components/Metric1';
 import ExpandableCard from './components/ExpandableCard';
 import Header from './components/Header';
+import CustomAccordion from './components/Accordion2';
 
 import { Tab } from '@mui/base/Tab';
 import { TabsList } from '@mui/base/TabsList';
 import { TabPanel } from '@mui/base/TabPanel';
 import { Tabs } from '@mui/base/Tabs';
 
+
+
 import './css/MUI-tabs.css'
 import './css/ProjectDetails.css';
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const accordionItems = [
+  { title: 'Boosting conversion rate', details: 'Details for accordion 1', additionalInfo: 'Additional info for accordion 1' },
+  { title: 'Returnable Tickets adoption rate', details: 'Details for accordion 2', additionalInfo: 'Additional info for accordion 2' },
+  { title: 'Enhance fans navigation for Returnable tickets.', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Re-design checkout flow', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Abandoned Cart', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Products 2.0', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Lyte at your service', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Promotions', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Event Landing 2.0', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'P2P : support different ticket types', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'iOS Wallet and PDF passes', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+
+
+
+
+];
+
 
 const ProjectDetails = () => {
   useEffect(() => {
@@ -86,12 +108,12 @@ const ProjectDetails = () => {
         <img src='../assets/some_screens_1.png' className='py-4 container-fluid'></img>
       </div> */}
 
-      <div className='container-fluid ephasized_section my-80 py-80'>
+      <div className='container-fluid ephasized_section mt-80 mb-20 py-80'>
         <div className='container-xxl'>
           <Header
             wrapperclassName="container-xxl py-4 px-0"
             size="medium"
-            title="My role on the project"
+            title="My role"
           />
           <div className='row'>
             <div className='col-12 col-md-6 pr-4 px-0 role-description pe-4'>
@@ -108,11 +130,10 @@ const ProjectDetails = () => {
             </div>
           </div>
         </div>
-
         <Header
           wrapperclassName="container-xxl pt-4"
           size="small"
-          title="High level design activities"
+          title="Design activities"
         />
         <Tabs defaultValue={1} id='double_diamond' className='container-xxl pb-4 tabs-wrapper'>
           <TabsList className='tabs-list'>
@@ -264,9 +285,21 @@ const ProjectDetails = () => {
             </div>
           </TabPanel>
         </Tabs>
+      </div>
+      <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c">
+      <Header
+          wrapperclassName="container-xxl pt-80"
+          size="medium"
+          title="Project & Features delivered"
+          description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
+          color="var(--txt-dark-1)"
+        />
+      <div className='container-xxl' style={{ backgroundColor: '#fff', height: '900px' }} >
+        <CustomAccordion items={accordionItems} />
+
 
       </div>
-      <div style={{ height: '400px', backgroundColor: 'var(--bg-light-1)' }} className="box-c">222</div>
+      </div>
 
 
 

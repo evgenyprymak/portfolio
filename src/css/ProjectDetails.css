@@ -21,8 +21,6 @@ body, html {
     padding: 0 2px;
 }
 
-
-
 .ephasized_section{
     background-color: var(--project-quasar);
     color: rgb(255, 255, 255);
@@ -31,7 +29,6 @@ body, html {
     width: calc(100% - 40px);
 }
 
-
 .role-description{
     font-size: clamp(16px, 2.5vw, 21px);
     font-weight: 400;
@@ -39,3 +36,4 @@ body, html {
     padding-right: 24px;
     text-wrap: balance;
 }
+
