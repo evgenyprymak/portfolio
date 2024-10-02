@@ -24,7 +24,7 @@ import './css/ProjectDetails.css';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const accordionItems = [
-  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space_planets_unknown.jpg', details: '', additionalInfo: 'Together with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked on' },
+  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/space_planets_unknown.jpg', additionalInfo: 'Together with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked on' },
   { title: 'Returnable Tickets adoption rate', details: '/portfolio/assets/desktop_6.jpg', additionalInfo: 'Additional info for accordion 2' },
   { title: 'Enhance fans navigation for Returnable tickets.', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Re-design checkout flow', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },

@@ -21,7 +21,7 @@
   height: 800px;
   /* background-color: white; */
   border-radius: 8px;
-  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('/portfolio/assets/space_planets_unknown.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(27, 12, 85, 0.9)), url('/portfolio/assets/space1.jpg');
 }
 
 .accordion-item {
