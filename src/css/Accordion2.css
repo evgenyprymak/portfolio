@@ -1,86 +1,36 @@
 .accordion-container {
-    display: flex;
-    padding: 20px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .accordion-section {
-    flex: 1;
-    max-width: 50%;
-    margin-right: 20px;
-  }
-  
-  .accordion-item {
-    border-radius: 5px;
-    color: #555;
-  }
-  
-  .accordion-header {
-    border-top: 1px solid rgb(209, 209, 209);
-    padding-top: 16px;
-    padding-bottom: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion-header.active-header {
-    color: #333;
-  }
-  
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s linear, padding 0.3s cubic-bezier(0.87, 0, 0.13, 1);
-  }
-  
-  .accordion-content.expanded {
-    max-height: 100px;
-    margin-bottom: 16px;
-  }
-  
-  .accordion-inner-content {
-    padding: 0px;
-  }
-  
-  .details-section {
-    flex: 1;
-    background-color: #176c22;
-    border-radius: 5px;
-    padding: 20px;
-    transition: opacity 0.3s ease;
-    opacity: 1;
-    height: 100%;
-  }
-  
-  .fade-out {
-    opacity: 0;
-  }
-  
-  .mobile-details {
-    display: none; /* Скрыто на десктопах */
-  }
-  
-  /* Медиазапрос для мобильных устройств */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column; /* Меняем контейнер на колонку */
-    }
-    
-    .accordion-section {
-      margin-right: 0;
-    }
-    
-    .details-section {
-      display: none; /* Прячем правую часть на мобильных */
-    }
-  
-    .mobile-details {
-      display: block; /* Показываем details внутри аккордиона */
-      padding-top: 10px;
-    }
-  }
-  
+  display: flex;
+}
+
+.accordion-section {
+  flex: 1;
+}
+
+.details-section {
+  width: 400px; /* или любое другое значение для вашей правой части */
+  transition: opacity 0.5s ease; /* Анимация для правой части */
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 10px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.accordion-content {
+  overflow: hidden;
+}
+
+.accordion-inner-content {
+  padding: 10px;
+  background: #ffffff;
+}
+
+.active-header {
+  background: #e0e0e0; /* Цвет активного заголовка */
+}

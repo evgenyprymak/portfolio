@@ -8,7 +8,7 @@ import ProjectDetails from './ProjectDetails';
 
 const App = () => {
   return (
-    <Router basename="/portfolio_react">
+    <Router basename="/portfolio">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/:id" element={<ProjectDetails />} />
