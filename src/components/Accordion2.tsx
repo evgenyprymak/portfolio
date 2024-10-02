@@ -1,9 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../css/Accordion2.css'; // Make sure to create this CSS file for styling
 
 type AccordionItem = {
   title: string;
   details: string; // URL изображения
+  details_bg?: string;
   additionalInfo: string;
 };
 
@@ -12,9 +13,18 @@ type CustomAccordionProps = {
 };
 
 const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(2);
   const [closingIndex, setClosingIndex] = useState<number | null>(null);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    // Добавляем задержку 500 мс перед открытием первого элемента
+    const timer = setTimeout(() => {
+      toggleAccordion(0); // Открываем первый элемент
+    }, 500);
+
+    return () => clearTimeout(timer); // Очищаем таймер при размонтировании компонента
+  }, []);
 
   const toggleAccordion = (index: number) => {
     if (openIndex !== index) {
@@ -23,13 +33,16 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
 
       setTimeout(() => {
         setClosingIndex(null);
-      }, 500);
+      }, 300);
     }
   };
 
   const calculateHeight = (index: number) => {
     return contentRefs.current[index] ? contentRefs.current[index].scrollHeight + 'px' : '0px';
   };
+
+
+
 
   return (
     <div className="accordion-container">
@@ -53,7 +66,10 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
             >
               {(openIndex === index || closingIndex === index) && (
                 <div className="accordion-inner-content">
-                  {item.additionalInfo}
+                  <div className="details-content">
+                    {item.additionalInfo}
+                    <img src={item.details} alt={item.title} className='image_mobile' />
+                  </div>
                 </div>
               )}
             </div>
@@ -61,8 +77,8 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
         ))}
       </div>
       <div className="details-section">
-        <h6>{items[openIndex].title}</h6>
-        <img src={items[openIndex].details} alt={items[openIndex].title} style={{ width: '100%', height: 'auto' }} />
+        {/* <h6>{items[openIndex].title}</h6> */}
+        <img src={items[openIndex].details} alt={items[openIndex].title} className='image_desktop' />
       </div>
     </div>
   );

@@ -24,8 +24,8 @@ import './css/ProjectDetails.css';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const accordionItems = [
-  { title: 'Boosting up conversion rate', details: '/assets/desktop_5.jpg', additionalInfo: 'Together with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked on' },
-  { title: 'Returnable Tickets adoption rate', details: 'Details for accordion 2', additionalInfo: 'Additional info for accordion 2' },
+  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space_planets_unknown.jpg', details: '', additionalInfo: 'Together with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked on' },
+  { title: 'Returnable Tickets adoption rate', details: '/portfolio/assets/desktop_6.jpg', additionalInfo: 'Additional info for accordion 2' },
   { title: 'Enhance fans navigation for Returnable tickets.', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Re-design checkout flow', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Abandoned Cart', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
@@ -282,15 +282,15 @@ const ProjectDetails = () => {
           </TabPanel>
         </Tabs>
       </div>
-      <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c">
+      <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c px-0">
       <Header
           wrapperclassName="container-xxl pt-80"
           size="medium"
-          title="Project & Features delivered"
+          title="Projects, features & flows delivered"
           description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
           color="var(--txt-dark-1)"
         />
-      <div className='container-xxl' style={{ backgroundColor: '#fff', height: '1200px' }} >
+      <div className='container-xxl px-0' style={{ height: '1200px' }} >
         <CustomAccordion items={accordionItems} />
 
 

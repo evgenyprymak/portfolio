@@ -1,36 +1,105 @@
 .accordion-container {
   display: flex;
+  padding: 20px;
+  height: 100%;
+  align-items:start;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(89, 89, 89);
+  height: 1200px;
 }
 
 .accordion-section {
-  flex: 1;
+  width: 50%;
+  margin-right: 40px;
 }
 
 .details-section {
-  width: 400px; /* или любое другое значение для вашей правой части */
-  transition: opacity 0.5s ease; /* Анимация для правой части */
+  width: 50%;
+  transition: opacity 0.2s linear;
+  height: 800px;
+  /* background-color: white; */
+  border-radius: 8px;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('/portfolio/assets/space_planets_unknown.jpg');
 }
 
 .accordion-item {
-  margin-bottom: 10px;
 }
 
 .accordion-header {
+  font-weight: 700;
+  border-top: 1px solid rgb(209, 209, 209);
+  padding-top: 16px;
+  padding-bottom: 16px;
   cursor: pointer;
-  padding: 10px;
-  background: #f0f0f0;
-  border: 1px solid #ccc;
+}
+
+.accordion-header:hover {
+  color: black;
 }
 
 .accordion-content {
+  height: 0px;
   overflow: hidden;
+  transition: height 0.2s linear;
 }
 
 .accordion-inner-content {
-  padding: 10px;
-  background: #ffffff;
+  margin-top: -4px;
+  padding-bottom: 16px;
+  font-size: 15px;
+  color: black;
 }
 
 .active-header {
-  background: #e0e0e0; /* Цвет активного заголовка */
+  color: black;
+  box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,1);
+}
+
+.closing{
+  height: 0px !important;
+  clip: auto;
+}
+
+.image_desktop{
+  width: 100%;
+  height: auto;
+}
+
+.image_mobile{
+  display: none;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+  .accordion-container {
+    padding: 16px;
+    flex-direction: column; /* Смена направления на вертикальное */
+  }
+
+  .accordion-section {
+    width: 100%; /* Полная ширина для аккордеона */
+    margin-right: 0; /* Убираем отступы */
+  }
+
+  .details-section {
+    padding-top: 16px;
+    width: 100%; /* Полная ширина для деталей внутри аккордеона */
+    order: 1; /* Поменять порядок отображения на мобильных */
+
+  }
+
+  .accordion-content {
+  }
+  
+  .image_mobile{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .image_desktop{
+    display: none;
+  }
 }
