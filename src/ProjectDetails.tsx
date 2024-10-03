@@ -24,9 +24,9 @@ import './css/ProjectDetails.css';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const accordionItems = [
-  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/space_planets_unknown.jpg', additionalInfo: 'Together with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked onTogether with our Head of Product, Product manager with collaboratively worked on' },
-  { title: 'Returnable Tickets adoption rate', details: '/portfolio/assets/desktop_6.jpg', additionalInfo: 'Additional info for accordion 2' },
-  { title: 'Enhance fans navigation for Returnable tickets.', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/quasar/fastcheckout1.png', additionalInfo: 'We aimed to boost the conversion rate and become the top ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying strengths and weaknesses in their platforms and ways to enhance our own. We combined areas for improvement and planned how to implement them quickly. I created multiple interactive prototypes using Protopie and Figma, ran user testing with Useberry, and identified actionable insights to boost conversion. Collaborating closely with our developers, we rapidly delivered the MVP, allowing fans to buy tickets swiftly without lengthy forms or excessive personal data entry. This solution increased conversion by 38%, and its success generated strong interest from other clients, helping the business secure significant contracts.' },
+  { title: 'Returnable Tickets adoption rate',details_bg: '/portfolio/assets/space1.jpg',  details: '/portfolio/assets/quasar/returnable1.png', additionalInfo: 'Additional info for accordion 2' },
+  { title: 'Enhance fans navigation for Returnable tickets.',details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/quasar/fastcheckout2.png', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Re-design checkout flow', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Abandoned Cart', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
   { title: 'Products 2.0', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
@@ -284,7 +284,7 @@ const ProjectDetails = () => {
       </div>
       <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c px-0">
       <Header
-          wrapperclassName="container-xxl pt-80"
+          wrapperclassName="container-xxl px-0 pt-80"
           size="medium"
           title="Projects, features & flows delivered"
           description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
