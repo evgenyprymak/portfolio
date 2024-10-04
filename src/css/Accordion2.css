@@ -12,7 +12,7 @@
 
 .accordion-section {
   width: 50%;
-  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .details-section {
@@ -70,7 +70,7 @@
 .accordion-inner-content {
   margin-top: -4px;
   padding-bottom: 16px;
-  font-size: 15px;
+  font-size: 16px;
   color: black;
 }
 
@@ -113,14 +113,11 @@
     order: 1; /* Поменять порядок отображения на мобильных */
     max-height: 420px;
   }
-
-
   .image_mobile{
     display: block;
     width: 100%;
     height: auto;
   }
-
   .image_desktop{
     display: none;
   }

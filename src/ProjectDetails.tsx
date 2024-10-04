@@ -284,7 +284,7 @@ const ProjectDetails = () => {
       </div>
       <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c px-0">
       <Header
-          wrapperclassName="container-xxl px-0 pt-80"
+          wrapperclassName="container-xxl px-3 pt-40"
           size="medium"
           title="Projects, features & flows delivered"
           description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"

@@ -8,7 +8,6 @@ type AccordionItem = {
   details_bg?: string;
   additionalInfo: string;
 };
-
 type CustomAccordionProps = {
   items: AccordionItem[];
 };
@@ -21,7 +20,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
 
   useEffect(() => {
 
-     const timer = setTimeout(() => {
+    const timer = setTimeout(() => {
       toggleAccordion(0); // Открываем первый элемент
     }, 200);
 
@@ -65,6 +64,23 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
 
   return (
     <div className="accordion-container">
+            <div
+        className="details-section"
+        style={{
+          backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/space1.jpg'
+            })`,
+        }}
+      >        <div className='product_image'>
+
+          <img
+            ref={imageRef} // Устанавливаем ссылку на изображение
+            src={items[openIndex].details}
+            alt={items[openIndex].title}
+            className='image_desktop'
+          />
+
+        </div>
+      </div>
       <div className="accordion-section">
         {items.map((item, index) => (
           <div key={index} className="accordion-item">
@@ -95,18 +111,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
           </div>
         ))}
       </div>
-      <div className="details-section" style={{ backgroundImage: `url(${items[openIndex].details_bg})` }}>
-        <div className='product_image'>
 
-          <img 
-            ref={imageRef} // Устанавливаем ссылку на изображение
-            src={items[openIndex].details} 
-            alt={items[openIndex].title} 
-            className='image_desktop' 
-          />
-
-        </div>
-      </div>
     </div>
   );
 };
