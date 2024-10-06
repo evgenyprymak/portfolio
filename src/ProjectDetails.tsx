@@ -24,17 +24,21 @@ import './css/ProjectDetails.css';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const accordionItems = [
-  { title: 'Boosting up conversion rate', details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/quasar/fastcheckout1.png', additionalInfo: 'We aimed to boost the conversion rate and become the top ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying strengths and weaknesses in their platforms and ways to enhance our own. We combined areas for improvement and planned how to implement them quickly. I created multiple interactive prototypes using Protopie and Figma, ran user testing with Useberry, and identified actionable insights to boost conversion. Collaborating closely with our developers, we rapidly delivered the MVP, allowing fans to buy tickets swiftly without lengthy forms or excessive personal data entry. This solution increased conversion by 38%, and its success generated strong interest from other clients, helping the business secure significant contracts.' },
-  { title: 'Returnable Tickets adoption rate',details_bg: '/portfolio/assets/space1.jpg',  details: '/portfolio/assets/quasar/returnable1.png', additionalInfo: 'Additional info for accordion 2' },
-  { title: 'Enhance fans navigation for Returnable tickets.',details_bg: '/portfolio/assets/space1.jpg', details: '/portfolio/assets/quasar/fastcheckout2.png', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Re-design checkout flow', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Abandoned Cart', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Products 2.0', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Lyte at your service', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Promotions', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'Event Landing 2.0', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'P2P : support different ticket types', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
-  { title: 'iOS Wallet and PDF passes', details: 'Details for accordion 3', additionalInfo: 'Additional info for accordion 3' },
+  { title: 'Driving Conversion Growth', 
+    details: '/portfolio/assets/quasar/fastcheckout3.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
+  },
+  { title: 'Leveraging Increased Adoption of Returnable Tickets to Drive Business Growth', 
+    details: '/portfolio/assets/quasar/fastcheckout1.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
+  },
+  { title: 'Leverage business with increased adoption rate of Returnable Tickets', 
+    details: '/portfolio/assets/quasar/fastcheckout1.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
+  }
 ];
 
 

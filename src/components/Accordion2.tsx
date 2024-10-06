@@ -4,9 +4,9 @@ import '../css/Accordion2.css';
 
 type AccordionItem = {
   title: string;
-  details: string; // URL изображения
-  details_bg?: string;
-  additionalInfo: string;
+  details: string; // feature image
+  details_bg?: string; // image background
+  description?: string;
 };
 type CustomAccordionProps = {
   items: AccordionItem[];
@@ -36,13 +36,13 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
       if (imageRef.current) {
         gsap.set(imageRef.current, {
           opacity: 0,
-          scale: 0.95, // Начальное состояние для анимации
+          scale: 1, // Начальное состояние для анимации
         });
 
         gsap.to(imageRef.current, {
           opacity: 1,
           scale: 1,
-          duration: 0.3,
+          duration: 0.57,
           onComplete: () => {
             // Обновляем src изображения после завершения анимации
             if (imageRef.current) {
@@ -67,7 +67,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
             <div
         className="details-section"
         style={{
-          backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/space1.jpg'
+          backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
             })`,
         }}
       >        <div className='product_image'>
@@ -102,7 +102,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
               {(openIndex === index || closingIndex === index) && (
                 <div className="accordion-inner-content">
                   <div className="details-content">
-                    {item.additionalInfo}
+                      {item.description}
                     <img src={item.details} alt={item.title} className='image_mobile' />
                   </div>
                 </div>
