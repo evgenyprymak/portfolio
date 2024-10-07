@@ -23,11 +23,11 @@
 }
 
 .details-section {
-  width: 760px;
+  width: 740px;
   transition: opacity 0.5s linear;
   height: 840px;
   overflow: hidden;
-  background-size: 100% auto;
+  background-size: 100% 100%, cover;
   display: flex;
   align-items: center;
   justify-content: center;

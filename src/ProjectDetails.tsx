@@ -30,8 +30,8 @@ const accordionItems = [
     description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
   },
   { title: 'Leveraging Increased Adoption of Returnable Tickets to Drive Business Growth', 
-    details: '/portfolio/assets/quasar/fastcheckout1.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    details: '/portfolio/assets/quasar/quasar_returnable.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
     description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
   },
   { title: 'Leverage business with increased adoption rate of Returnable Tickets', 
@@ -294,7 +294,7 @@ const ProjectDetails = () => {
           description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
           color="var(--txt-dark-1)"
         />
-      <div className='container-xxl px-0' style={{ height: '1200px' }} >
+      <div className='container-xxl px-0' style={{ height: 'auto' }} >
         <CustomAccordion items={accordionItems} />
 
 
