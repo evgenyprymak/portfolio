@@ -9,13 +9,11 @@
 }
 
 .hero p{
-  color: #efefef;
+  color: #b2b2b2;
   font-family: ObjectSans;
   font-weight: 500;
-  font-size: 72px;
-  line-height: 120%;
-  width: 900px;
-  /* max-width: 950px; */
-  font-size: 48px;
+  line-height: 155%;
+  max-width: 768px;
+  font-size: 28px;
   text-align: left;
 }

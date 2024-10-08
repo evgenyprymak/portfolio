@@ -18,16 +18,22 @@ const MainPage = () => {
       </section>
       <section id='recent works' className=''>
        
-        <div className='container-xxl'>        
+        <div className='container-xxl px-0'>        
           <h1>Recent Works</h1>
-          
-          <Project
-            link='/project/1'
-            image='assets/desktop_5.jpg'
-            title="Lyte Dashboard"
-            year={2019}
-            description="Unlocking Data & Events Management for clients. Product Design, UI Kit, Web"
-          />
+          <div className='row py-80 px-0'>
+            <div className='col-md-6 px-0'>
+              <Project
+              link='/project/1'
+              image='assets/desktop_5.jpg'
+              title="Lyte Dashboard"
+              year={2019}
+              description="Unlocking Data & Events Management for clients. Product Design, UI Kit, Web"
+            />
+
+            </div>
+
+          </div>
+
           </div>
 
 
