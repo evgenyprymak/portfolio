@@ -11,7 +11,8 @@
 }
 
 .accordion-section {
-  width: 50%;
+  flex-shrink: 100;
+  order: 2;
   margin-left: 40px;
 }
 
@@ -23,14 +24,15 @@
 }
 
 .details-section {
-  width: 740px;
+  order: 1;
   transition: opacity 0.5s linear;
-  height: 840px;
   overflow: hidden;
-  background-size: 100% 100%, cover;
+  background-size: 150% auto, cover;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 650px;
+  aspect-ratio: 3.5/4 auto;
 }
 
 .product_image{
@@ -73,8 +75,9 @@
 .accordion-inner-content {
   margin-top: -4px;
   padding-bottom: 16px;
-  font-size: 16px;
+  font-size: 15px;
   color: black;
+  text-wrap: pretty;
 }
 
 .active-header {
@@ -91,7 +94,7 @@
   width: 100%;
   height: auto;
   opacity: 1; /* Состояние при загрузке */
-  transform: scale(1); /* Состояние при загрузке */
+
 }
 
 .image_mobile{
@@ -99,27 +102,27 @@
 }
 
 /* Медиазапрос для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .accordion-container {
-    padding: 16px;
+    padding: 0px;
     flex-direction: column; /* Смена направления на вертикальное */
   }
 
   .accordion-section {
-    width: 100%; /* Полная ширина для аккордеона */
-    margin-right: 0; /* Убираем отступы */
+    width: 100%;
+    margin-left: 0px;
   }
 
   .details-section {
-    padding-top: 16px;
     width: 100%; /* Полная ширина для деталей внутри аккордеона */
     order: 1; /* Поменять порядок отображения на мобильных */
-    max-height: 420px;
+    background-color: aqua;
+    aspect-ratio: 4/3 auto;
   }
   .image_mobile{
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
   .image_desktop{
     display: none;

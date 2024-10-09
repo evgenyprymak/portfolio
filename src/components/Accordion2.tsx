@@ -64,7 +64,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
 
   return (
     <div className="accordion-container">
-            <div
+      <div
         className="details-section"
         style={{
           backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
@@ -102,8 +102,16 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
               {(openIndex === index || closingIndex === index) && (
                 <div className="accordion-inner-content">
                   <div className="details-content">
-                      {item.description}
-                    <img src={item.details} alt={item.title} className='image_mobile' />
+                    {item.description}
+                    <div
+                      className="details-section"
+                      style={{
+                        backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
+                          })`,
+                      }}
+                    >
+                      <img src={item.details} alt={item.title} className='image_mobile' />
+                    </div>
                   </div>
                 </div>
               )}

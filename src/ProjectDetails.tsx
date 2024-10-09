@@ -29,14 +29,24 @@ const accordionItems = [
     details_bg: '/portfolio/assets/quasar/bg/bg1.png',
     description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
   },
-  { title: 'Leveraging Increased Adoption of Returnable Tickets to Drive Business Growth', 
-    details: '/portfolio/assets/quasar/quasar_returnable.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
-    description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
+  { title: 'Increasing Adoption of Layaway Plans for Sales Growth', 
+    details: '/portfolio/assets/quasar/quasar_lp_2.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   },
   { title: 'Leverage business with increased adoption rate of Returnable Tickets', 
-    details: '/portfolio/assets/quasar/fastcheckout1.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
+    details: '/portfolio/assets/quasar/quasar_returnable_2.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
+    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
+  },
+  { title: 'Enhance the Ticket Selection Page and Bypass the Landing Page', 
+    details: '/portfolio/assets/quasar/quasar_menu.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
+    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
+  },
+  { title: 'Multistep checkout pages', 
+    details: '/portfolio/assets/quasar/quasar_multistep_checkout.png',
+    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
     description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   }
 ];
@@ -288,13 +298,13 @@ const ProjectDetails = () => {
       </div>
       <div style={{backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c px-0">
       <Header
-          wrapperclassName="container-xxl px-3 pt-40"
+          wrapperclassName="container-xxl px-4 pt-40"
           size="medium"
           title="Projects, features & flows delivered"
           description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
           color="var(--txt-dark-1)"
         />
-      <div className='container-xxl px-0' style={{ height: 'auto' }} >
+      <div className='container-xxl px-4' style={{ height: 'auto' }} >
         <CustomAccordion items={accordionItems} />
 
 
