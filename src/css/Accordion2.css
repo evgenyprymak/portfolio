@@ -6,7 +6,6 @@
   font-size: 18px;
   font-weight: 500;
   color: rgb(89, 89, 89);
-  height: 1200px;
   padding-top: 40px;
 }
 
@@ -32,7 +31,7 @@
   align-items: center;
   justify-content: center;
   width: 650px;
-  aspect-ratio: 3.5/4 auto;
+  aspect-ratio: 4/3 auto;
 }
 
 .product_image{

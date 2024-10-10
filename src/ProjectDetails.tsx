@@ -108,9 +108,9 @@ const ProjectDetails = () => {
         description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>} />
       <div className='container-xxl'>
         <div className='row row-gap-10'>
-          <Metric1 className='col-12 col-md-3 card-gap-10' above='Around' mainmetric='NDA' color='rgba(255,255,255,0.5)' below='Events ran on Quasar platform' />
-          <Metric1 className='col-12 col-md-3 card-gap-10' above='More than' mainmetric='NDA' color='rgba(255,255,255,0.5)' below='Tickets sold per year' />
-          <Metric1 className='col-12 col-md-3 card-gap-10' above='Up to' mainmetric='NDA' color='rgba(255,255,255,0.5)' below='Conversion rate' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Events ran on Quasar platform' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Tickets sold per year' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion rate' />
           <Metric1 className='col-12 col-md-3 card-gap-10' above='Closely' mainmetric='$NDA' color='rgba(255,255,255,0.5)' below='Yearly fan savings' />
         </div>
       </div>

@@ -25,6 +25,7 @@
 }
 .metric1_main_number{
     font-family: 'Neue Machina Plain', sans-serif;
+    font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
     font-weight: 500;
     letter-spacing: -2px;
     margin-top: 10px;
