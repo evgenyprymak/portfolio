@@ -1,39 +1,49 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: var(--bg-dark-1);
 }
 
-.row-gap-10{
+
+
+.row-gap-10 {
     margin: 0 -10px;
 }
 
-.card-gap-10{
+.card-gap-10 {
     padding: 0 10px;
 }
 
-.row-gap-2{
-    margin: 0 -2px ;
+.row-gap-2 {
+    margin: 0 -2px;
     row-gap: 0px !important;
 }
 
-.card-gap-2{
+.card-gap-2 {
     padding: 0 2px;
 }
 
-.ephasized_section{
-    background-color: var(--project-quasar);
-    color: rgb(255, 255, 255);
+.ephasized_section {
+    background-color: #F1F1F1;
+    color: #111111;
     border-bottom: none;
-    border-radius: 8px;
-    width: calc(100% - 40px);
+    width: 100%;
 }
 
-.role-description{
+.role-description {
     font-size: clamp(16px, 2.5vw, 21px);
     font-weight: 400;
     opacity: 0.8;
     padding-right: 24px;
     text-wrap: balance;
+}
+
+.project_title_image {
+    display: flex;
+    padding-top: 10vw;
+    align-self: center;
+    justify-self: center;
 }
 

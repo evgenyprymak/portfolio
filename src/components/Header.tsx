@@ -1,13 +1,14 @@
 import React from "react";
-import "../css/Header.css";
+import '../css/Header.css'; 
+
 
 interface HeaderProps {
   wrapperclassName?: string;
   className?: string;
   title: string;
-  description?: string | JSX.Element; // Обновляем тип description
-  size?: "large" | "medium" | "small"; // Пропс для размеров
-  color?: string; // Опциональный пропс
+  description?: string | JSX.Element; 
+  size?: "large" | "medium" | "small"; 
+  color?: string; 
 }
 
 const Header: React.FC<HeaderProps> = ({ wrapperclassName, className, title, description, size = "medium", color }) => {

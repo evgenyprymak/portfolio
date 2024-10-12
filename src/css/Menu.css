@@ -1,14 +1,17 @@
+.top-bar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    top: 40px;
+}
+
 .menu {
     color: #a5a5a5;
-    width: 100%;
     display: flex;
-    /* padding: 16px 12px; */
-    border-radius: 999px;
-    text-align: start;
     font-family: ObjectSans;
     gap: 24px;
-    position: sticky;
-    top: 40px;
 }
 
 .menu-item {
@@ -43,4 +46,8 @@
 .link:hover::before {
     transform-origin: 0% 150%;
     transform: scale3d(1, 2, 1);
+}
+
+.logo{
+    font-size: 20px;
 }

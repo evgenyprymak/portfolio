@@ -98,36 +98,45 @@ const ProjectDetails = () => {
   }, []);
 
   return (
-    <div className="container-fluid px-0 justify-content-center">
+    <div className="container-fluid px-0">
       <Menu />
-      {/* <button className="scroll-button">Scroll to Box</button> */}
-      <img className='project_title_image container-xxl' src='/portfolio/assets/quasar/quasar_title.png'></img>
+      <button className="scroll-button">Scroll to Box</button>
       <Header
-        wrapperclassName="header container-xxl pt-80 pb-40"
+        wrapperclassName="page-header container-xxl pb-40"
         size="large"
         title="Quasar"
         description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>} />
       <div className='container-xxl'>
         <div className='row row-gap-10'>
-          <Metric1 className='col-6 col-md-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
-          <Metric1 className='col-6 col-md-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Covered in ticket reservations' />
-          <Metric1 className='col-6 col-md-4 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Events ran on Quasar platform' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Tickets sold per year' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion rate' />
+          <Metric1 className='col-12 col-md-3 card-gap-10' above='Closely' mainmetric='$NDA' color='rgba(255,255,255,0.5)' below='Yearly fan savings' />
         </div>
       </div>
+      {/* <div className='container-xxl px-0'>
+        <img src='../assets/some_screens_1.png' className='py-4 container-fluid'></img>
+      </div> */}
+
       <div className='container-fluid ephasized_section mt-80 mb-20 py-80'>
         <div className='container-xxl'>
           <Header
             wrapperclassName="container-xxl py-4 px-0"
-            className='txt-dark-1'
             size="medium"
-            title="My role on the project"
+            title="My role"
           />
           <div className='row'>
-            <div className='col-3 col-md-6 px-0 role-description pe-4'>
+            <div className='col-12 col-md-6 pr-4 px-0 role-description pe-4'>
               I joined the Quasar project in the end of 2020. Prior to this, I had been working on internal tools, client portals, and client experiences to help the business accelerate and scale. By the end of 2020, I took on the responsibility of managing all product design work in the company.
             </div>
-            <div className='col-3 col-md-6 px-0 role-description pe-4'>
-              I joined the Quasar project in the end of 2020. Prior to this, I had been working on internal tools, client portals, and client experiences to help the business accelerate and scale. By the end of 2020, I took on the responsibility of managing all product design work in the company.
+            <div className='col-12 col-md-6 pb-4 px-0 role-description pe-4'>
+              During my tenure on this project, I had the pleasure of collaborating with an exceptional Product Manager and brilliant Frontend, Backend, and QA engineers. We frequently communicated with other departments in the company, including Data, Marketing, and Fan Experience.
+            </div>
+            <div className='col-12 col-md-6 pb-4 px-0 role-description pe-4'>
+              The Quasar project was built using the Xenolyte design system, which primarily focused on fan-facing interfaces. Consequently, I also took charge of managing this design system. It comprised over 50 components, ranging from basic elements to complex design components like data tables.
+            </div>
+            <div className='col-12 col-md-6 pb-4 px-0 role-description pe-4'>
+              As part of my role, I interviewed and onboarded new designers to the project. To streamline this process and support ongoing design work, I created and maintained a "Design Club" space in Notion. This resource not only ensured a more consistent and straightforward onboarding process but also served as an up-to-date repository for new information and resources.
             </div>
           </div>
         </div>

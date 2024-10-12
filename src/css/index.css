@@ -29,13 +29,10 @@ html {
   --div-dark-1: #4F4F4F;
   --active-tab: #FFFFFF;
 
-  --bg-dark-1: #111111;
+  --bg-dark-1: #070707;
   --bg-dark-2: #313133;
-
   --bg-light-1: #ECF0F4;
-
   --txt-light-1: #FFFFFF;
-  
   --txt-dark-1: #000000;
 }
 
@@ -45,6 +42,15 @@ html {
   }
 
 }
+
+.txt-light-1{
+  color: var(--txt-light-1);
+}
+
+.txt-dark-1{
+  color: var(--txt-dark-1);
+}
+
 
 
 a {
@@ -60,7 +66,7 @@ body {
   margin: 0;
   width: 100%;
   min-width: 360px;
-  color: rgba(226, 226, 226, 0.87);
+  color: #ffffff;
   background-color: var(--bg-dark-1);
   font-family: ObjectSans;
 }
@@ -142,48 +148,4 @@ body {
 .my-80{
   margin-top: 80px;
   margin-bottom: 80px;
-}
-
-
-.header-title {
-  font-family: 'Neue Machina Plain', sans-serif;
-  line-height: 135%;
-  font-weight: 500;
-  max-width: 800px;
-  text-wrap: balance;
-
-}
-
-.header-description {
-  opacity: 0.85;
-  line-height: 155%;
-  font-weight: 500;
-  max-width: 800px;
-  text-wrap: balance;
-}
-
-
-/* Размеры для заголовка и описания */
-.large {
-  font-size: clamp(56px, 6vw, 72px);
-}
-
-.large+.header-description {
-  font-size: clamp(20px, 2vw, 28px);
-}
-
-.medium {
-  font-size: clamp(28px, 6vw, 48px);
-}
-
-.medium+.header-description {
-  font-size: clamp(16px, 2.5vw, 24px);
-}
-
-.small {
-  font-size: clamp(20px, 3vw, 32px);
-}
-
-.small+.header-description {
-  font-size: 14px;
 }

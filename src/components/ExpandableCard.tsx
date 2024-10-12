@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { IoAddSharp, IoRemoveSharp } from "react-icons/io5"; // Импортируем сразу две иконки
 
-import '../css/ExpandableCard.css'; // Подключаем CSS файл
+import '../css/ExpandableCard.css';
 
 interface CardProps {
   wrapperclassName?: string;

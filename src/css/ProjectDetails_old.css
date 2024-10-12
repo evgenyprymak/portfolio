@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.row-gap-10{
+    margin: 0 -10px;
+}
+
+.card-gap-10{
+    padding: 0 10px;
+}
+
+.row-gap-2{
+    margin: 0 -2px ;
+    row-gap: 0px !important;
+}
+
+.card-gap-2{
+    padding: 0 2px;
+}
+
+.ephasized_section{
+    background-color: var(--project-quasar);
+    color: rgb(255, 255, 255);
+    border-bottom: none;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+}
+
+.role-description{
+    font-size: clamp(16px, 2.5vw, 21px);
+    font-weight: 400;
+    opacity: 0.8;
+    padding-right: 24px;
+    text-wrap: balance;
+}
+
