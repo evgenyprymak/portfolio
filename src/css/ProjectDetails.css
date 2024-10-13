@@ -30,14 +30,24 @@ html {
     color: #111111;
     border-bottom: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .role-description {
-    font-size: clamp(16px, 2.5vw, 21px);
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 400;
     opacity: 0.8;
-    padding-right: 24px;
+    padding-right: 80px;
+    padding-left: 0px;
+    padding-bottom: 20px;
     text-wrap: balance;
+
+}
+
+.role-description strong{
+    color: black;
 }
 
 .project_title_image {

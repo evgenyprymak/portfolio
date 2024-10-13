@@ -1,13 +1,13 @@
 .header-title {
     line-height: 135%;
     font-weight: 800;
-    max-width: 800px;
+    max-width: 960px;
     text-wrap: balance;
     font-feature-settings: 'ss02' on, 'ss05' on, 'ss06' on, 'ss07' on, 'liga' off, 'clig' off;
 }
 
 .header-title.large {
-    font-size: 48px;
+    font-size: 72px;
     font-family: 'Neue Machina Inktrap', sans-serif;
 }
 
@@ -21,10 +21,12 @@
 }
 
 .header-description {
-    opacity: 1;
+    opacity: 0.8;
     line-height: 155%;
     font-weight: 500;
     text-wrap: balance;
+    font-size: 28px;
+    max-width: 960px;
 }
 
 .header-description.large {

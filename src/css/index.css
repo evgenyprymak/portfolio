@@ -34,7 +34,13 @@ html {
   --bg-light-1: #ECF0F4;
   --txt-light-1: #FFFFFF;
   --txt-dark-1: #000000;
+  --txt-dark-2: #2F2F36;
+
 }
+
+
+
+
 
 @media (min-width: 992px) {
   html {
@@ -49,6 +55,10 @@ html {
 
 .txt-dark-1{
   color: var(--txt-dark-1);
+}
+
+.txt-dark-2{
+  color: var(--txt-dark-2);
 }
 
 
