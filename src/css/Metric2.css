@@ -23,12 +23,11 @@
     font-size: 18px;
 }
 .metric2_main_number{
-    font-family: 'Neue Machina Plain', sans-serif;
     font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 20px;
     padding: 0px;
-    font-size: clamp(20px, 5vw, 28px);
+    font-size: clamp(20px, 5vw, 24px);
     line-height: 100%;
 }
 .metric2_below{

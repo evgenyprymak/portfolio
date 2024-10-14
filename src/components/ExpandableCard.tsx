@@ -34,12 +34,12 @@ const ExpandableCard: React.FC<CardProps> = ({ wrapperclassName, className, titl
             {isExpanded ? (
               <IoRemoveSharp
                 className="expandable-card__icon expandable-card__icon--visible"
-                size={24}
+                size={20}
               />
             ) : (
               <IoAddSharp
                 className="expandable-card__icon expandable-card__icon--visible"
-                size={24}
+                size={20}
               />
             )}
           </div>

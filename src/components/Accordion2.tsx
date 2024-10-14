@@ -4,9 +4,9 @@ import '../css/Accordion2.css';
 
 type AccordionItem = {
   title: string;
-  details: string; // feature image
-  details_bg?: string; // image background
-  description?: string;
+  image_desktop: string;
+  details_bg?: string;
+  description?: JSX.Element | string;
 };
 type CustomAccordionProps = {
   items: AccordionItem[];
@@ -46,7 +46,7 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
           onComplete: () => {
             // Обновляем src изображения после завершения анимации
             if (imageRef.current) {
-              imageRef.current.src = items[index].details; // Обновляем src изображения
+              imageRef.current.src = items[index].image_desktop; // Обновляем src изображения
             }
           }
         });
@@ -64,21 +64,23 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
 
   return (
     <div className="accordion-container">
-      <div
-        className="details-section"
-        style={{
-          backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
-            })`,
-        }}
-      >        <div className='product_image'>
+      <div className="details-section-desktop">
+        <div
+          className="details-section"
+          style={{
+            backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
+              })`,
+          }}
+        >        <div className='product_image'>
 
-          <img
-            ref={imageRef} // Устанавливаем ссылку на изображение
-            src={items[openIndex].details}
-            alt={items[openIndex].title}
-            className='image_desktop'
-          />
+            <img
+              ref={imageRef} // Устанавливаем ссылку на изображение
+              src={items[openIndex].image_desktop}
+              alt={items[openIndex].title}
+              className='image_desktop'
+            />
 
+          </div>
         </div>
       </div>
       <div className="accordion-section">
@@ -103,14 +105,16 @@ const CustomAccordion: React.FC<CustomAccordionProps> = ({ items }) => {
                 <div className="accordion-inner-content">
                   <div className="details-content">
                     {item.description}
-                    <div
-                      className="details-section"
-                      style={{
-                        backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
-                          })`,
-                      }}
-                    >
-                      <img src={item.details} alt={item.title} className='image_mobile' />
+                    <div className="details-section-mobile">
+                      <div
+                        className="details-section"
+                        style={{
+                          backgroundImage: `url(${items[openIndex].details_bg || '/portfolio/assets/quasar/bg/bg1.png'
+                            })`,
+                        }}
+                      >
+                        <img src={item.image_desktop} alt={item.title} className='image_mobile' />
+                      </div>
                     </div>
                   </div>
                 </div>

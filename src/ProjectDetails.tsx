@@ -8,15 +8,9 @@ import Menu from './Menu';
 import Metric1 from './components/Metric1';
 import Metric2 from './components/Metric2';
 
-import ExpandableCard from './components/ExpandableCard';
 import Header from './components/Header';
 import CustomAccordion from './components/Accordion2';
 import Divider from './components/Divider';
-
-import { Tab } from '@mui/base/Tab';
-import { TabsList } from '@mui/base/TabsList';
-import { TabPanel } from '@mui/base/TabPanel';
-import { Tabs } from '@mui/base/Tabs';
 
 
 
@@ -29,31 +23,31 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const accordionItems = [
   {
     title: 'Driving Conversion Growth',
-    details: '/portfolio/assets/quasar/fastcheckout3.png',
+    image_desktop: '/portfolio/assets/quasar/fastcheckout3.png',
     details_bg: '/portfolio/assets/quasar/bg/bg1.png',
-    description: 'Our goal was simple: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough competitor analysis, identifying their strengths and weaknesses while outlining key opportunities to enhance our product. We compiled a list of improvements and developed strategies to implement them quickly. I designed interactive prototypes using Protopie and Figma, iterating through multiple versions, and conducted user testing via Useberry to refine our direction and identify quick wins for boosting conversion. Working closely with our skilled developers, we rapidly delivered the MVP. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, leading to a 38% increase in conversion. The feature became highly anticipated by other clients, and though not yet released globally, it helped the business secure significant contracts based on this conversion enhancement.'
+    description: <span>The goal: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough <strong>competitor analysis</strong>, identifying their strengths and weaknesses while <strong>outlining key opportunities</strong> to enhance our product. We compiled a list of improvements and <strong>developed strategies</strong> to implement them quickly. I designed <strong>interactive prototypes</strong> using <strong>Protopie</strong> and Figma, iterating through multiple versions, and conducted user testing via <strong>Useberry</strong> to refine our direction and identify <strong>quick wins for boosting conversion</strong>. Working closely with our skilled developers, <strong>we rapidly delivered the MVP</strong>. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, <strong>leading to a 38% increase in conversion</strong>. The feature became highly anticipated by other clients, and though not yet released globally, it helped the <strong>business secure significant contracts</strong> based on this conversion enhancement.</span>
   },
   {
     title: 'Increasing Adoption of Layaway Plans for Sales Growth',
-    details: '/portfolio/assets/quasar/quasar_lp_2.png',
+    image_desktop: '/portfolio/assets/quasar/quasar_lp_2.png',
     details_bg: '/portfolio/assets/quasar/bg/bg1.png',
     description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   },
   {
     title: 'Leverage business with increased adoption rate of Returnable Tickets',
-    details: '/portfolio/assets/quasar/quasar_returnable_2.png',
+    image_desktop: '/portfolio/assets/quasar/quasar_returnable_2.png',
     details_bg: '/portfolio/assets/quasar/bg/bg2.png',
     description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   },
   {
     title: 'Enhance the Ticket Selection Page and Bypass the Landing Page',
-    details: '/portfolio/assets/quasar/quasar_menu.png',
+    image_desktop: '/portfolio/assets/quasar/quasar_menu.png',
     details_bg: '/portfolio/assets/quasar/bg/bg2.png',
     description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   },
   {
     title: 'Multistep checkout pages',
-    details: '/portfolio/assets/quasar/quasar_multistep_checkout.png',
+    image_desktop: '/portfolio/assets/quasar/quasar_multistep_checkout.png',
     details_bg: '/portfolio/assets/quasar/bg/bg2.png',
     description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
   }
@@ -118,19 +112,19 @@ const ProjectDetails = () => {
       <div className='container-xxl'>
         <div className='row row-gap-10'>
           <Metric1 className='col-6 col-md-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
-          <Metric1 className='col-6 col-md-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Covered in ticket reservations' />
+          <Metric1 className='col-6 col-md-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
           <Metric1 className='col-6 col-md-4 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
         </div>
       </div>
-      <div className='container-fluid ephasized_section mt-40 mb-20 pt-40 px-0'>
+      <div className='container-fluid ephasized_section mt-40 pt-40 px-0'>
         <div className='container-xxl'>
           <div className='row row-gap-10'>
-            <Metric2 className='col-6 col-md-4 card-gap-10' above='My role' mainmetric='Product Designer' color='rgba(0,0,0,1)' />
-            <Metric2 className='col-6 col-md-4 card-gap-10' above='Timeline' mainmetric='2020–2024' color='rgba(0,0,0,1)' />
-            <Metric2 className='col-6 col-md-4 card-gap-10' above='Dev team size' mainmetric='5–10' color='rgba(0,0,0,1)' />
+            <Metric2 className='col-6 col-md-4 card-gap-10' above='My role' mainmetric='Product Designer' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 col-md-4 card-gap-10' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 col-md-4 card-gap-10' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
           </div>
         </div>
-        <Divider className='container-xxl px-2'/>
+        <Divider className='container-xxl px-2' />
         <div className='container-xxl'>
           <Header
             wrapperclassName="container-xxl py-4 px-0"
@@ -147,48 +141,79 @@ const ProjectDetails = () => {
             </div>
           </div>
         </div>
-        <Divider className='container-xxl px-2'/>
+        <Divider className='container-xxl px-2' />
         <Header
           wrapperclassName="container-xxl pt-4"
           className='txt-dark-2'
           size="medium"
-          description='During my time on the project, I had the pleasure of working on various aspects, each involving different constraints. Below is a quick breakdown of activities, organized by the phases of the design process:'
+          description="During my time on the project, I had the pleasure of tackling various challenges, each with its own unique constraints. Below is a quick snapshot of the key activities I worked on, organized by the different phases of the design process. While this isn't an exhaustive list, it gives you a good sense of the most impactful work I contributed to:"
           title="Design activities"
         />
-        <div className='container-xxl px-0'>
-          <div className='row'>
-            <div className='col-md-3'>
-              <div>Discover</div>
-              <ExpandableCard
-                title='Understanding patterns and behaviors of fans'
-                description='agag'
-              />
+        <div className='container-xxl'>
+          <div className='row DD'>
+            <div className='col-12 col-l-3 DD-phase'>
+              <div className='DD-wrapper'>
+                <img src='/portfolio/assets/icons/DD-icon-1.svg'></img>
+                <div>Discover</div>
+              </div>
+              <div className='design-activity'>Data-Driven Design Decisions</div>
+              <div className='design-activity'>Understanding patterns and behaviors of fans</div>
+              <div className='design-activity'>Competitor analysis</div>
+              <div className='design-activity'>Unmoderated User Research</div>
+              <div className='design-activity'>Design ideation sprints</div>
+            </div>
+            <div className='col-12 col-l-3 DD-phase'>
+              <div className='DD-wrapper'>
+                <img src='/portfolio/assets/icons/DD-icon-2.svg'></img>
+                <div>Define</div>
+              </div>
+              <div className='design-activity'>Formulating and redefining problem statements</div>
+              <div className='design-activity'>Clustering and grouping problem statements</div>
+              <div className='design-activity'>Developing use cases</div>
+              <div className='design-activity'>Maintaining feature backlog from a design perspective and insights</div>
+            </div>
+            <div className='col-12 col-l-3 DD-phase'>
+              <div className='DD-wrapper'>
+                <img src='/portfolio/assets/icons/DD-icon-3.svg'></img>
+                <div>Develop</div>
+              </div>
+              <div className='design-activity'>Creating low & high fidelity prototypes</div>
+              <div className='design-activity'>Updating a design system to ensure consistency</div>
+              <div className='design-activity'>Creating production-ready design screens & hand off</div>
+              <div className='design-activity'>Sessions with developers to assess the feasibility</div>
+              <div className='design-activity'>Collaborating with Quality Assurance, and Design QA</div>
+              <div className='design-activity'>Working with other designers to create required assets</div>
+              <div className='design-activity'>Interface animations & motion design</div>
+              <div className='design-activity'>Identifying A/B testing opportunities</div>
+            </div>
+            <div className='col-12 col-l-3 DD-phase'>
+              <div className='DD-wrapper'>
+                <img src='/portfolio/assets/icons/DD-icon-4.svg'></img>
+                <div>Deliver</div>
+              </div>
+              <div className='design-activity'>Determining data to collect for analysis.</div>
+              <div className='design-activity'>Conducting design reviews to gather feedback and improve </div>
+              <div className='design-activity'>Collaborating with content creators</div>
+              <div className='design-activity'>Performed pre-production review and collaborated</div>
+              <div className='design-activity'>Company & team wide features presentation</div>
+              <div className='design-activity'>Creating necessary admin tools or pass to another team</div>
+              <div className='design-activity'>Creating guides for clients for event customizations.</div>
             </div>
           </div>
         </div>
-      <Divider className='container-xxl px-2'/>
-
       </div>
-      <div style={{ backgroundColor: '#f1f1f1', paddingBottom: '100px' }} className="box-c px-0">
+      <div style={{ backgroundColor: '#fff', paddingBottom: '100px' }} className="features px-0">
         <Header
-          wrapperclassName="container-xxl px-4 pt-40"
+          wrapperclassName="container-xxl px-4 pt-80"
           size="medium"
           title="Projects, features & flows delivered"
-          description="Since my join the product I contributed in developing about 57 features created from scratch and improved 17 of them as well"
-          color="var(--txt-dark-1)"
+          description="Since my join the product I contributed in developing about 53 features created from scratch and improved 24 of them as well. With dependency on time to market, feasibility, "
+          color="var(--txt-dark-2)"
         />
         <div className='container-xxl px-4' style={{ height: 'auto' }} >
           <CustomAccordion items={accordionItems} />
         </div>
       </div>
-
-
-
-
-
-
-
-
     </div>
   );
 };
