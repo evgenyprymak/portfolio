@@ -1,0 +1,113 @@
+/* Card.css */
+
+.task {
+    /* width: 300px; */
+    height: 600px;
+    /* Фиксированная высота карточки */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: #F7F7F7;
+    color: var(--txt-dark-2);
+    margin-bottom: 16px;
+    text-wrap: pretty;
+}
+
+.task:hover {
+    cursor: pointer;
+}
+
+.task:hover .task-button{
+    background-color: #cccccc;
+}  
+
+
+.task-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: transform 0.3s ease;
+}
+
+.task-image {
+    background-color: #333333;
+}
+
+.task-image img {
+    width: 100%;
+    height: auto;
+    /* Высота изображения */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.task-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.task-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: #d7d7d7;
+    color: rgb(92, 92, 92);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    /* Увеличиваем z-index, чтобы кнопка всегда была сверху */
+}
+
+.task-button:hover {
+    background-color: #717171;
+}
+
+/* Описание */
+.task-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 120px;
+    overflow: hidden;
+    padding: 0 24px;
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+    transition: max-height 0.4s ease;
+    z-index: 1;
+    background-color: #F7F7F7;
+}
+
+.task-description-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.task-description-text.expanded {
+    color: var(--txt-dark-2);
+}
+
+.task-description.expanded {
+    max-height: 550px;
+    z-index: 1;
+}
+
+.task-content.expanded {
+    transform: translateY(-150px);
+}

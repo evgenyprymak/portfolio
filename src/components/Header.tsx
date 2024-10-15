@@ -8,14 +8,15 @@ interface HeaderProps {
   title: string;
   description?: string | JSX.Element; 
   size?: "large" | "medium" | "small"; 
-  color?: string; 
+  color?: string;
+  colorDescription?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ wrapperclassName, className, title, description, size = "medium", color }) => {
+const Header: React.FC<HeaderProps> = ({ wrapperclassName, className, title, description, size = "medium", color, colorDescription }) => {
   return (
     <div className={wrapperclassName}>
       <h1 className={`header-title ${size} ${className}`} style={{ color }}>{title}</h1>
-      <p className={`header-description ${size} ${color}`} style={{ color }}>{description}</p>
+      <p className={`header-description ${size} ${className}`} style={{ color: colorDescription }}>{description}</p>
     </div>
   );
 };

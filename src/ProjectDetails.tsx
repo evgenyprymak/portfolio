@@ -1,15 +1,15 @@
 // @ts-ignore
 import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import Menu from './Menu';
 import Metric1 from './components/Metric1';
 import Metric2 from './components/Metric2';
+import Task from './components/Task'
 
 import Header from './components/Header';
-import CustomAccordion from './components/Accordion2';
 import Divider from './components/Divider';
 
 
@@ -18,89 +18,55 @@ import './css/MUI-tabs.css'
 import './css/ProjectDetails.css';
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-const accordionItems = [
-  {
-    title: 'Driving Conversion Growth',
-    image_desktop: '/portfolio/assets/quasar/fastcheckout3.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
-    description: <span>The goal: to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a thorough <strong>competitor analysis</strong>, identifying their strengths and weaknesses while <strong>outlining key opportunities</strong> to enhance our product. We compiled a list of improvements and <strong>developed strategies</strong> to implement them quickly. I designed <strong>interactive prototypes</strong> using <strong>Protopie</strong> and Figma, iterating through multiple versions, and conducted user testing via <strong>Useberry</strong> to refine our direction and identify <strong>quick wins for boosting conversion</strong>. Working closely with our skilled developers, <strong>we rapidly delivered the MVP</strong>. The result was a solution that allowed fans to purchase tickets effortlessly, without filling out numerous forms or providing excessive personal information, <strong>leading to a 38% increase in conversion</strong>. The feature became highly anticipated by other clients, and though not yet released globally, it helped the <strong>business secure significant contracts</strong> based on this conversion enhancement.</span>
-  },
-  {
-    title: 'Increasing Adoption of Layaway Plans for Sales Growth',
-    image_desktop: '/portfolio/assets/quasar/quasar_lp_2.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg1.png',
-    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
-  },
-  {
-    title: 'Leverage business with increased adoption rate of Returnable Tickets',
-    image_desktop: '/portfolio/assets/quasar/quasar_returnable_2.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
-    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
-  },
-  {
-    title: 'Enhance the Ticket Selection Page and Bypass the Landing Page',
-    image_desktop: '/portfolio/assets/quasar/quasar_menu.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
-    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
-  },
-  {
-    title: 'Multistep checkout pages',
-    image_desktop: '/portfolio/assets/quasar/quasar_multistep_checkout.png',
-    details_bg: '/portfolio/assets/quasar/bg/bg2.png',
-    description: 'Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough analysis of competitors and industry trends to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned user testing with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and identifying a Minimum Viable Product (MVP) to facilitate a quick launch. By implementing A/B testing that offered Layaway Plans as the default payment method, we ultimately achieved a higher adoption rate through targeted design decisions.'
-  }
-];
-
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const ProjectDetails = () => {
-  useEffect(() => {
-    ScrollTrigger.normalizeScroll(true);
+  // useEffect(() => {
+  //   ScrollTrigger.normalizeScroll(true);
 
-    const smoothScroll = () => {
-      gsap.to(window, {
-        scrollTo: { y: ".box-c", autoKill: false },
-        duration: 1,
-        ease: "power2.inOut"
-      });
-    };
+  //   // const smoothScroll = () => {
+  //   //   gsap.to(window, {
+  //   //     scrollTo: { y: ".box-c", autoKill: false },
+  //   //     duration: 1,
+  //   //     ease: "power2.inOut"
+  //   //   });
+  //   // };
 
-    const button = document.querySelector('button');
-    if (button) {
-      button.addEventListener('click', smoothScroll);
-    }
+  //   // const button = document.querySelector('button');
+  //   // if (button) {
+  //   //   button.addEventListener('click', smoothScroll);
+  //   // }
 
-    // Анимация карточек с задержкой
-    gsap.fromTo('.expandable-card',
-      { opacity: 0, y: 150 }, // Начальное состояние
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.3,
-        ease: 'back.out(1.2)',
-        stagger: 0.1, // Задержка между анимациями карточек
-        scrollTrigger: {
-          trigger: '#double_diamond',
-          start: 'top bottom', // Когда элемент #double_diamond касается нижней части экрана
-          end: 'bottom center',
-          toggleActions: 'play none none reverse',
-          markers: false, // Можно включить markers: true для отладки
-        }
-      }
-    );
+  //   // Анимация карточек с задержкой
+  //   gsap.fromTo('.expandable-card',
+  //     { opacity: 0, y: 150 }, // Начальное состояние
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       duration: 1,
+  //       delay: 0.3,
+  //       ease: 'back.out(1.2)',
+  //       stagger: 0.1, // Задержка между анимациями карточек
+  //       scrollTrigger: {
+  //         trigger: '#double_diamond',
+  //         start: 'top bottom', // Когда элемент #double_diamond касается нижней части экрана
+  //         end: 'bottom center',
+  //         toggleActions: 'play none none reverse',
+  //         markers: false, // Можно включить markers: true для отладки
+  //       }
+  //     }
+  //   );
 
-    return () => {
-      if (button) {
-        button.removeEventListener('click', smoothScroll);
-      }
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     // if (button) {
+  //     //   button.removeEventListener('click', smoothScroll);
+  //     // }
+  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+  //   };
+  // }, []);
 
   return (
-    <div className="container-fluid px-0 justify-content-center">
+    <div className="container-fluid justify-content-center">
       <Menu />
       {/* <button className="scroll-button">Scroll to Box</button> */}
       <img className='project_title_image container-xxl' src='/portfolio/assets/quasar/quasar_title.png'></img>
@@ -108,6 +74,8 @@ const ProjectDetails = () => {
         wrapperclassName="header container-xxl pt-80 pb-40"
         size="large"
         title="Quasar"
+        color='var(--txt-light-1)'
+        colorDescription='var(--txt-light-3)'
         description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>} />
       <div className='container-xxl'>
         <div className='row row-gap-10'>
@@ -128,9 +96,10 @@ const ProjectDetails = () => {
         <div className='container-xxl'>
           <Header
             wrapperclassName="container-xxl py-4 px-0"
-            className='txt-dark-2'
             size="medium"
             title="Long story short"
+            color='var(--txt-dark-2)'
+            colorDescription='var(--txt-dark-3)'
           />
           <div className='row'>
             <div className='col-12 col-md-6 role-description'>
@@ -144,10 +113,11 @@ const ProjectDetails = () => {
         <Divider className='container-xxl px-2' />
         <Header
           wrapperclassName="container-xxl pt-4"
-          className='txt-dark-2'
           size="medium"
           description="During my time on the project, I had the pleasure of tackling various challenges, each with its own unique constraints. Below is a quick snapshot of the key activities I worked on, organized by the different phases of the design process. While this isn't an exhaustive list, it gives you a good sense of the most impactful work I contributed to:"
           title="Design activities"
+          color='var(--txt-dark-2)'
+          colorDescription='var(--txt-dark-2)'
         />
         <div className='container-xxl'>
           <div className='row DD'>
@@ -202,17 +172,46 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: '#fff', paddingBottom: '100px' }} className="features px-0">
+      <div style={{ backgroundColor: '#fff', paddingBottom: '100px' }} className="features px-0" id='features'>
         <Header
           wrapperclassName="container-xxl px-4 pt-80"
           size="medium"
           title="Projects, features & flows delivered"
           description="Since my join the product I contributed in developing about 53 features created from scratch and improved 24 of them as well. With dependency on time to market, feasibility, "
-          color="var(--txt-dark-2)"
+          color='var(--txt-dark-2)'
+          colorDescription='var(--txt-dark-2)'
         />
         <div className='container-xxl px-4' style={{ height: 'auto' }} >
-          <CustomAccordion items={accordionItems} />
+          <div className='row'>
+            <Task
+              wrapperClassName='col-md-4'
+              title='Driving Conversion Growth via Checkout Optimization'
+              description={<span>Our goal was to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a <strong>competitor analysis</strong>, and identified opportunities for improvement at some steps in User Flows. I created <strong>interactive prototypes</strong> in <strong>Protopie</strong> and <strong>Figma</strong>, tested them with users via <strong>Useberry</strong>, and after minor changes we processed to development. <strong>I worked closely with developers</strong> to launch the MVP quickly. The result was a smoother ticket purchase process with fewer forms and less personal information, leading to a <strong>38% increase in conversion</strong>. The feature gained <strong>significant interest from other clients</strong>, even before its global release.</span>}
+              image='/portfolio/assets/quasar/fastcheckout3.png'
+            />
+            <Task
+              wrapperClassName='col-md-4'
+              title='Increasing Adoption of Layaway Plans'
+              description={<span>Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough <strong>analysis of competitors and industry trends</strong> to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned <strong>user testing</strong> with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and <strong>identifying a MVP</strong> to facilitate a quick launch. By implementing <strong>A/B testing</strong> that offered Layaway Plans as the default payment method, <strong>we ultimately achieved a higher adoption rate</strong> through targeted design decisions.</span>}
+              image='/portfolio/assets/quasar/quasar_lp_2.png'
+            />
+            <Task
+              wrapperClassName='col-md-4'
+              title='Increasing Adoption of Returnable Tickets'
+              description='Our goal was to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a competitor analysis, and identified opportunities for improvement at some steps in User Flows. I created interactive prototypes in Protopie and Figma, tested them with users via Useberry, and after minor changes we processed to development. I worked closely with developers to launch the MVP quickly. The result was a smoother ticket purchase process with fewer forms and less personal information, leading to a 38% increase in conversion. The feature gained significant interest from other clients, even before its global release.'
+              image='/portfolio/assets/quasar/fastcheckout3.png'
+            />
+          </div>
         </div>
+        <Divider />
+        <Header
+          wrapperclassName="container-xxl px-4 pt-80"
+          size="medium"
+          title="Projects, features & flows delivered"
+          description="Since my join the product I contributed in developing about 53 features created from scratch and improved 24 of them as well. With dependency on time to market, feasibility, "
+          color='var(--txt-dark-2)'
+          colorDescription='var(--txt-dark-2)'
+        />
       </div>
     </div>
   );

@@ -33,6 +33,10 @@
   aspect-ratio: 3.5/4 auto;
 }
 
+.details-section-desktop{
+
+}
+
 .product_image{
   position: relative;
   display: flex;

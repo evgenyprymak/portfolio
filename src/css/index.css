@@ -22,6 +22,10 @@ html {
          :root { font-family: 'Inter var', sans-serif; }
        }
 
+
+           
+
+
   --project-quasar: #22215e;
   --project-quasar-light-1: #2a296f;
   --project-quasar-light-2: #312f78;
@@ -33,11 +37,12 @@ html {
   --bg-dark-2: #313133;
   --bg-light-1: #ECF0F4;
   --txt-light-1: #FFFFFF;
+  --txt-light-2: #FFFFFF;
+  --txt-light-3: #8B8B8F;
   --txt-dark-1: #000000;
   --txt-dark-2: #2F2F36;
-
+  --txt-dark-3: #6E6E73;
 }
-
 
 
 

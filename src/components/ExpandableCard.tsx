@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { IoAddSharp, IoRemoveSharp } from "react-icons/io5"; // Импортируем сразу две иконки
+import { IoAddSharp, IoRemoveSharp } from "react-icons/io5";
 
 import '../css/ExpandableCard.css';
 
