@@ -2,24 +2,30 @@
 
 .task {
     /* width: 300px; */
-    height: 600px;
+    height: 680px;
     /* Фиксированная высота карточки */
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     position: relative;
-    transition: all 0.3s ease;
-    background-color: #F7F7F7;
-    color: var(--txt-dark-2);
-    margin-bottom: 16px;
+    background-color: #19191a;
+    color: var(--txt-light-2);
+    margin-bottom: 32px;
     text-wrap: pretty;
+    transition: box-shadow 0.6s ease;
+
+}
+
+.task.expanded{
+    /* box-shadow: 0px 0px 0px 3px #7b92cb; */
 }
 
 .task:hover {
     cursor: pointer;
+    color: var(--txt-light-1);
 }
 
-.task:hover .task-button{
-    background-color: #cccccc;
+.task:hover .task-btn{
+    background-color: #7e7e7e;
 }  
 
 
@@ -28,15 +34,18 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -40;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    transition: transform 0.3s ease;
+    transition: transform 0.42s cubic-bezier(0.33, 1, 0.68, 1);
+    background-color: aqua;
 }
 
 .task-image {
-    background-color: #333333;
+    height: 500px;
+    background-color: #7b92cb;
+    /* overflow: hidden; */
 }
 
 .task-image img {
@@ -44,23 +53,23 @@
     height: auto;
     /* Высота изображения */
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
 
 .task-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     padding-top: 16px;
     padding-bottom: 8px;
-    transition: transform 0.3s ease;
+    padding-right: 32px;
+    /* transition: transform 0.3s ease; */
 }
 
-.task-button {
+.task-btn {
     position: absolute;
     bottom: 16px;
     right: 16px;
-    background-color: #d7d7d7;
+    background-color: #424244;
     color: rgb(92, 92, 92);
     border: none;
     border-radius: 50%;
@@ -75,39 +84,92 @@
     /* Увеличиваем z-index, чтобы кнопка всегда была сверху */
 }
 
-.task-button:hover {
-    background-color: #717171;
+.task-btn:hover {
+    background-color: #262424;
+}
+
+:root{
+    --my-ease: 0.9s cubic-bezier(0.32, 1, 0.68, 1);
 }
 
 /* Описание */
 .task-description {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
-    max-height: 120px;
+    max-height: 240px;
     overflow: hidden;
     padding: 0 24px;
-    padding-bottom: 32px;
-    margin-bottom: 40px;
-    transition: max-height 0.4s ease;
+    transition: max-height var(--my-ease), bottom var(--my-ease), padding var(--my-ease);
     z-index: 1;
-    background-color: #F7F7F7;
+    background-color: #19191a;
 }
 
 .task-description-text {
     color: rgba(0, 0, 0, 0);
+    transition: color 0.3s ease;
+    padding-bottom: 40px;
 }
 
 .task-description-text.expanded {
-    color: var(--txt-dark-2);
+    color: var(--txt-light-3);
+}
+
+.task-description-text.expanded strong{
+    color: var(--txt-light-2);
 }
 
 .task-description.expanded {
-    max-height: 550px;
+    /* bottom: 0px; */
+    max-height: 680px;
     z-index: 1;
+    /* transition: max-height cubic-bezier(0.32, 1, 0.68, 1), bottom cubic-bezier(0.32, 1, 0.68, 1), padding cubic-bezier(0.32, 1, 0.68, 1); */
+    /* padding-bottom: 60px; */
+    /* background-color: #202020; */
 }
 
 .task-content.expanded {
-    transform: translateY(-150px);
+    transform: translateY(-50px);
+}
+
+.icon{
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.icon.expanded{
+    transform: rotate(135deg);
+}
+
+.tags{
+    position: absolute;
+    z-index: 2;
+    bottom: 24px;
+    left: 24px;
+    color: #FF0000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tags span{
+    padding-right: 16px;
+}
+
+@media (max-width: 992px) {
+    .task-description{
+        max-height: 292px;
+    }
+    .task-title{
+     padding-right: 16px;   
+    }
+}
+
+@media (max-width: 1280px) {
+    .task-description{
+        max-height: 320px;
+    }
+    .task-title{
+     padding-right: 16px;   
+    }
 }

@@ -19,6 +19,14 @@ html {
     padding: 0 10px;
 }
 
+.row-gap-24 {
+    margin: 0 -24px;
+}
+
+.card-gap-24 {
+    padding: 0 24px;
+}
+
 .row-gap-2 {
     margin: 0 -2px;
     row-gap: 0px !important;

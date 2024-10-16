@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-import Menu from './Menu';
+// import Menu from './Menu';
 import Hero from './Hero';
 import Project from './Project';
 
@@ -12,7 +12,7 @@ import './css/index.css';
 const MainPage = () => {
   return (
     <div className="container-fliud px-4">
-      <Menu />
+      {/* <Menu /> */}
       <section id='hero' className='container-xxl'>
         <Hero />
       </section>
