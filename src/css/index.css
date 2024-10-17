@@ -47,12 +47,6 @@ html {
 
 
 
-@media (min-width: 992px) {
-  html {
-    overflow-y:visible;
-  }
-
-}
 
 .txt-light-1{
   color: var(--txt-light-1);
@@ -130,7 +124,16 @@ body {
   padding-bottom: 80px;
 }
 
-
+.pt-160{
+  padding-top: 160px;
+}
+.pb-160{
+  padding-bottom: 160px;
+}
+.py-160{
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
 
 .mt-20{
   margin-top: 20px;
@@ -163,4 +166,24 @@ body {
 .my-80{
   margin-top: 80px;
   margin-bottom: 80px;
+}
+
+
+@media (min-width: 992px) {
+  html {
+    overflow-y:visible;
+  }
+}
+
+@media (max-width: 992px) {
+  .pt-160{
+    padding-top: 60px;
+  }
+  .pb-160{
+    padding-bottom: 60px;
+  }
+  .py-160{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }

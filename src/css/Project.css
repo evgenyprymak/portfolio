@@ -1,6 +1,8 @@
 @import './index.css';
 
 .project_card{
+    border-radius: 16px;
+    overflow: hidden;
     font-family: ObjectSans;
     width: 100%;
     margin-bottom: 40px;

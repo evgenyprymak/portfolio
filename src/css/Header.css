@@ -7,12 +7,12 @@
 }
 
 .header-title.large {
-    font-size: 72px;
+    font-size: clamp(40px, 4vw, 72px);
     font-family: 'Neue Machina Inktrap', sans-serif;
 }
 
 .header-title.medium {
-    font-size: 40px;
+    font-size: clamp(32px, 4vw, 40px);
     font-weight: 700;
 }
 
@@ -29,13 +29,13 @@
 }
 
 .header-description.large {
-    font-size: 28px;
+    font-size: clamp(20px, 2vw, 28px);
 }
 
 .header-description.medium {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
 }
 
 .header-description.small {
-    font-size: 12px;
+    font-size: clamp(10px, 1vw, 12px);
 }

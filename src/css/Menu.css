@@ -1,10 +1,26 @@
 .top-bar{
+    position: sticky;
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    background-color: blue;
+    padding: 16px;
+    top: 0px;
+    z-index: 999;
+}
 
-    top: 40px;
+@media (max-width: 600px) {
+    .top-bar {
+        display: none;
+    }
+
+    /* Другие изменения стилей для мобильной версии */
+}
+
+
+.logo{
+    font-size: 20px;
 }
 
 .menu {
@@ -12,6 +28,7 @@
     display: flex;
     font-family: ObjectSans;
     gap: 24px;
+    margin: 0px 40px;
 }
 
 .menu-item {
@@ -48,6 +65,3 @@
     transform: scale3d(1, 2, 1);
 }
 
-.logo{
-    font-size: 20px;
-}

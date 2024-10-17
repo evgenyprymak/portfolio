@@ -1,14 +1,12 @@
 // @ts-ignore
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import MainPage from './MainPage';
 import ProjectDetails from './ProjectDetails';
 
-
-
 const App = () => {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/:id" element={<ProjectDetails />} />

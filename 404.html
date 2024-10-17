@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Page Not Found</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
 </head>
 <body>
   <script type="text/javascript">
-    var redirectTo = window.location.pathname.replace("/portfolio", "");
-    window.location.replace("/portfolio" + redirectTo);
+    // Убираем /portfolio из URL, чтобы оставить только путь
+    var redirectTo = window.location.pathname.substring(window.location.pathname.indexOf("/portfolio") + "/portfolio".length);
+    
+    // Перенаправляем на index.html, сохраняя остальную часть пути для маршрутизации на клиенте
+    window.location.replace("/portfolio/index.html" + "#" + redirectTo);
   </script>
 </body>
 </html>

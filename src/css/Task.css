@@ -24,6 +24,10 @@
     color: var(--txt-light-1);
 }
 
+.task:hover .task-description{
+    background-color: #1d1d1f;
+}
+
 .task:hover .task-btn{
     background-color: #7e7e7e;
 }  
@@ -101,7 +105,7 @@
     max-height: 240px;
     overflow: hidden;
     padding: 0 24px;
-    transition: max-height var(--my-ease), bottom var(--my-ease), padding var(--my-ease);
+    transition: max-height var(--my-ease), bottom var(--my-ease), padding var(--my-ease), background-color 0.3s ease;
     z-index: 1;
     background-color: #19191a;
 }

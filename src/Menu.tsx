@@ -4,7 +4,7 @@ import './css/Menu.css';
 
 function Menu() {
   return (
-    <div className="container-fliud px-4 top-bar">
+    <div className="container-fliud top-bar">
       <div className='logo'>Evgeny Prymak</div>
       <div className='menu'>
         <a href='#'><div className="menu-item link link--metis">Product Design</div></a>
