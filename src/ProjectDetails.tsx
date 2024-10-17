@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-import Menu from './Menu';
 import Metric1 from './components/Metric1';
 import Metric2 from './components/Metric2';
 import Task from './components/Task'
@@ -67,7 +66,6 @@ const ProjectDetails = () => {
 
   return (
     <div className="container-fluid px-0 justify-content-center">
-      <Menu />
       {/* <button className="scroll-button">Scroll to Box</button> */}
       <div className='container-xxl px-4 project_title_image'>
         <div className='title_image'>

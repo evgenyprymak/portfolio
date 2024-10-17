@@ -112,7 +112,8 @@ html {
 
 .title_image {
     position: relative;
-    z-index: 2; 
+    display: block;
+    z-index: 2;
 }
 
 .title_image img {
@@ -126,6 +127,10 @@ html {
 
 
 .title_image::before {
+
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
     content: "";
     position: absolute;
     top: 0;
@@ -142,6 +147,10 @@ html {
 
 
 .title_image::after {
+
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
     content: "";
     position: absolute;
     top: 0;

@@ -1,16 +1,23 @@
-.top-bar{
-    position: sticky;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: blue;
-    padding: 16px;
-    top: 0px;
+.top-bar-wrapper {
+    transition: all 0.3s ease; /* Плавный переход */
+    top: 0;
     z-index: 999;
+
 }
 
-@media (max-width: 600px) {
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(45, 45, 45);
+    padding: 24px 0px;
+    margin: 0px;
+    transition: all 0.3s ease; /* Плавная анимация */
+}
+
+
+
+@media (max-width: 768px) {
     .top-bar {
         display: none;
     }
@@ -28,7 +35,7 @@
     display: flex;
     font-family: ObjectSans;
     gap: 24px;
-    margin: 0px 40px;
+    margin: 0px 0px;
 }
 
 .menu-item {
