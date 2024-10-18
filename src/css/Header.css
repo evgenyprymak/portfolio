@@ -17,7 +17,9 @@
 }
 
 .header-title.small {
-    font-size: 16px;
+    font-size: clamp(28px, 4vw, 32px);
+    font-weight: 700;
+
 }
 
 .header-description {
@@ -37,5 +39,5 @@
 }
 
 .header-description.small {
-    font-size: clamp(10px, 1vw, 12px);
+    font-size: clamp(16px, 1.5vw, 20px);
 }

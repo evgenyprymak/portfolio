@@ -62,13 +62,14 @@ export class BlurScrollEffect {
         scaleY: 0.1,
         scaleX: 1.2,
         filter: 'blur(20px) brightness(10%)',
-        willChange: 'filter, transform'
+        willChange: 'filter, transform',
+        duration: 0.01,
       }, {
         ease: 'none',
         scaleY: 1,
         scaleX: 1,
         filter: 'blur(0px) brightness(100%)',
-        stagger: 0.01,
+        stagger: 0.003,
       });
     });
   }
@@ -86,15 +87,15 @@ export class BlurScrollEffect {
     // Анимация появления текста
     gsap.fromTo(chars, {
       scaleY: 0.1,
-      scaleX: 1.2,
+      scaleX: 2.2,
       filter: 'blur(20px) brightness(10%)'
     }, {
       ease: 'power2.out',
       scaleY: 1,
       scaleX: 1,
       filter: 'blur(0px) brightness(100%)',
-      stagger: 0.05,
-      duration: 1, // Длительность анимации
+      stagger: 0.01,
+      duration: 0.1, // Длительность анимации
       onComplete: () => {
         console.log('Текст показан!');
       }

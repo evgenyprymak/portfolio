@@ -12,6 +12,7 @@ interface ProjectProps {
   title: string;
   year: number;
   description: string;
+  comingsoon?: boolean;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -20,9 +21,10 @@ const Project: React.FC<ProjectProps> = ({
     title,
     year,
     description,
+    comingsoon,
   }) => {
     return (
-      <div className='project_card container-xxl'>
+      <div className={`project_card container-xxl ${comingsoon ? 'coming_soon' : ''}`}>
           <Link to={link.toString()} className='a.project_card'>
             <div className='project_image_wrapper'>
               <img

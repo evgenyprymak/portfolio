@@ -1,14 +1,20 @@
 @import './index.css';
 
 .project_card{
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
     font-family: ObjectSans;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 0px;
-    background-color: var(--bg-dark);
+    background-color: #1d1d1f;
+
 }
+
+.coming_soon{
+    opacity: 0.8;
+}
+
 
 .project_image_wrapper{
     overflow: hidden;
@@ -41,13 +47,15 @@
     font-weight: 700;
     padding: 24px;
     padding-bottom: 12px;
+    color: var(--txt-light-2);
 }
 
 .project_description{
     padding: 24px;
     padding-top: 0px;
     font-size: 16px;
-    color: grey;
+    color: var(--txt-light-3);
+    font-weight: 500;
 }
 .project_year{
     font-size: 12px;

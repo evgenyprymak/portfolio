@@ -169,6 +169,71 @@ body {
 }
 
 
+.divider-light {
+  width: 100%;
+  height: 1px; /* Высота линии */
+  background-color: rgb(77, 77, 77); /* Цвет линии */
+  border: none; /* Убедитесь, что граница не влияет на стиль */
+}
+
+.contribution div{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.contribution{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.mvp_steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--txt-light-2);
+  position: relative; /* Added to position the pseudo-element correctly */
+}
+
+.mvp_steps div {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  position: relative;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.mvp_image{
+  transform: scale(0.8);
+}
+
+.mvp_steps img {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  position: relative;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.mvp_steps div::before {
+  content: '';
+  position: absolute;
+  height: calc(100% - 10px);
+  width: 4px;
+  left: -16px; /* Adjust as necessary for spacing */
+  top: 5px;
+  border-left: 3px solid #F0C52D; /* Changed to border-left for a better visual effect */
+}
+
+.skill{
+  padding-top: 12px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 992px) {
   html {
     overflow-y:visible;
@@ -187,3 +252,4 @@ body {
     padding-bottom: 60px;
   }
 }
+
