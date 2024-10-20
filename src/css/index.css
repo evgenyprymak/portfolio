@@ -184,47 +184,7 @@ body {
 .contribution{
   padding-top: 40px;
   padding-bottom: 40px;
-}
-.mvp_steps {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: var(--txt-light-2);
-  position: relative; /* Added to position the pseudo-element correctly */
-}
 
-.mvp_steps div {
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  position: relative;
-  margin-bottom: 12px;
-  margin-left: 16px;
-  font-weight: 600;
-}
-
-.mvp_image{
-  transform: scale(0.8);
-}
-
-.mvp_steps img {
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  position: relative;
-  margin-bottom: 12px;
-  margin-left: 16px;
-  font-weight: 600;
-}
-
-.mvp_steps div::before {
-  content: '';
-  position: absolute;
-  height: calc(100% - 10px);
-  width: 4px;
-  left: -16px; /* Adjust as necessary for spacing */
-  top: 5px;
-  border-left: 3px solid #F0C52D; /* Changed to border-left for a better visual effect */
 }
 
 .skill{
@@ -233,6 +193,36 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.approach{
+  align-items: center;
+}
+
+.mvp_steps {
+  display: flex;
+  flex-direction: column;
+  color: var(--txt-light-2);
+}
+
+.levels {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-bottom: 16px;
+  font-weight: 500;
+}
+
+
+.list-number{
+  margin-right: 12px;
+  min-width: 20px;
+  color: #F0C52D;
+  font-weight: 600;
+  text-align: right;
+}
+
+
+
 
 @media (min-width: 992px) {
   html {

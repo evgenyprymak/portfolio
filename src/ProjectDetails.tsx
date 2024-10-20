@@ -1,13 +1,9 @@
 // @ts-ignore
 import React, { useEffect } from 'react';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import Metric1 from './components/Metric1';
 import Metric2 from './components/Metric2';
 import Task from './components/Task'
-
 import Header from './components/Header';
 import Divider from './components/Divider';
 
@@ -16,57 +12,52 @@ import Divider from './components/Divider';
 import './css/MUI-tabs.css'
 import './css/ProjectDetails.css';
 
+// import { gsap } from 'gsap';
+// import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// gsap.registerPlugin(ScrollToPlugin);
 
 const ProjectDetails = () => {
+
   // useEffect(() => {
-  //   ScrollTrigger.normalizeScroll(true);
-
-  //   // const smoothScroll = () => {
-  //   //   gsap.to(window, {
-  //   //     scrollTo: { y: ".box-c", autoKill: false },
-  //   //     duration: 1,
-  //   //     ease: "power2.inOut"
-  //   //   });
-  //   // };
-
-  //   // const button = document.querySelector('button');
-  //   // if (button) {
-  //   //   button.addEventListener('click', smoothScroll);
-  //   // }
-
-  //   // Анимация карточек с задержкой
-  //   gsap.fromTo('.expandable-card',
-  //     { opacity: 0, y: 150 }, // Начальное состояние
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       duration: 1,
-  //       delay: 0.3,
-  //       ease: 'back.out(1.2)',
-  //       stagger: 0.1, // Задержка между анимациями карточек
-  //       scrollTrigger: {
-  //         trigger: '#double_diamond',
-  //         start: 'top bottom', // Когда элемент #double_diamond касается нижней части экрана
-  //         end: 'bottom center',
-  //         toggleActions: 'play none none reverse',
-  //         markers: false, // Можно включить markers: true для отладки
-  //       }
-  //     }
-  //   );
-
-  //   return () => {
-  //     // if (button) {
-  //     //   button.removeEventListener('click', smoothScroll);
-  //     // }
-  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  //   };
+  //   gsap.to(window, {
+  //     scrollTo: { y: 500, autoKill: false },
+  //     duration: 2,
+  //     ease: "power2.inOut"
+  //   });
   // }, []);
+    // const button = document.querySelector('button');
+    // if (button) {
+    //   button.addEventListener('click', smoothScroll);
+    // }
+
+    // Анимация карточек с задержкой
+    // gsap.fromTo('.task',
+    //   { opacity: 0, y: 150 }, // Начальное состояние
+    //   {
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 1,
+    //     delay: 0.3,
+    //     ease: 'back.out(1.2)',
+    //     stagger: 0.1, 
+    //     scrollTrigger: {
+    //       trigger: '#features',
+    //       start: 'top bottom',
+    //       end: 'bottom center',
+    //       toggleActions: 'play none none reverse',
+    //       markers: false, 
+    //     }
+    //   }
+    // );
+
+    // return () => {
+    //   ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    // };
+
 
   return (
-    <div className="container-fluid px-0 justify-content-center">
-      {/* <button className="scroll-button">Scroll to Box</button> */}
+    <div className="container-fluid px-0 justify-content-center" style={{height: '5000px'}}>
       <div className='container-xxl px-4 project_title_image'>
         <div className='title_image'>
           <img 
@@ -86,7 +77,8 @@ const ProjectDetails = () => {
         title="Quasar"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
-        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>} />
+        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>} 
+      />
       <div className='container-xxl px-4'>
         <div className='row row-gap-10'>
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
@@ -179,13 +171,13 @@ const ProjectDetails = () => {
                   <img src='/portfolio/assets/icons/DD-icon-4.svg'></img>
                   <div>Deliver</div>
                 </div>
-                <div className='design-activity'>Determining data to collect for analysis.</div>
+                <div className='design-activity'>Determining data to collect for analysis</div>
                 <div className='design-activity'>Conducting design reviews to gather feedback and improve </div>
                 <div className='design-activity'>Collaborating with content creators</div>
-                <div className='design-activity'>Performed pre-production review and collaborated</div>
+                <div className='design-activity'>Performed pre-production reviews</div>
                 <div className='design-activity'>Company & team wide features presentation</div>
                 <div className='design-activity'>Creating necessary admin tools or pass to another team</div>
-                <div className='design-activity'>Creating guides for clients for event customizations.</div>
+                <div className='design-activity'>Creating guides for clients for event customizations</div>
               </div>
             </div>
           </div>
@@ -246,7 +238,7 @@ const ProjectDetails = () => {
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
               bgColor='#6493B5'
               title='Evolving UX of Complex Products'
-              description={<span>I <strong>redefined the problem</strong>, shifting from addressing specific client needs to creating a <strong>platform-wide solution</strong>. This redesign aimed to solve UI issues, <strong>meet new business requirements</strong>, and provide fans with clearer information about content and availability. We also considered how availability was dependent on option selection.<br /><br /><br /><br /><br /><br /><br /></span>}
+              description={<span>The business tasked us with <strong>unlocking sales for a complex product</strong> for a specific client. Based on our insights, <strong>I redefined the problem</strong>, identifying broader issues with complex products. I shifted the focus from addressing a single client’s needs to developing a <strong>platform-wide solution</strong>. This redesign addressed UI challenges, met new business requirements, and provided fans with clearer information about tickets availability, taking into account how option selection impacted by availability. The feature saw <strong>high adoption</strong> among clients and received <strong>very positive feedback</strong>.</span>}
               image='/portfolio/assets/quasar/quasar_products_2.png'
             />
             <Task

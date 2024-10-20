@@ -6,7 +6,7 @@ const Menu = () => {
   const topBarRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="container-xxl top-bar-wrapper">
+    <div className="container-xxl top-bar-wrapper" id="menu">
       <div className="top-bar" ref={topBarRef}>
         <div className='logo'><a href='#/'>Evgeny Prymak</a></div>
         <div className='menu'>

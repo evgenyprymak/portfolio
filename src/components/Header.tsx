@@ -5,7 +5,7 @@ import '../css/Header.css';
 interface HeaderProps {
   wrapperclassName?: string;
   className?: string;
-  title: string;
+  title: string | JSX.Element;
   description?: string | JSX.Element; 
   size?: "large" | "medium" | "small"; 
   alignment?: "left" | "center";
