@@ -1,5 +1,6 @@
 .top-bar-wrapper {
     transition: all 0.3s ease; /* Плавный переход */
+    padding: 0 24px;
     top: 0;
     z-index: 999;
 
@@ -21,8 +22,6 @@
     .menu {
         display: none;
     }
-
-    /* Другие изменения стилей для мобильной версии */
 }
 
 

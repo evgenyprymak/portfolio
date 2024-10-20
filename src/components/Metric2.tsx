@@ -9,7 +9,7 @@ interface MetricProps {
   color?: string; // Опциональный пропс
 }
 
-const Metric1: React.FC<MetricProps> = ({ className, above, mainmetric, below, color }) => {
+const Metric1: React.FC<MetricProps> = ({ className, above, mainmetric, below, color="#555555" }) => {
   return (
     <div className={`metric2_card ${className || ''}`}>
       <p className="metric2_above">{above}</p>
@@ -17,13 +17,6 @@ const Metric1: React.FC<MetricProps> = ({ className, above, mainmetric, below, c
       <p className="metric2_below">{below}</p>
     </div>
   );
-};
-
-Metric1.defaultProps = {
-  color: '#555555',
-  above: 'Default Above',
-  mainmetric: '0%',
-  below: '',
 };
 
 export default Metric1;

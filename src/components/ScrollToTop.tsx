@@ -5,10 +5,11 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Прокрутка к верхней части при изменении пути
+    document.querySelector('body')?.scrollTo(0, 0);
   }, [pathname]);
 
-  return null;
+  return null; // Не нужно ничего рендерить
 };
 
 export default ScrollToTop;
