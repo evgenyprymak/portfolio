@@ -52,7 +52,7 @@
 
 .task-image {
     height: 600px;
-    background-color: #7b92cb;
+    background-color: #19191a;
     transition: transform 0.9s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.9s ease;
     /* overflow: hidden; */
 }
@@ -163,6 +163,16 @@
 
 .tags span{
     padding-right: 16px;
+}
+
+
+@media (max-width: 420px) {
+    .task-image img {
+        width: 100%;
+        height: calc(100% - 148px);
+        object-fit: cover;
+    }
+     
 }
 
 @media (max-width: 992px) {

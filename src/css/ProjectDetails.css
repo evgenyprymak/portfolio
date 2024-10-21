@@ -244,8 +244,18 @@ html {
     border-bottom: none;
 }
 
+.return-home{
+    position: relative;
+    padding: 24px;
+    background-color: #19191a;
+    border-radius: 16px;
+    left: calc(50% - 77px);
+}
+
 
 @media (max-width: 992px) {
+
+    
     .DD{
         margin-top: 16px;
         margin-bottom: 16px;
