@@ -6,6 +6,7 @@ import Metric2 from './components/Metric2';
 import Task from './components/Task'
 import Header from './components/Header';
 import Divider from './components/Divider';
+import PageHero from './components/PageHero';
 
 import './css/ProjectDetails.css';
 
@@ -14,41 +15,29 @@ const ProjectDetails = () => {
 
   return (
     <div className="container-fluid px-0 justify-content-center">
-      <div className='container-xxl px-4 project_title_image'>
-        <div className='title_image'>
-          <img
-            src='/portfolio/assets/quasar/quasar_main_image_desktop.jpg'
-            srcSet="/portfolio/assets/quasar/quasar_main_image_mobile.jpg 600w, /portfolio/assets/quasar/quasar_main_image_desktop.jpg 1200w"
-            sizes="(max-width: 600px) 100vw, 1200px"
-            alt="Quasar. The ticketing platform."
-          />
-          <div className="shadow blue-shadow"></div>
-          <div className="shadow red-shadow"></div>
-        </div>
-      </div>
-      <Header
-        wrapperclassName="header container-xxl pt-80 pb-40 px-4 "
-        alignment='left'
-        size="large"
-        title="Quasar"
+      <PageHero
+        title={<span>Quasar. <br/>The Ticketing Platform.</span>}
+        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}
+        wrapperclassName="container-fluid"
+        imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg"
+        imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
-        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}
       />
-
       <div className='container-xxl px-4'>
-        <div className='row row-gap-10'>
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
+        <div className='row row-gap-2'>
+          <Metric1 className='col-6 col-lg-4 card-gap-2' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
+          <Metric1 className='col-6 col-lg-4 card-gap-2' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
+          <Metric1 className='col-6 col-lg-4 card-gap-2' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
         </div>
       </div>
       <div className='container-fluid ephasized_section mt-40 pt-40 px-0'>
         <div className='container-xxl px-4'>
-          <div className='row row-gap-10'>
-            <Metric2 className='col-6 col-lg-4 card-gap-10' above='My role' mainmetric='Product Designer' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 col-lg-4 card-gap-10' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 col-lg-4 card-gap-10' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
+          <div className='row row-gap-2'>
+            <Metric2 className='col-6 col-lg-3 card-gap-2' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 col-lg-3 card-gap-2' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 col-lg-3 card-gap-2' above='Design team size' mainmetric='1–2' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 col-lg-3 card-gap-2' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
           </div>
         </div>
         <Divider className='container-xxl px-4' />
@@ -79,8 +68,8 @@ const ProjectDetails = () => {
           colorDescription='var(--txt-dark-2)'
         />
         <div className='container-xxl px-4'>
-          <div className='row row-gap-10 DD'>
-            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
+          <div className='row row-gap-2 DD'>
+            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-1.svg'></img>
@@ -93,7 +82,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Design ideation sprints</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-2.svg'></img>
@@ -105,7 +94,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Maintaining feature backlog from a design perspective and insights</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-3.svg'></img>
@@ -121,7 +110,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Identifying A/B testing opportunities</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
               <div className='DD-wrapper'>
 
                 <div className='DD-header'>
@@ -159,24 +148,24 @@ const ProjectDetails = () => {
           <div className='row row-gap-10 pt-40'>
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
-              bgColor='#1B2061'
+              bgColor='#111111'
               title='Driving Conversion Growth via Checkout Optimization'
               description={<span>Our goal was to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a <strong>competitor analysis</strong>, and identified opportunities for improvement at some steps in User Flows. I created <strong>interactive prototypes</strong> in <strong>Protopie</strong> and <strong>Figma</strong>, tested them with users via <strong>Useberry</strong>, and after minor changes we processed to development. <strong>I worked closely with developers</strong> to launch the MVP quickly. The result was a smoother ticket purchase process with fewer forms and less personal information, leading to a <strong>38% increase in conversion</strong>. The feature gained <strong>significant interest from other clients</strong>, even before its global release.</span>}
-              image='/portfolio/assets/quasar/quasar_fastcheckout.png'
+              image='/portfolio/assets/quasar/quasar_fastcheckout_v3.jpg'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
               bgColor='#1B2061'
               title='Increasing Adoption of Layaway Plans'
               description={<span>Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough <strong>analysis of competitors and industry trends</strong> to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned <strong>user testing</strong> with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and <strong>identifying a MVP</strong> to facilitate a quick launch. By implementing <strong>A/B testing</strong> that offered Layaway Plans as the default payment method, <strong>we ultimately achieved a higher adoption rate</strong> through targeted design decisions.</span>}
-              image='/portfolio/assets/quasar/quasar_lp.png'
+              image='/portfolio/assets/quasar/quasar_lp_v3.jpg'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
               bgColor='#1B2061'
               title='Leveraging Returnable Tickets to Drive Business Growth'
               description={<span>Returnable tickets, one of our <strong>core win-win solutions</strong>, required design improvements to key touchpoints. After gathering <strong>fan feedback</strong> from the initial release, we identified several areas for enhancement. Recognizing the value this feature brought to both fans and the business, we decided to further leverage its usage. The redesigned solution introduced Returnable tickets at multiple points during the fan journey, resulting in a <strong>20% increase in adoption</strong> of the <strong>MVP</strong> version. Some of these improvements were added to the product roadmap, with the potential to boost adoption even further.</span>}
-              image='/portfolio/assets/quasar/quasar_returnable.png'
+              image='/portfolio/assets/quasar/quasar_returnable_v3.jpg'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'

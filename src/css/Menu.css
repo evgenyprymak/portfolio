@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(45, 45, 45);
+    /* border-bottom: 1px solid rgb(45, 45, 45); */
     padding: 24px 0px;
     margin: 0px;
     transition: all 0.3s ease; /* Плавная анимация */
