@@ -152,6 +152,8 @@ const ProjectDetails = () => {
               title='Driving Conversion Growth via Checkout Optimization'
               description={<span>Our goal was to become the leading ticketing platform. Together with our Head of Product and Product Manager, we conducted a <strong>competitor analysis</strong>, and identified opportunities for improvement at some steps in User Flows. I created <strong>interactive prototypes</strong> in <strong>Protopie</strong> and <strong>Figma</strong>, tested them with users via <strong>Useberry</strong>, and after minor changes we processed to development. <strong>I worked closely with developers</strong> to launch the MVP quickly. The result was a smoother ticket purchase process with fewer forms and less personal information, leading to a <strong>38% increase in conversion</strong>. The feature gained <strong>significant interest from other clients</strong>, even before its global release.</span>}
               image='/portfolio/assets/quasar/quasar_fastcheckout_v3.jpg'
+              tag1='Competitor Analysis'
+              tag2='User Testing'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -159,6 +161,8 @@ const ProjectDetails = () => {
               title='Increasing Adoption of Layaway Plans'
               description={<span>Our in-house Layaway Plans generated significant revenue for the business, prompting us to explore ways to increase their adoption rate. To achieve this, I conducted a thorough <strong>analysis of competitors and industry trends</strong> to understand how Buy Now, Pay Later (BNPL) and Layaway Plans are currently implemented by popular services. I planned <strong>user testing</strong> with interactive prototypes and surveys to gather feedback, while also developing a comprehensive vision for the feature and <strong>identifying a MVP</strong> to facilitate a quick launch. By implementing <strong>A/B testing</strong> that offered Layaway Plans as the default payment method, <strong>we ultimately achieved a higher adoption rate</strong> through targeted design decisions.</span>}
               image='/portfolio/assets/quasar/quasar_lp_v3.jpg'
+              tag1='User, A/B Testing'
+              tag2='MVP'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -166,6 +170,8 @@ const ProjectDetails = () => {
               title='Leveraging Returnable Tickets to Drive Business Growth'
               description={<span>Returnable tickets, one of our <strong>core win-win solutions</strong>, required design improvements to key touchpoints. After gathering <strong>fan feedback</strong> from the initial release, we identified several areas for enhancement. Recognizing the value this feature brought to both fans and the business, we decided to further leverage its usage. The redesigned solution introduced Returnable tickets at multiple points during the fan journey, resulting in a <strong>20% increase in adoption</strong> of the <strong>MVP</strong> version. Some of these improvements were added to the product roadmap, with the potential to boost adoption even further.</span>}
               image='/portfolio/assets/quasar/quasar_returnable_v3.jpg'
+              tag1='User Feedback'
+              tag2='Information Architecture'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -173,12 +179,16 @@ const ProjectDetails = () => {
               title='Streamlining User Navigation from Client to Ticket Purchase'
               description={<span>After switching to primary sales, we realized that the event Landing page in fan navigation from the client site to Lyte no longer served its intended purpose. Additionally, we received feedback and requirements for improvements to the Landing page, as it lacked functionality to display key information. I conducted <strong>desk research</strong>, <strong>competitor analysis</strong>, and <strong>user flow reviews</strong>. I proposed rethinking how we and our clients navigate fans to the ticket purchase. This <strong>solution was highly adopted by clients</strong> and <strong>significantly improved the overall fan experience</strong>.</span>}
               image='/portfolio/assets/quasar/quasar_menu.png'
+              tag1='User Flow'
+              tag2='Information Architecture'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
               title='Multistep Checkout Experience'
               description={<span>We addressed both technical challenges and design needs by restructuring a complex checkout process into multiple steps. Using the <strong>Chunking UX principle</strong>, we designed a flow that minimized <strong>cognitive load</strong>, ensuring a <strong>smoother and more effective checkout experience</strong>, which played a <strong>critical role in boosting conversion</strong>. The new design was also built with <strong>scalability in mind</strong>, allowing for the <strong>easy addition of future features</strong> without requiring significant development or design time for future improvements.<br /><br /><br /></span>}
               image='/portfolio/assets/quasar/quasar_multistep_checkout.png'
+              tag1='Chunking UX'
+              tag2='Scalability'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -186,13 +196,16 @@ const ProjectDetails = () => {
               title='Evolving UX of Complex Products'
               description={<span>The business tasked us with <strong>unlocking sales for a complex product</strong> for a specific client. Based on our insights, <strong>I redefined the problem</strong>, identifying broader issues with complex products. I shifted the focus from addressing a single client’s needs to developing a <strong>platform-wide solution</strong>. This redesign addressed UI challenges, met new business requirements, and provided fans with clearer information about tickets availability, taking into account how option selection impacted by availability. The feature saw <strong>high adoption</strong> among clients and received <strong>very positive feedback</strong>.</span>}
               image='/portfolio/assets/quasar/quasar_products_2.png'
+              tag1='Problem Redefinition'
+              tag2='Interface Animation'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
               bgColor="#AE895C"
               title='Unlocking Sales with Restricted Payment Methods'
               description={<span>We enabled clients to sell specific ticket types on our platform by updating ticket cards with appropriate imagery that clearly showed any restrictions. Additionally, we enhanced the info section on the ticket selection page and updated the checkout functionality to support this feature. The feature was delivered under a tight deadline, significantly improving communication with the client and <strong>securing more contracts</strong> for the company.</span>}
-              image='/portfolio/assets/quasar/quasar_restricted_payments.png'
+              image='/portfolio/assets/quasar/quasar_restricted_payments_v3.jpg'
+              tag1='Growth-Focused Design'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -200,6 +213,7 @@ const ProjectDetails = () => {
               title='Increasing Conversion by Abandoned Cart emails'
               description={<span>I defined when, how, and what to send to fans who abandoned their carts. We explored multiple <strong>campaign title options</strong> and <strong>call-to-action strategies</strong> to increase conversion. I also developed a plan for future design improvements aimed at enhancing engagement with fans who abandoned their carts.</span>}
               image='/portfolio/assets/quasar/quasar_abandoned_cart.png'
+              tag1='Conversion Optimization'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -207,6 +221,8 @@ const ProjectDetails = () => {
               title='Boost Sales with New Promotions on the Platform'
               description={<span>I unlocked the power of <strong>promotions</strong> for both the business and clients, enabling them to boost sales through a variety of promotion types. I conducted desk research, analyzed user flows, and collaborated with PMs and developers to handle edge cases. The improved design incorporated <strong>various states</strong> and high levels of customization, updating the <strong>design system</strong>. The feature was highly adopted by clients and internally, leading to a <strong>significant increase in sales</strong>.</span>}
               image='/portfolio/assets/quasar/quasar_promotions.png'
+              tag1='User Flow'
+              tag2='Client Activation'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -214,6 +230,8 @@ const ProjectDetails = () => {
               title='Streamlining Ticket Activation for Improved User Experience'
               description={<span>We were tasked with enabling the Ticket Activation process for the Australian market, as it was crucial for our clients there. I conducted desk research, identified multiple approaches, and <strong>collaborated with the team</strong> to assess feasibility and design the process for this feature. By uniquely combining existing patterns with new functionality, we were able to <strong>deliver the feature under a tight deadline</strong>. The feature was <strong>highly adopted by clients</strong> and secured more contracts for the following year.</span>}
               image='/portfolio/assets/quasar/quasar_activation.png'
+              tag1='Clients Activation'
+              tag2=''
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -221,6 +239,8 @@ const ProjectDetails = () => {
               title='My Tix Pages on the Platform'
               description={<span><strong>We identified a gap</strong> in the fan journey when it came to managing their tickets. <strong>I conducted extensive research</strong> and identified the best possible solution within the constraints of feasibility. This section also <strong>unlocked the power of our platform</strong> by displaying integrated tickets from various ticketing platforms, giving us the <strong>opportunity to upsell our service</strong> for events where fans hadn’t initially planned to use it. Additionally, the design supported cases where users could navigate to closed events to view the status of their returns, which was previously inaccessible but essential for certain user groups.</span>}
               image='/portfolio/assets/quasar/quasar_my_tickets.png'
+              tag1='Information Architecture'
+              tag2='Business Growth'
             />
             <Task
               wrapperClassName='col-md-6 col-lg-4 card-gap-10'
@@ -228,6 +248,8 @@ const ProjectDetails = () => {
               title='Enhancing Fan-to-Fan Exchanges'
               description={<span>As our platform evolved, the Fan-to-Fan exchanges required a redesign that could be <strong>implemented with low costs</strong>. <strong>I identified weak points and dead ends</strong> in the current process and <strong>turned these into opportunities</strong> to <strong>increase sales</strong>. We also conducted <strong>A/B testing</strong> on specific design solutions, identifying the most effective ones. The new design provided <strong>greater clarity for users</strong>, addressing previously reported issues with how information was presented.</span>}
               image='/portfolio/assets/quasar/quasar_private_exchange.png'
+              tag1='User Centered Design'
+              tag2='User Flow'
             />
           </div>
         </div>

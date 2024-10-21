@@ -9,11 +9,11 @@ interface TaskProps {
     details_bg?: string;
     description?: JSX.Element | string;
     bgColor?: string;
-    // tag1?: string;
-    // tag2?: string;
+    tag1?: string;
+    tag2?: string;
 }
 
-const Task: React.FC<TaskProps> = ({ wrapperClassName, title, description, image, bgColor="#7b92cb"}) => {
+const Task: React.FC<TaskProps> = ({ wrapperClassName, title, description, image, bgColor="#7b92cb", tag1, tag2}) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleDescription = () => {
@@ -33,7 +33,7 @@ const Task: React.FC<TaskProps> = ({ wrapperClassName, title, description, image
                 <button className="task-btn" onClick={toggleDescription}>
                     <img src='/portfolio/assets/icons/icon_close.svg' alt="Close" className={`icon ${isExpanded ? 'expanded' : ''}`} />
                 </button>
-                {/* <div className='tags'><span>{tag1}</span><span>{tag2}</span></div> */}
+                <div className='tags'><span>{tag1}</span><span>{tag2}</span></div>
             </div>
         </div>
     );
