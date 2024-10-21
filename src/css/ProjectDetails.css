@@ -47,6 +47,15 @@ html {
     flex-direction: column;
 }
 
+.dark_section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #070707;
+    color: var(--txt-light-2);
+}
+
+
 .role-description {
     font-size: clamp(16px, 2vw, 20px);
     font-weight: 500;
@@ -252,6 +261,9 @@ html {
     left: calc(50% - 77px);
 }
 
+.inline-image{
+    width: 100%;
+}
 
 @media (max-width: 992px) {
 

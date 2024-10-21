@@ -6,15 +6,12 @@ import ScrollToTop from '../src/components/ScrollToTop';
 import MainPage from './MainPage';
 import Menu from './Menu';
 import ProjectDetails from './ProjectDetails';
-import ProjectDetailsDashboard from './ProjectDetailsProcedural';
+import ProjectDetailsDashboard from './ProjectDetailsDashboard';
 
 
 
 const App = () => {
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
 
 
   return (

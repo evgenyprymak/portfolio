@@ -68,14 +68,11 @@ const MainPage = () => {
           <div className='skill'>Data-Driven Design Strategies</div>
           <div className='skill'>Cross-Functional Collaboration</div>
           <div className='skill'>Iterative Prototyping and User Testing</div>
-
         </div>
         <div className='col-lg-4 col-md-6'>
-
           <div className='skill'>Design Systems</div>
           <div className='skill'>Enhancing Product Usability</div>
           <div className='skill'>Leveraging User Behavior by Analytics</div>
-
           <div className='skill'>0<img src='/portfolio/assets/icons/arrow.svg' style={{ height: '14px', marginLeft: '4px', marginRight: '4px', }}></img>1 Products</div>
           <div className='skill'>Presentation & Pitching</div>
           <div className='skill'>B2B, B2C, SaaS</div>
@@ -131,7 +128,7 @@ const MainPage = () => {
           <div className='col-md-12 col-lg-6 card-gap-10'>
             <Project
               comingsoon
-              link='#'
+              link='/project/2'
               image='assets/project_dashboard.png'
               title="Lyte Dashboard"
               year={2019}
