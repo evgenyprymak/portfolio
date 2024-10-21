@@ -1,11 +1,14 @@
 // @ts-ignore
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
-import MainPage from './MainPage';
-import ProjectDetails from './ProjectDetails';
-import ProjectDetailsProcedural from './ProjectDetailsProcedural';
-import Menu from './Menu';
 import ScrollToTop from '../src/components/ScrollToTop';
+
+import MainPage from './MainPage';
+import Menu from './Menu';
+import ProjectDetails from './ProjectDetails';
+import ProjectDetailsDashboard from './ProjectDetailsProcedural';
+
+
 
 const App = () => {
 
@@ -21,7 +24,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/project/1" element={<ProjectDetails />} />
-        <Route path="/project/2" element={<ProjectDetailsProcedural />} />
+        <Route path="/project/2" element={<ProjectDetailsDashboard />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
