@@ -21,7 +21,7 @@
     margin: 0px;
     padding-top: 20px;
     font-size: 18px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid var(--bg-light-4);
 }
 .metric1_main_number{
     font-family: 'Neue Machina Plain', sans-serif;

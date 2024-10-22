@@ -263,11 +263,10 @@ html {
 
 .inline-image{
     width: 100%;
+    border-radius: 16px;
 }
 
 @media (max-width: 992px) {
-
-    
     .DD{
         margin-top: 16px;
         margin-bottom: 16px;
@@ -281,5 +280,8 @@ html {
     }
     .design-activity{
         min-height: auto;
+    }
+    .inline-image{
+        border-radius: 8px;
     }
 }

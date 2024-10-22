@@ -2,14 +2,14 @@ import React from 'react';
 import '../css/Divider.css';
 
 interface CardProps {
-  type?: string;
+  type?: "dark" | "light"; 
   className?: string;
 }
 
-const Divider: React.FC<CardProps> = ({ className }) => {
+const Divider: React.FC<CardProps> = ({ className, type='dark' }) => {
   return (
     <div className={`divider-wrapper ${className || ''}`}>
-      <div className="divider"></div>
+      <div className={`divider ${type}`}></div>
     </div>
   );
 };
