@@ -1,12 +1,18 @@
 // @ts-ignore
 import React, { useEffect } from "react";
-import { ImageNames } from './ImageNames';
+import { ImageNames } from './ImageNamesProcedural';
+// import { ImageNames2 } from './ImageNamesOldWorks';
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import "../css/ImageGallery.css";
 
-const basePath = 'assets/procedural/'; // путь до папки images в public
+interface ImageGalleryProps {
+  source?: string[]; // Ожидаем массив строк (названия изображений)
+  basePath?: string; // Добавляем возможность менять базовый путь
+}
+
+
 
 const squareVariants = {
   visible: (index: number) => ({
@@ -23,11 +29,14 @@ const squareVariants = {
   hidden: { opacity: 0, scale: 1, scaleX: 1.5, y: 50 }, // Добавление начального вращения
 };
 
-const ImageGallery = () => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  source = ImageNames,
+  basePath = 'assets/procedural/'
+}) => {
   return (
     <div>
       <div className='row row-gap-10'>
-        {ImageNames.map((name, index) => {
+        {source.map((name, index) => {
           const controls = useAnimation();
           const [ref, inView] = useInView({
             triggerOnce: true, // анимация срабатывает один раз

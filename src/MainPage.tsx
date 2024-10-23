@@ -64,6 +64,7 @@ const MainPage = () => {
             title='Expertise'
             description={<span>Refined over 18+ years of commercial experience.</span>}
             size='small'
+            colorDescription='var(--txt-light-3)'
           />
           <div className='col-lg-4 col-md-6'>
             <div className='skill'>Design Leadership</div>
@@ -105,7 +106,6 @@ const MainPage = () => {
               speed={1.3}
               src="/portfolio/assets/animation/MVP_time_remap.json"
               style={{ width: '90%', height: '400px' }}
-  
             ></lottie-player>
           </div>
           <div className='col-lg-5 col-md-12 mvp_steps'>
@@ -193,6 +193,15 @@ const MainPage = () => {
                 title="Capital.com Trading Platform"
                 year={2019}
                 description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
+              />
+            </div>
+            <div className='col-md-12 col-lg-6 card-gap-10'>
+              <Project
+                link='/project/99'
+                image='assets/project_old.jpg'
+                title="Old Projects"
+                year={2019}
+                description="Early work in UX/UI design, web design, and game design, marking the start of my design journey."
               />
             </div>
           </div>

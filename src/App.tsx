@@ -7,6 +7,7 @@ import MainPage from './MainPage';
 import ProjectDetails from './ProjectDetails';
 import ProjectDetailsDashboard from './ProjectDetailsDashboard';
 import ProjectDetailsProcedural from './ProjectDetailsProcedural';
+import ProjectDetailsOldWorks from './ProjectDetailsOldWorks';
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/project/1" element={<ProjectDetails />} />
         <Route path="/project/2" element={<ProjectDetailsDashboard />} />
         <Route path="/project/100" element={<ProjectDetailsProcedural />} />
+        <Route path="/project/99" element={<ProjectDetailsOldWorks />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
