@@ -70,17 +70,6 @@ html, body {
   color: var(--txt-dark-2);
 }
 
-
-
-a {
-  font-weight: 700;
-  color: #b7b7b7;
-  text-decoration: none;
-}
-a:hover {
-  color: #fff;
-}
-
 body {
   margin: 0;
   width: 100%;
@@ -252,6 +241,23 @@ body {
   color: var(--txt-light-3);
   font-weight: 500;
   text-align: right;
+}
+
+
+
+.cta-button-row{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.cta-button{
+  border-radius: 8px;
+  /* background-color: red; */
+  font-size: 16px;
+  font-weight: 700;
+  /* padding: 0px 16px; */
 }
 
 

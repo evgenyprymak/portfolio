@@ -33,5 +33,5 @@
   "include": [
     "src",
     "custom-elements.d.ts"
-  ]
+, "generateImageProcedural.js"  ]
 }

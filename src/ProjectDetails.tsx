@@ -11,16 +11,19 @@ import { Link } from 'react-router-dom';
 
 
 import './css/ProjectDetails.css';
+import Menu from './Menu';
 
 
 const ProjectDetails = () => {
 
   return (
     <div className="container-fluid px-0 justify-content-center">
+      <Menu productDesign />
       <PageHero
         title={<span>Quasar. <br/>The Ticketing Platform.</span>}
         description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}
         wrapperclassName="container-fluid"
+        headerwrapper='pb-40'
         imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg"
         imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg"
         color='var(--txt-light-1)'

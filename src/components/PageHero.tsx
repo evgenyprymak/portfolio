@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 
 interface PageHero {
   wrapperclassName?: string;
+  headerwrapper?: string;
   className?: string;
   title: string | JSX.Element; 
   description?: string | JSX.Element; 
@@ -15,7 +16,7 @@ interface PageHero {
   imageDesktop?: string;
 }
 
-const PageHero: React.FC<PageHero> = ({ wrapperclassName, title, description,  alignment, color, colorDescription, imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg", imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg" }) => {
+const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, description,  alignment, color, colorDescription, imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg", imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg" }) => {
   return (
     <motion.div
           animate={{
@@ -26,10 +27,10 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, title, description,  a
             ease: "easeInOut",
           }}
     >
-    <div className={`page-hero-main ${wrapperclassName}`}>
-      <div className="page-hero-wrapper">
+    <div className="page-hero-main">
+      <div className={`page-hero-wrapper ${wrapperclassName}`}>
         <div className="page-hero-content">
-          <div className="page-hero-header-wrapper container-xxl">
+          <div className={`page-hero-header-wrapper container-xxl ${headerwrapper}`}>
             <Header
               wrapperclassName="header px-2 z-3"
               alignment={alignment}
