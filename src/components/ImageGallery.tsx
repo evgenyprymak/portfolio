@@ -1,7 +1,6 @@
 // @ts-ignore
 import React, { useEffect } from "react";
 import { ImageNames } from './ImageNamesProcedural';
-// import { ImageNames2 } from './ImageNamesOldWorks';
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,6 +9,7 @@ import "../css/ImageGallery.css";
 interface ImageGalleryProps {
   source?: string[]; // Ожидаем массив строк (названия изображений)
   basePath?: string; // Добавляем возможность менять базовый путь
+  aspectRatio?: string;
 }
 
 
@@ -31,7 +31,8 @@ const squareVariants = {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({
   source = ImageNames,
-  basePath = 'assets/procedural/'
+  basePath = 'assets/procedural/',
+  aspectRatio = "9 / 12"
 }) => {
   return (
     <div>
@@ -50,7 +51,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
           }, [controls, inView]);
 
           return (
-            <div className='col-6 col-lg-4 gallery-image-wrapper card-gap-10' key={name}>
+            <div 
+            className='col-6 col-lg-4 gallery-image-wrapper aspect-ratio card-gap-10' 
+            key={name}
+            style={{ aspectRatio }}
+            >
               <motion.div
                 ref={ref}
                 initial="hidden"

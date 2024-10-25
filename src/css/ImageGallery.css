@@ -2,9 +2,12 @@
     overflow: hidden;
     margin-top: 20px;
     display: flex;
-    aspect-ratio: 9 / 12;
-
     justify-content: center;
+    background-color: black;
+    }
+
+.aspect-ratio{
+    aspect-ratio: 9 / 12;
 }
 
 .gallery-image-wrapper div{

@@ -5,11 +5,10 @@ import Metric2 from './components/Metric2';
 import Header from './components/Header';
 import Divider from './components/Divider';
 import PageHero from './components/PageHero';
-import { Link } from 'react-router-dom';
-
 
 import './css/ProjectDetails.css';
 import Menu from './Menu';
+import Footer from './components/Footer';
 
 
 const ProjectDetailsDashboard = () => {
@@ -26,23 +25,14 @@ const ProjectDetailsDashboard = () => {
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
       />
-      {/* <div className='container-xxl px-4'>
-        <div className='row row-gap-2'>
-          <Metric1 className='col-6 col-lg-4 card-gap-2' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
-          <Metric1 className='col-6 col-lg-4 card-gap-2' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
-          <Metric1 className='col-6 col-lg-4 card-gap-2' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
-        </div>
-      </div> */}
-      <div className='container-fluid ephasized_section mt-40 pt-40 px-0'>
-        <div className='container-xxl px-4'>
+      <div className='container-fluid ephasized_section mt-40 pt-40'>
+        <div className='container-xxl'>
           <div className='row row-gap-2'>
             <Metric2 className='col-6 col-lg-4 card-gap-2' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
             <Metric2 className='col-6 col-lg-4 card-gap-2' above='Timeline' mainmetric='Sep–Dec, 2019' color='var(--txt-dark-2)' />
             <Metric2 className='col-6 col-lg-4 card-gap-2' above='Design team size' mainmetric='1–2' color='var(--txt-dark-2)' />
           </div>
-        </div>
-        <Divider className='container-xxl px-4' />
-        <div className='container-xxl px-4'>
+          <Divider />
           <Header
             wrapperclassName="container-xxl py-4 px-0"
             size="medium"
@@ -50,7 +40,7 @@ const ProjectDetailsDashboard = () => {
             color='var(--txt-dark-2)'
             colorDescription='var(--txt-dark-3)'
           />
-          <div className='row pb-80'>
+          <div className='row pb-40'>
             <div className='col-12 col-lg-6 role-description'>
               I joined the project soon after joining the company. The client dashboard already existed but required a complete redesign due to significant issues with data, design, and implementation. The project lacked a dedicated team or Project Manager, and the documentation was incomplete, so <strong>my initial focus was bringing clarity to the ambiguous state</strong>.
             </div>
@@ -58,10 +48,13 @@ const ProjectDetailsDashboard = () => {
               During my time on the project, I collaborated closely with the Head of Design to gather business requirements and worked alongside another designer to research needs from other key leaders within the company. I also <strong>conducted interviews with the Operations team</strong>, who interacted with clients, to <strong>gather their feedback</strong> and <strong>identify pain points</strong> in the existing dashboard. Additionally, I <strong>collaborated with developers</strong> to understand the technical possibilities and limitations, ensuring that <strong>the design was feasible</strong> without over-complicating the implementation.
             </div>
           </div>
+          <img className='inline-image mb-80' src='/portfolio/assets/dashboard/dashboard_random.jpg'></img>
+        
+        
+        
         </div>
-        <div className='container-xxl px-4 pb-80' ><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_random.jpg'></img></div>
         <div className='dark_section'>
-          <div className='container-xxl px-4'>
+          <div className='container-xxl px-2'>
             <Header
               wrapperclassName="pt-80"
               size="medium"
@@ -137,14 +130,14 @@ const ProjectDetailsDashboard = () => {
                 type='light'
               />
               <Header
-                  wrapperclassName=""
-                  className=''
-                  size="medium"
-                  title=""
-                  description={<span>Since clients had previously complained about unclear information, I made it a priority to fix that, making sure everything was presented in a simple, easy-to-understand way. I also added elements that allowed clients to easily navigate to get help or leave feedback about what they felt was missing.</span>}
-                  color='var(--txt-light-2)'
-                  colorDescription='var(--txt-light-3)'
-                />
+                wrapperclassName=""
+                className=''
+                size="medium"
+                title=""
+                description={<span>Since clients had previously complained about unclear information, I made it a priority to fix that, making sure everything was presented in a simple, easy-to-understand way. I also added elements that allowed clients to easily navigate to get help or leave feedback about what they felt was missing.</span>}
+                color='var(--txt-light-2)'
+                colorDescription='var(--txt-light-3)'
+              />
               <div className='row row-gap-10 align-items-center'>
                 <div className='col-lg-6 mt-40 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_help_1.jpg'></img></div>
                 <div className='col-lg-6 mt-40 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_help_2.jpg'></img></div>
@@ -175,7 +168,7 @@ const ProjectDetailsDashboard = () => {
                 type='light'
               />
               <div className='row row-gap-10 align-items-center'>
-              <div className='col-lg-6 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_mobile_1.jpg'></img></div>
+                <div className='col-lg-6 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_mobile_1.jpg'></img></div>
                 <Header
                   wrapperclassName="col-lg-6 col-sm-12 card-gap-10"
                   className='ps-4'
@@ -213,21 +206,17 @@ const ProjectDetailsDashboard = () => {
               />
               <div className='row row-gap-10 align-items-center'>
                 <div className='col-lg-6 mt-20 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_some_1.jpg'></img></div>
-                <div className='col-lg-6 mt-20 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_some_2.jpg'></img></div>              
+                <div className='col-lg-6 mt-20 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_some_2.jpg'></img></div>
               </div>
             </div>
-
-            <Divider
-                type='light'
-              />
+            <Footer />
 
           </div>
         </div>
 
       </div>
-      <div className='container-xxl py-80'>
-        <Link to="/" className='return-home'>Return Home</Link>
-      </div>
+
+
 
     </div>
   );

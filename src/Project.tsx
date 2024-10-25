@@ -24,8 +24,8 @@ const Project: React.FC<ProjectProps> = ({
     comingsoon,
   }) => {
     return (
-      <div className={`project_card container-xxl ${comingsoon ? 'coming_soon' : ''}`}>
-          <Link to={link.toString()} className='a.project_card'>
+      <div className={`project_card container-xxl `}>
+          <Link to={link.toString()} className={`a.project_card ${comingsoon ? 'coming_soon' : ''}`}>
             <div className='project_image_wrapper'>
               <img
                 src={image}

@@ -143,6 +143,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+                comingsoon
                 link='#'
                 image='assets/project_xenolyte.jpg'
                 title="Xenolyte Design System"
@@ -152,6 +153,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+              comingsoon
                 link='#'
                 image='assets/project_title_tours.jpg'
                 title="Lyte Dashboard for Music Tours"
@@ -161,6 +163,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+              comingsoon
                 link='#'
                 image='assets/project_designprocess.jpg'
                 title="Creating & Rolling Out Design Process"
@@ -170,6 +173,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+              comingsoon
                 link='#'
                 image='assets/project_admin.jpg'
                 title="Complex Admin Tools"
@@ -179,6 +183,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+              comingsoon
                 link='#'
                 image='assets/project_blueprint.jpg'
                 title="Service Blueprint"
@@ -188,6 +193,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+              comingsoon
                 link='#'
                 image='assets/project_capital.jpg'
                 title="Capital.com Trading Platform"

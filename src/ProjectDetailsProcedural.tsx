@@ -1,9 +1,8 @@
 
 import PageHero from "./components/PageHero";
 import ImageGallery from './components/ImageGallery';
-import Divider from "./components/Divider";
-import { Link } from "react-router-dom";
 import Menu from "./Menu";
+import Footer from "./components/Footer";
 
 const ProjectDetailsProcedural = () => {
   return (
@@ -22,11 +21,9 @@ const ProjectDetailsProcedural = () => {
       />
       <div className='container-xxl mb-80'>
         <div className='pt-160'><ImageGallery /></div>
-        <Divider
-            type='light'
-          />
-          <Link to="/" className='return-home'>Return Home</Link>
+        <Footer />
       </div>
+
     </div>
 
   );

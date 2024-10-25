@@ -1,10 +1,9 @@
 
 import PageHero from "./components/PageHero";
 import ImageGallery from './components/ImageGallery';
-import Divider from "./components/Divider";
-import { Link } from "react-router-dom";
 import Menu from "./Menu";
 import { ImageNames2 } from "./components/ImageNamesOldWorks";
+import Footer from "./components/Footer";
 
 
 const ProjectDetailsProcedural = () => {
@@ -29,12 +28,10 @@ const ProjectDetailsProcedural = () => {
           <ImageGallery
             source={ImageNames2}
             basePath="assets/oldworks/"
+            aspectRatio="10 / 13"
           />
         </div>
-        <Divider
-          type='light'
-        />
-        <Link to="/" className='return-home'>Return Home</Link>
+        <Footer />
       </div>
     </div>
 

@@ -32,7 +32,7 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, 
           <div className="page-hero-content">
             <div className={`page-hero-header-wrapper container-xxl ${headerwrapper}`}>
               <Header
-                wrapperclassName="header px-2 z-3"
+                wrapperclassName="header z-3"
                 alignment={alignment}
                 size="large"
                 title={title}

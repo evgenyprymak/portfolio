@@ -7,11 +7,11 @@ import Task from './components/Task'
 import Header from './components/Header';
 import Divider from './components/Divider';
 import PageHero from './components/PageHero';
-import { Link } from 'react-router-dom';
 
 
 import './css/ProjectDetails.css';
 import Menu from './Menu';
+import Footer from './components/Footer';
 
 
 const ProjectDetails = () => {
@@ -20,7 +20,7 @@ const ProjectDetails = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Quasar. <br/>The Ticketing Platform.</span>}
+        title={<span>Quasar. <br />The Ticketing Platform.</span>}
         description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}
         wrapperclassName="container-fluid"
         headerwrapper='pb-40'
@@ -29,7 +29,7 @@ const ProjectDetails = () => {
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
       />
-      <div className='container-xxl px-4'>
+      <div className='container-xxl'>
         <div className='row row-gap-10'>
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
@@ -37,18 +37,16 @@ const ProjectDetails = () => {
         </div>
       </div>
       <div className='container-fluid ephasized_section mt-40 pt-40 px-0'>
-        <div className='container-xxl px-4'>
-          <div className='row row-gap-2'>
-            <Metric2 className='col-6 card-gap-2' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-2' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-2' above='Design team size' mainmetric='1–2' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-2' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
+        <div className='container-xxl'>
+          <div className='row row-gap-10'>
+            <Metric2 className='col-6 card-gap-10' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 card-gap-10' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 card-gap-10' above='Design team size' mainmetric='1–2' color='var(--txt-dark-2)' />
+            <Metric2 className='col-6 card-gap-10' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
           </div>
-        </div>
-        <Divider className='container-xxl px-4' />
-        <div className='container-xxl px-4'>
+          <Divider />
           <Header
-            wrapperclassName="container-xxl py-4 px-0"
+            wrapperclassName="py-4"
             size="medium"
             title="Long story short"
             color='var(--txt-dark-2)'
@@ -62,19 +60,17 @@ const ProjectDetails = () => {
               In addition, I <strong>interviewed and onboarded</strong> new designers, creating and maintaining a "Design Club" space in Notion to streamline the process. This resource helped ensure a smooth onboarding experience and served as a regularly updated repository of information and resources. Through our team efforts, we <strong>significantly increased conversion rates</strong>, <strong>boosted the adoption rate of key business features</strong>, and successfully delivered numerous features to the market <strong>under tight deadlines</strong>.
             </div>
           </div>
-        </div>
-        <Divider className='container-xxl px-4' />
-        <Header
-          wrapperclassName="container-xxl px-4 pt-4"
-          size="medium"
-          description="During my time on the project, I had the pleasure of tackling various challenges, each with its own unique constraints. Below is a quick snapshot of the key activities I worked on, organized by the different phases of the design process. While this isn't an exhaustive list, it gives you a good sense of the most impactful work I contributed to:"
-          title="Design activities"
-          color='var(--txt-dark-2)'
-          colorDescription='var(--txt-dark-2)'
-        />
-        <div className='container-xxl px-4'>
-          <div className='row row-gap-2 DD'>
-            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
+          <Divider />
+          <Header
+            wrapperclassName="pt-4"
+            size="medium"
+            description="During my time on the project, I had the pleasure of tackling various challenges, each with its own unique constraints. Below is a quick snapshot of the key activities I worked on, organized by the different phases of the design process. While this isn't an exhaustive list, it gives you a good sense of the most impactful work I contributed to:"
+            title="Design activities"
+            color='var(--txt-dark-2)'
+            colorDescription='var(--txt-dark-2)'
+          />
+          <div className='row row-gap-10 DD'>
+            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-1.svg'></img>
@@ -87,7 +83,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Design ideation sprints</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-2.svg'></img>
@@ -99,7 +95,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Maintaining feature backlog from a design perspective and insights</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
               <div className='DD-wrapper'>
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-3.svg'></img>
@@ -115,9 +111,8 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Identifying A/B testing opportunities</div>
               </div>
             </div>
-            <div className='col-md-6 col-lg-3 card-gap-2 DD-phase'>
+            <div className='col-md-6 col-lg-3 card-gap-10 DD-phase'>
               <div className='DD-wrapper'>
-
                 <div className='DD-header'>
                   <img src='/portfolio/assets/icons/DD-icon-4.svg'></img>
                   <div>Deliver</div>
@@ -134,9 +129,9 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: '#070707', paddingBottom: '100px' }} className="features px-0" id='features'>
+      <div className="features dark_section container-xxl" id='features'>
         <Header
-          wrapperclassName="container-xxl px-4 pt-160 d-flex flex-column justify-content-center"
+          wrapperclassName="pt-160 d-flex flex-column justify-content-center"
           size="medium"
           title="Projects, features & flows delivered"
           description="Since joining the product team, I have contributed to the development of numerous features, creating some from scratch and enhancing many others. My approach consistently balances time to market, feasibility, and the win-win-win principle (client, business, and user), ensuring optimal design solutions that benefit all stakeholders."
@@ -144,12 +139,12 @@ const ProjectDetails = () => {
           colorDescription='var(--txt-light-3)'
           alignment='center'
         />
-        <div className='container-xxl px-4 py-4'>
+        <div className='py-4'>
           <div className='nda'>
             <div><img src='/portfolio/assets/icons/nda.png'></img>I am restricted in publicly displaying extra design files from this work and can only share non-proprietary project and product details.</div>
           </div>
         </div>
-        <div className='container-xxl px-4' style={{ height: 'auto' }} >
+        <div className='' style={{ height: 'auto' }} >
           <div className='row row-gap-10 pt-40'>
             <Task
               wrapperClassName='col-md-6 col-xl-4 card-gap-10'
@@ -257,10 +252,7 @@ const ProjectDetails = () => {
               tag2='User Flow'
             />
           </div>
-          <Divider
-            type='light'
-          />
-          <Link to="/" className='return-home'>Return Home</Link>
+          <Footer />
         </div>
 
       </div>

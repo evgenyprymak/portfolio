@@ -55,7 +55,9 @@ html, body {
 }
 
 
-
+a {
+  color: var(--txt-light-2);
+}
 
 
 .txt-light-1{
