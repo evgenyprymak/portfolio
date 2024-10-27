@@ -49,10 +49,9 @@ const ProjectDetailsDashboard = () => {
             </div>
           </div>
           <img className='inline-image mb-80' src='/portfolio/assets/dashboard/dashboard_random.jpg'></img>
-        
-        
-        
         </div>
+      </div>
+
         <div className='dark_section'>
           <div className='container-xxl px-2'>
             <Header
@@ -214,7 +213,6 @@ const ProjectDetailsDashboard = () => {
           </div>
         </div>
 
-      </div>
 
 
 

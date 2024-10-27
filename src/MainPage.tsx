@@ -143,6 +143,15 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
+                link='/project/8'
+                image='assets/capital/project_capital.jpg'
+                title="Capital.com Trading Platform"
+                year={2019}
+                description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
+              />
+            </div>
+            <div className='col-md-12 col-lg-6 card-gap-10'>
+              <Project
                 comingsoon
                 link='#'
                 image='assets/project_xenolyte.jpg'
@@ -189,16 +198,6 @@ const MainPage = () => {
                 title="Service Blueprint"
                 year={2019}
                 description="Mapping out client journeys and service touchpoints to identify opportunities for improvement and enhance overall CX."
-              />
-            </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'>
-              <Project
-              comingsoon
-                link='#'
-                image='assets/project_capital.jpg'
-                title="Capital.com Trading Platform"
-                year={2019}
-                description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
               />
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>

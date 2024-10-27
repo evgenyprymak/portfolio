@@ -249,11 +249,60 @@ html {
 }
 
 
-
 .inline-image{
     width: 100%;
-    border-radius: 16px;
+    border-radius: .75rem;
 }
+
+.inline-image-2-container{
+    padding: 24px 24px;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.inline-image-2{
+    align-self: center;
+    justify-self: center;
+    max-height: 600px;
+    border-radius: .5rem;
+}
+
+#capital-logo-lottie{
+    background-color: var(--bg-dark-1);
+}
+
+.capital-fca{
+    border-radius: .75rem;
+    background-color: #f2f3f4;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.capital-fca, .capital-eq div{
+    min-width: 120px;
+}
+
+.capital-eq{
+    border-radius: .75rem;
+    background-color: #001248;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+
 
 @media (max-width: 992px) {
     .DD{

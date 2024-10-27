@@ -8,6 +8,7 @@ import ProjectDetails from './ProjectDetails';
 import ProjectDetailsDashboard from './ProjectDetailsDashboard';
 import ProjectDetailsProcedural from './ProjectDetailsProcedural';
 import ProjectDetailsOldWorks from './ProjectDetailsOldWorks';
+import ProjectDetailsCapital from './ProjectDetailsCapital';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/project/2" element={<ProjectDetailsDashboard />} />
         <Route path="/project/100" element={<ProjectDetailsProcedural />} />
         <Route path="/project/99" element={<ProjectDetailsOldWorks />} />
+        <Route path="/project/8" element={<ProjectDetailsCapital />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
