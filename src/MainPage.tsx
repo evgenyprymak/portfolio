@@ -1,5 +1,5 @@
 // @ts-ignore
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import Hero from './Hero';
 import Project from './Project';
@@ -12,11 +12,14 @@ import '@lottiefiles/lottie-player';
 
 
 import './css/index.css';
+import ModalXeno from './components/ModalXenolyte';
 
 
 const MainPage = () => {
   const lottieRef = useRef<HTMLElement | null>(null);
   const targetRef = useRef<HTMLDivElement | null>(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
 
@@ -51,8 +54,8 @@ const MainPage = () => {
   return (
     <div>
       <Menu
-      productDesign
-       />
+        productDesign
+      />
       <div className="container-xxl px-4">
         <div className=''>
           <Hero />
@@ -114,7 +117,7 @@ const MainPage = () => {
             <div className='levels'><div className='list-number'>2.</div><div>Ensure the product operates consistently and dependably, fostering trust among users.</div></div>
             <div className='levels'><div className='list-number'>1.</div><div>Design essential features that enable users to complete their tasks effectively.</div></div>
           </div>
-  
+
         </div>
         <div className='divider-light mt-80' id='recent-projects' />
         <div className=''>
@@ -123,6 +126,7 @@ const MainPage = () => {
             title='Latest Projects'
             size='small'
           />
+
           <div className='row row-gap-10 pt-40 pb-80'>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
@@ -150,9 +154,18 @@ const MainPage = () => {
                 description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'>
+
+
+            <ModalXeno
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            >
+            </ModalXeno>
+
+
+
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsModalOpen(true)}>
               <Project
-                comingsoon
                 link='#'
                 image='assets/project_xenolyte.jpg'
                 title="Xenolyte Design System"
@@ -162,7 +175,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
-              comingsoon
+                comingsoon
                 link='#'
                 image='assets/project_title_tours.jpg'
                 title="Lyte Dashboard for Music Tours"
@@ -172,7 +185,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
-              comingsoon
+                comingsoon
                 link='#'
                 image='assets/project_designprocess.jpg'
                 title="Creating & Rolling Out Design Process"
@@ -182,7 +195,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
-              comingsoon
+                comingsoon
                 link='#'
                 image='assets/project_admin.jpg'
                 title="Complex Admin Tools"
@@ -192,7 +205,7 @@ const MainPage = () => {
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
-              comingsoon
+                comingsoon
                 link='#'
                 image='assets/project_blueprint.jpg'
                 title="Service Blueprint"
@@ -210,12 +223,12 @@ const MainPage = () => {
               />
             </div>
           </div>
-  
+
         </div>
-  
-  
-  
-  
+
+
+
+
       </div>
     </div>
   );

@@ -109,7 +109,7 @@ const ProjectDetailsDashboard = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Capital.com<br />Reinventing future of trading.</span>}
+        title={<span>Capital.com<br />Reinventing the Future<br />of Trading</span>}
         description={<span>Capital.com is a CFD trading platform designed to be both intuitive for beginners and feature-rich for experienced traders. With a focus on accessibility and user-friendly design, it offers a seamless experience that makes trading straightforward for all users, regardless of their level of expertise.</span>}
         wrapperclassName="container-fluid"
         imageMobile="/portfolio/assets/capital/project_hero_capital_960w.jpg"
@@ -141,8 +141,6 @@ const ProjectDetailsDashboard = () => {
           />
           <div>
           </div>
-
-
           <div className='row pb-40' >
             <div className='col-12 col-lg-6 role-description'>
               After several years in the trading industry, beginning at IG—Europe's leading trading platform—I joined Capital.com to transform the trading experience. Starting as a product designer, I focused on making CFD (Contract for Difference) trading accessible globally through our web platform. Collaborating closely with a Product Manager and a front-end developer, we launched the platform within just six months. This launch was a significant milestone, quickly expanding access to trading for over 1 million users worldwide. Today, the platform has grown to more than 7 million users and continues to attract a global audience.            </div>
