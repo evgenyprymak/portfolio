@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Размытая кисть при наведении</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  function reset() {
+    const {width, height} = ctx.canvas;
+    const wd2 = width;
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = 'white';
+    ctx.fillRect(wd2, 0, wd2, height);
+
+    const gradient = ctx.createLinearGradient(0, 0, 0, height);
+    gradient.addColorStop(0, 'black');
+    gradient.addColorStop(1, 'blue');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, wd2, height);
+  }
+  reset();
+
+  function getCanvasRelativePosition(e) {
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: (e.clientX - rect.left) / rect.width * canvas.width,
+      y: (e.clientY - rect.top) / rect.height * canvas.height,
+    };
+  }
+
+  function lerp(a, b, t) {
+    return a + (b - a) * t;
+  }
+
+  let lastX;
+  let lastY;
+  let lastForce = 0.5;
+  let alpha = 1;
+  let blurRadius = 10;
+  const alphaDecayRate = 0.0001;
+
+  const brushCtx = document.createElement('canvas').getContext('2d');
+  let featherGradient;
+
+  function createFeatherGradient(radius, hardness) {
+    const innerRadius = Math.min(radius * hardness, radius - 1);
+    const gradient = brushCtx.createRadialGradient(0, 0, innerRadius, 0, 0, radius);
+    gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
+    gradient.addColorStop(1, 'rgba(0, 0, 0, 1)');
+    return gradient;
+  }
+
+  function updateBrushSettings(radius = 100, hardness = 0.01) {
+    featherGradient = createFeatherGradient(radius, hardness);
+    brushCtx.canvas.width = radius * 2;
+    brushCtx.canvas.height = radius * 2;
+    feather(brushCtx);
+  }
+  updateBrushSettings();
+
+  function feather(ctx) {
+    ctx.save();
+    ctx.fillStyle = featherGradient;
+    ctx.globalCompositeOperation = 'destination-out';
+    const {width, height} = ctx.canvas;
+    ctx.translate(width / 2, height / 2);
+    ctx.fillRect(-width / 2, -height / 2, width, height);
+    ctx.restore();
+  }
+
+  function updateBrush(x, y) {
+    const width = brushCtx.canvas.width;
+    const height = brushCtx.canvas.height;
+    const srcX = x - width / 2;
+    const srcY = y - height / 2;
+    brushCtx.clearRect(0, 0, brushCtx.canvas.width, brushCtx.canvas.height);
+
+    if (srcX + width > canvas.width) {
+      brushCtx.drawImage(ctx.canvas, srcX, srcY, canvas.width - srcX, height, 0, 0, canvas.width - srcX, height);
+    } else if (srcY + height > canvas.height) {
+      brushCtx.drawImage(ctx.canvas, srcX, srcY, width, canvas.height - srcY, 0, 0, width, canvas.height - srcY);
+    } else {
+      brushCtx.drawImage(ctx.canvas, srcX, srcY, width, height, 0, 0, width, height);
+    }
+    
+    feather(brushCtx);
+  }
+
+  function draw(e) {
+    const pos = getCanvasRelativePosition(e);
+    const force = e.force || 1;
+    
+    ctx.globalAlpha = alpha;
+    ctx.filter = `blur(${blurRadius}px)`;
+    ctx.drawImage(brushCtx.canvas, pos.x - brushCtx.canvas.width / 2, pos.y - brushCtx.canvas.height / 2);
+    ctx.filter = 'none';
+    updateBrush(pos.x, pos.y);
+
+    lastX = pos.x;
+    lastY = pos.y;
+    lastForce = force;
+  }
+
+  function animate() {
+    if (lastX !== undefined && lastY !== undefined) {
+      ctx.globalAlpha = alpha;
+      ctx.filter = `blur(${blurRadius}px)`;
+      ctx.drawImage(brushCtx.canvas, lastX - brushCtx.canvas.width / 2, lastY - brushCtx.canvas.height / 2);
+      ctx.filter = 'none';
+      updateBrush(lastX, lastY);
+    }
+
+    // Decrease alpha over time
+    alpha = Math.max(0, alpha - alphaDecayRate);
+
+    requestAnimationFrame(animate);
+  }
+
+  canvas.addEventListener('mousemove', draw);
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    reset();
+  });
+
+  animate();
+</script>
+</body>
+</html>

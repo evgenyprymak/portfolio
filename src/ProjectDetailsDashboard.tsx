@@ -9,6 +9,7 @@ import PageHero from './components/PageHero';
 import './css/ProjectDetails.css';
 import Menu from './Menu';
 import Footer from './components/Footer';
+import Project from './Project';
 
 
 const ProjectDetailsDashboard = () => {
@@ -68,7 +69,6 @@ const ProjectDetailsDashboard = () => {
                 <div className='numbered-list'><div className='numbered-list-number'>2.</div><div><strong>Minimize time spent by the Financial team</strong> on each client/event through improved reporting features.</div></div>
                 <div className='numbered-list'><div className='numbered-list-number'>3.</div><div><strong>Ensure data accuracy for clients</strong>, providing them with reliable and actionable insights.</div></div>
                 <div className='numbered-list'><div className='numbered-list-number'>4.</div><div><strong>Clarify information and data</strong> by aligning it with specific business terminology for better understanding.</div></div>
-
               </div>
               <div className='col-12 col-lg-6 card-gap-2'>
                 <div className='numbered-list'><div className='numbered-list-number'>5.</div><div><strong>Enable mobile access</strong>, allowing users to work with the dashboard on-site via mobile devices.</div></div>
@@ -208,6 +208,16 @@ const ProjectDetailsDashboard = () => {
                 <div className='col-lg-6 mt-20 col-sm-12 card-gap-10'><img className='inline-image' src='/portfolio/assets/dashboard/dashboard_some_2.jpg'></img></div>
               </div>
             </div>
+            <Divider type='light' />
+            <Project
+                link='/project/8'
+                image='assets/capital/project_capital.jpg'
+                title="Capital.com Trading Platform"
+                year={<span>2018 · B2C</span>}
+                description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
+                isNextProject
+              />
+
             <Footer />
 
           </div>

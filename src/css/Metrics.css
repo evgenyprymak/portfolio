@@ -1,0 +1,75 @@
+
+.metric3_card{
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.metric4_card{
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+    .metric3_card {
+        margin-bottom: 12px;
+    }
+    .metric4_card{
+        padding: 0px;
+        margin-bottom: 12px;
+    }
+
+    .metric3_above{
+        margin: 0px;
+        padding-top: 20px;
+        font-size: 14px;
+    }
+
+  }
+
+.metric3_above{
+    margin: 0px;
+    font-size: 18px;
+    /* border-top: 1px solid var(--bg-light-4); */
+}
+
+.metric4_above{
+    margin: 0px;
+    font-size: 14px;
+    /* border-top: 1px solid var(--bg-light-4); */
+    opacity: 0.7;
+}
+
+.metric3_main_number{
+    font-family: 'Neue Machina Plain', sans-serif;
+    font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
+    font-weight: 500;
+    font-size: clamp(32px, 5vw, 40px);
+    letter-spacing: -1px;
+    padding: 0px;
+    line-height: 100%;
+}
+
+.metric3_old_number{
+    /* font-size: clamp(24px, 5vw, 32px); */
+    font-weight: 400;
+
+
+}
+
+.metric3_below{
+    margin-top: 8px;
+    padding: 0px;
+    font-size: 16px;
+    max-width: 420px;
+    opacity: 0.8;
+}
+
+.metric4_main_number{
+    font-family: 'Neue Machina Plain', sans-serif;
+    font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
+    font-weight: 500;
+    font-size: clamp(14px, 5vw, 18px);
+    letter-spacing: 0px;
+    padding-top: 12px;
+    line-height: 100%;
+}

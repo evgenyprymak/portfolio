@@ -13,6 +13,7 @@ import Metric1 from './components/Metric1';
 
 import lottie from 'lottie-web';
 import VideoComp from './components/VideoComp';
+import Project from './Project';
 
 
 const ProjectDetailsDashboard = () => {
@@ -112,12 +113,13 @@ const ProjectDetailsDashboard = () => {
         title={<span>Capital.com<br />Reinventing the Future<br />of Trading</span>}
         description={<span>Capital.com is a CFD trading platform designed to be both intuitive for beginners and feature-rich for experienced traders. With a focus on accessibility and user-friendly design, it offers a seamless experience that makes trading straightforward for all users, regardless of their level of expertise.</span>}
         wrapperclassName="container-fluid"
+        headerwrapper='pb-40 px-3'
         imageMobile="/portfolio/assets/capital/project_hero_capital_960w.jpg"
         imageDesktop="/portfolio/assets/capital/project_hero_capital_2560w.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
       />
-      <div className='container-xxl'>
+      <div className='container-xxl px-3'>
         <div className='row row-gap-10'>
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='1M+' color='rgba(255,255,255,1)' below='Active users in 2019' />
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='$13B+' color='rgba(255,255,255,1)' below='Trading volume' />
@@ -126,7 +128,7 @@ const ProjectDetailsDashboard = () => {
       </div>
 
       <div className='container-fluid ephasized_section mt-40 pt-40'>
-        <div className='container-xxl'>
+        <div className='container-xxl px-3'>
           <div className='row row-gap-2'>
             <Metric2 className='col-6 col-lg-6 card-gap-2' above='My role' mainmetric='Product Designer' color='var(--txt-dark-2)' />
             <Metric2 className='col-6 col-lg-6 card-gap-2' above='Timeline' mainmetric='2016–2019' color='var(--txt-dark-2)' />
@@ -155,7 +157,7 @@ const ProjectDetailsDashboard = () => {
       </div>
 
       <div className='dark_section'>
-        <div className='container-xxl px-2'>
+        <div className='container-xxl px-3'>
           <Header
             wrapperclassName="pt-80"
             size="medium"
@@ -314,7 +316,15 @@ const ProjectDetailsDashboard = () => {
             </div>
 
           </div>
-
+          <Divider type='light' />
+          <Project
+                link='/project/1'
+                image='assets/projectTitleImages/quasar_title_5.jpg'
+                title="Quasar Ticketing Platform"
+                year={<span>2020–2024 · B2C</span>}
+                description="Enhanced the ticketing platform's usability, leading to significant boosts in conversion and adoption rates."
+                isNextProject
+              />
           <Footer />
 
         </div>

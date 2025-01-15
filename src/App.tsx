@@ -9,6 +9,7 @@ import ProjectDetailsDashboard from './ProjectDetailsDashboard';
 import ProjectDetailsProcedural from './ProjectDetailsProcedural';
 import ProjectDetailsOldWorks from './ProjectDetailsOldWorks';
 import ProjectDetailsCapital from './ProjectDetailsCapital';
+import ContactForm from './Email';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/project/100" element={<ProjectDetailsProcedural />} />
         <Route path="/project/99" element={<ProjectDetailsOldWorks />} />
         <Route path="/project/8" element={<ProjectDetailsCapital />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

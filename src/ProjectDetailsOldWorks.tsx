@@ -23,7 +23,7 @@ const ProjectDetailsProcedural = () => {
         colorDescription='var(--txt-light-3)'
         alignment='center'
       />
-      <div className='container-xxl mb-80'>
+      <div className='container-xxl mb-80 px-3'>
         <div className='pt-160'>
           <ImageGallery
             source={ImageNames2}

@@ -1,8 +1,6 @@
 // @ts-ignore
 import React, { useEffect } from 'react';
 
-import Metric1 from './components/Metric1';
-import Metric2 from './components/Metric2';
 import Task from './components/Task'
 import Header from './components/Header';
 import Divider from './components/Divider';
@@ -12,39 +10,71 @@ import PageHero from './components/PageHero';
 import './css/ProjectDetails.css';
 import Menu from './Menu';
 import Footer from './components/Footer';
+import NDABlock from './components/NDABlock';
+import Project from './Project';
+import ResultsSummary from './components/ResultsSummary';
+import { motion } from 'framer-motion';
 
 
 const ProjectDetails = () => {
+
+  const sectionColorChange = ({ bgfrom = '#000000', bgto = '#000000' } = {}) => ({
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: { margin: "0px 0px -50% 0px" },
+    variants: {
+      offscreen: {
+        backgroundColor: bgfrom,
+      },
+      onscreen: {
+        backgroundColor: bgto,
+        transition: {
+          type: "easeIn",
+          duration: 0.5,
+        },
+      },
+    },
+  });
+
+
+  const imageSlide = ({ delay = 0 } = {}) => ({
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: { margin: "0px 0px -100px 0px" },
+    variants: {
+      offscreen: {
+        opacity: 0,
+        y: 50,
+      },
+      onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 1,
+          delay,
+        },
+      },
+    },
+  });
 
   return (
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
         title={<span>Quasar. <br />The Ticketing Platform.</span>}
-        description={<span>The Quasar project aimed to create the best fan experience in the ticketing world. It supported various event states, including Demand Aggregation, Pre-Registration, On Sale, Exchange, and P2P exchanges. Each flow had unique and shared features, posing a design challenge in creating a scalable product while delivering a great user experience. The product was highly adopted by clients to boost their sales and enhance fan experiences. Well-known clients included BottleRock Napa Valley Festival, Coachella, Burning Man, and Lost Paradise, among many others.</span>}
+        description={<span>The Quasar project focused on creating a top-tier fan experience in ticketing, supporting diverse event states like Demand Aggregation, On Sale, and P2P exchanges. Adopted by major clients such as Coachella and Burning Man, it boosted sales and fan satisfaction.</span>}
         wrapperclassName="container-fluid"
-        headerwrapper='pb-40'
+        headerwrapper=''
         imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg"
         imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
       />
-      <div className='container-xxl'>
-        <div className='row row-gap-10'>
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='Around' mainmetric='5,700' color='rgba(255,255,255,1)' below='Music events used the platform' />
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='More than' mainmetric='$750M' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
-          <Metric1 className='col-6 col-lg-4 card-gap-10' above='Up to' mainmetric='75%' color='rgba(255,255,255,1)' below='Conversion Rate (secondary sales)' />
-        </div>
-      </div>
-      <div className='container-fluid ephasized_section mt-40 pt-40 px-0'>
-        <div className='container-xxl'>
-          <div className='row row-gap-10'>
-            <Metric2 className='col-6 card-gap-10' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-10' above='Timeline' mainmetric='2020–2024' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-10' above='Design team size' mainmetric='1–2' color='var(--txt-dark-2)' />
-            <Metric2 className='col-6 card-gap-10' above='Dev team size' mainmetric='5–10' color='var(--txt-dark-2)' />
-          </div>
-          <Divider />
+      <ResultsSummary />
+      <div className='container-fluid ephasized_section pt-40 px-0'>
+        <div className='container-xxl px-3'>
           <Header
             wrapperclassName="py-4"
             size="medium"
@@ -60,7 +90,23 @@ const ProjectDetails = () => {
               In addition, I <strong>interviewed and onboarded</strong> new designers, creating and maintaining a "Design Club" space in Notion to streamline the process. This resource helped ensure a smooth onboarding experience and served as a regularly updated repository of information and resources. Through our team efforts, we <strong>significantly increased conversion rates</strong>, <strong>boosted the adoption rate of key business features</strong>, and successfully delivered numerous features to the market <strong>under tight deadlines</strong>.
             </div>
           </div>
-          <Divider />
+
+          <motion.div {...sectionColorChange({ bgfrom: '#FFF', bgto: '#1B0431' })} className='f-width my-40'>
+            <div className='container-xxl my-40 py-40 px-1'>
+              <div className='row'>
+                <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
+                  <img src='/portfolio/assets/quasar/tickets_edited2.jpg' className='col-12 inline-image quasar-image-1' />
+                </motion.div>
+                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-12 col-md-6 col-lg-7 px-0 quasar-image-2'>
+                  <img src='/portfolio/assets/quasar/tickets_2.jpg' className='inline-image' />
+                </motion.div>
+                <motion.div {...imageSlide({ delay: 0.24 })} className='col-sm-12 col-md-6 col-lg-5 px-0 quasar-image-3'>
+                  <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+
           <Header
             wrapperclassName="pt-4"
             size="medium"
@@ -129,7 +175,7 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
-      <div className="features dark_section container-xxl" id='features'>
+      <div className="features dark_section container-xxl px-3" id='features'>
         <Header
           wrapperclassName="pt-160 d-flex flex-column justify-content-center"
           size="medium"
@@ -139,11 +185,7 @@ const ProjectDetails = () => {
           colorDescription='var(--txt-light-3)'
           alignment='center'
         />
-        <div className='py-4'>
-          <div className='nda'>
-            <div><img src='/portfolio/assets/icons/nda.png'></img>I am restricted in publicly displaying extra design files from this work and can only share non-proprietary project and product details.</div>
-          </div>
-        </div>
+        <NDABlock />
         <div className='' style={{ height: 'auto' }} >
           <div className='row row-gap-10 pt-40'>
             <Task
@@ -252,6 +294,15 @@ const ProjectDetails = () => {
               tag2='User Flow'
             />
           </div>
+          <Divider type='light' />
+          <Project
+            link='/project/2'
+            image='assets/project_dashboard.jpg'
+            title="Lyte Client Dashboard"
+            year={<span>2019 · B2B</span>}
+            description="Unlocking data and events management for clients through intuitive product design and a comprehensive UI kit for the web."
+            isNextProject
+          />
           <Footer />
         </div>
 

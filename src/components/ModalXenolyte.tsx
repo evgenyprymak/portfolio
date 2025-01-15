@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../css/Modal.css';
 import Header from './Header';
 import Metric1 from './Metric1';
+import NDABlock from './NDABlock';
 
 interface ModalProps {
   isOpen: boolean;                // Explicitly define the type as boolean
@@ -46,16 +47,20 @@ const ModalXeno: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <Metric1 className='col-6 col-lg-6 card-gap-10' above='Time saving (approx.)' mainmetric='35%' color='rgba(255,255,255,1)' below='For a Front-End development' />
             <Metric1 className='col-6 col-lg-6 card-gap-10' above='Time saving (approx.)' mainmetric='50%' color='rgba(255,255,255,1)' below='For a Design Teams' />
           </div>
+          <NDABlock />
           <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_4.jpg'></img>
-          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_1.jpg'></img>
+          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_3.jpg'></img>
+          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_2.jpg'></img>
+
+
 
         </div>
       </div>
 
-<div className='dialog-close-container'>
+      <div className='dialog-close-container'>
         <img className="dialog-close" src='/portfolio/assets/icons/icon_close.svg' alt="Close" onClick={onClose}></img>
-  
-</div>
+
+      </div>
     </div>
   );
 };

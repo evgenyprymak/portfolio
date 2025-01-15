@@ -22,7 +22,10 @@
   border-top: 1px solid var(--bg-light-4);
 }
 
-
+.divider-wrapper.small-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* Добавьте медиазапросы для брейкпоинтов */
 @media (max-width: 768px) {

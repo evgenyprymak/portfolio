@@ -17,7 +17,7 @@ const squareVariants = {
       ease: "easeInOut",
     },
   }),
-  hidden: { opacity: 0, scale: 1, scaleX: 0.9, y: 0 },
+  hidden: { opacity: 0, scale: 1, scaleX: 1, y: 0 },
 };
 
 const Footer: React.FC = () => {
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         <div className="footer-wrapper row-gap-2">
           <Link to="/" className="return-home card-gap-2">Return Home</Link>
           <div className="footer-btns">
-          <a href="https://www.linkedin.com/in/evgenyprymak/" className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_linkedin.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>LinkedIn</a>
+          <a href="https://www.linkedin.com/in/evgenyprymak/" className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_linkedin.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>My LinkedIn</a>
           <a href="https://drive.google.com/file/d/1u-RuCyojZ77YW-6CqajPDBz1JkzBudT7/view"  className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_pdf.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>Resume</a>
           </div>
         </div>
