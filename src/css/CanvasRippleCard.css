@@ -1,0 +1,118 @@
+/* CanvasRippleCard.css
+   Canvas-based ripple for a card with Apple-like styling and fallbacks */
+
+:root {
+  --crc-bg: rgba(22, 22, 24, 0.6);
+  --crc-border: rgba(255, 255, 255, 0.12);
+  --crc-text: #b13d04;
+  --crc-subtext: rgba(255, 255, 255, 0.7);
+  --crc-radius: 20px;
+  --crc-pad: 0px;
+  /* --crc-shadow: 0 10px 30px rgba(56, 189, 248, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25); */
+  --crc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.canvas-ripple-card {
+  position: relative;
+  overflow: hidden;
+  /* border-radius: var(--crc-radius); */
+  padding: var(--crc-pad);
+  color: var(--crc-text);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    var(--crc-bg);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  isolation: isolate;
+  transition: transform 300ms var(--crc-ease), box-shadow 300ms var(--crc-ease), filter 300ms var(--crc-ease);
+  will-change: transform, box-shadow, filter;
+}
+
+.canvas-ripple-bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  filter: saturate(100%) contrast(95%);
+}
+
+/* subtle background transform and opacity transitions */
+.canvas-ripple-bg {
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 360ms var(--crc-ease), filter 300ms var(--crc-ease), opacity 100ms linear;
+  will-change: transform, filter, opacity;
+}
+
+
+/* JS-driven overlay: clip-path + backdrop-filter on each frame */
+.canvas-ripple-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3; /* affects all beneath; canvas ring sits above */
+  /* clip-path, backdrop-filter, and opacity are set by JS each frame */
+}
+
+.canvas-ripple-card:hover,
+.canvas-ripple-card:focus {
+  /* Ensure position stays fixed; no transform on hover */
+  transform: none;
+  box-shadow: var(--crc-shadow);
+  filter: none;
+}
+
+.canvas-ripple-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: 1; /* keep luminous canvas ring above backdrop+content */
+}
+
+.canvas-ripple-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: 0; /* behind content, above background */
+}
+
+.canvas-ripple-webgl {
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 360ms var(--crc-ease), opacity 100ms linear;
+  will-change: transform, opacity;
+}
+
+/* During animation, avoid layout shifts by keeping dimensions and position fixed */
+.crc-anim {
+  transform: none !important;
+  will-change: auto;
+}
+
+.canvas-ripple-content { position: relative; z-index: 1; }
+.canvas-ripple-content { filter: url(#dummy); }
+/* Use filter via inline style set at runtime, attach to the card root */
+.canvas-ripple-card { filter: url(#none); }
+/* .canvas-ripple-title { font-size: 20px; font-weight: 700; letter-spacing: 0.2px; }
+.canvas-ripple-subtitle { margin-top: 6px; color: var(--crc-subtext); font-size: 14px; } */
+/* .canvas-ripple-body { margin-top: 14px; } */
+
+
+
+/* Reduced motion: disable scaling; canvas effect is not drawn via JS when prefers-reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .canvas-ripple-card { transition: none; }
+  .canvas-ripple-card:hover, .canvas-ripple-card:focus { transform: none; box-shadow: var(--crc-shadow); }
+  .canvas-ripple-bg { transition: none !important; transform: none !important; }
+  .canvas-ripple-webgl { transition: none !important; transform: none !important; }
+}
+
+

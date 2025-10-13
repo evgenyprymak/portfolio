@@ -10,6 +10,7 @@ import ProjectDetailsProcedural from './ProjectDetailsProcedural';
 import ProjectDetailsOldWorks from './ProjectDetailsOldWorks';
 import ProjectDetailsCapital from './ProjectDetailsCapital';
 import ContactForm from './Email';
+import MainPage_old_v1 from './MainPage_old_v1';
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/old_v1" element={<MainPage_old_v1 />} />
         <Route path="/project/1" element={<ProjectDetails />} />
         <Route path="/project/2" element={<ProjectDetailsDashboard />} />
         <Route path="/project/100" element={<ProjectDetailsProcedural />} />

@@ -53,8 +53,8 @@ const ResultsSummary: React.FC = () => {
                         <div className='col-lg-4 col-md-6 col-sm-12'>
                             <Metric3 className='' oldMetric='230' mainMetric='1200' colorOldMetric={colorOldMetric} color={activeTextColor} below='Number of music events per year' />
                             <Metric3 className='' oldMetric='80K' mainMetric='1M+' colorOldMetric={colorOldMetric} color={activeTextColor} below='Tickets sold growth per year' />
-                            <Metric3 className='' oldMetric='14%' mainMetric='38%' colorOldMetric={colorOldMetric} color={activeTextColor} below='Primary sales Conversion Rate growth' />
-                            <Metric3 className='' oldMetric='22%' mainMetric='54%' colorOldMetric={colorOldMetric} color={activeTextColor} below='Secondary sales Conversion Rate growth' />
+                            <Metric3 className='' oldMetric='14%' mainMetric='28%' colorOldMetric={colorOldMetric} color={activeTextColor} below='Primary sales Conversion Rate growth' />
+                            <Metric3 className='' oldMetric='22%' mainMetric='37%' colorOldMetric={colorOldMetric} color={activeTextColor} below='Secondary sales Conversion Rate growth' />
                         </div>
                         <div className='col-lg-4 col-md-6 col-sm-12'>
                             <Metric3 className='' oldMetric='2,5m' mainMetric='45s' colorOldMetric={colorOldMetric} color={activeTextColor} below='Average time to purchase tickets' />

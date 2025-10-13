@@ -10,7 +10,7 @@ import PageHero from './components/PageHero';
 import './css/ProjectDetails.css';
 import Menu from './Menu';
 import Footer from './components/Footer';
-import NDABlock from './components/NDABlock';
+// import NDABlock from './components/NDABlock';
 import Project from './Project';
 import ResultsSummary from './components/ResultsSummary';
 import { motion } from 'framer-motion';
@@ -125,7 +125,7 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Data-Driven Design Decisions</div>
                 <div className='design-activity'>Understanding patterns and behaviors of fans</div>
                 <div className='design-activity'>Competitor analysis</div>
-                <div className='design-activity'>Unmoderated User Research</div>
+                <div className='design-activity'>User Research</div>
                 <div className='design-activity'>Design ideation sprints</div>
               </div>
             </div>
@@ -174,9 +174,35 @@ const ProjectDetails = () => {
             </div>
           </div>
         </div>
+        <motion.div {...sectionColorChange({ bgfrom: '#000', bgto: '#FFF' })} className='f-width'>
+          <div className='container-xxl my-40 py-40 px-3'>
+            <div className='row row-gap-10 pt-40'>
+              <motion.div {...imageSlide()} className='col-12 card-gap-10'>
+                <img src='/portfolio/assets/quasar/Activation.jpg' className='col-12 inline-image' />
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.12 })} className='col-lg-4 col-sm-12 col-md-6 mt-20 card-gap-10'>
+                <div
+                  className="inline-image-3"
+                  style={{ backgroundImage: `url('/portfolio/assets/quasar/printable.jpg')` }}
+                >
+                </div>                
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.24 })} className='col-lg-8 col-sm-12 col-md-6 mt-20 card-gap-10'>
+                <div
+                  className="inline-image-3"
+                  style={{ backgroundImage: `url('/portfolio/assets/quasar/403-02.jpg')` }}                
+                
+                >
+
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
       </div>
+
       <div className="features dark_section container-xxl px-3" id='features'>
-        <Header
+        {/* <Header
           wrapperclassName="pt-160 d-flex flex-column justify-content-center"
           size="medium"
           title="Projects, features & flows delivered"
@@ -184,10 +210,10 @@ const ProjectDetails = () => {
           color='var(--txt-light-2)'
           colorDescription='var(--txt-light-3)'
           alignment='center'
-        />
-        <NDABlock />
-        <div className='' style={{ height: 'auto' }} >
-          <div className='row row-gap-10 pt-40'>
+        /> */}
+        {/* <NDABlock /> */}
+        <div className='pt-40' style={{ height: 'auto' }} >
+          <div className='row row-gap-10 pt-80'>
             <Task
               wrapperClassName='col-md-6 col-xl-4 card-gap-10'
               bgColor='#19191a'

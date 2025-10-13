@@ -48,7 +48,7 @@ html {
     flex-direction: column;
 }
 
-.dark_section{
+.dark_section {
     width: 100%;
     background-color: var(--bg-dark-1);
     color: var(--txt-light-2);
@@ -63,13 +63,13 @@ html {
     padding-bottom: 20px;
     text-wrap: balance;
     color: var(--txt-dark-3);
-    
+
 }
 
 
 .role-description strong {
-    color: rgba(0,0,0,1);
-    font-weight: 600;    
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
 }
 
 
@@ -82,7 +82,8 @@ html {
 
 @media (max-width: 600px) {
     .project_title_image {
-        margin-top: 100px; /* Пример уменьшения отступа для мобильных устройств */
+        margin-top: 100px;
+        /* Пример уменьшения отступа для мобильных устройств */
         margin-bottom: 40px;
     }
 
@@ -100,7 +101,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    z-index: 5; 
+    z-index: 5;
     position: relative;
 }
 
@@ -117,10 +118,10 @@ html {
     right: 0;
     bottom: 0;
     border-radius: 48px;
-    box-shadow: 
+    box-shadow:
         0px 0px clamp(4px, 10vw, 49.7px) 0px #7765dc5c inset;
     pointer-events: none;
-    z-index: 1; 
+    z-index: 1;
     animation: expandShadow1 3s ease-out forwards;
 }
 
@@ -137,10 +138,10 @@ html {
     right: 0;
     bottom: 0;
     border-radius: 48px;
-    box-shadow: 
-         0px 0px clamp(4px, 10vw, 49.7px) 0px #7765dc20 inset;
+    box-shadow:
+        0px 0px clamp(4px, 10vw, 49.7px) 0px #7765dc20 inset;
     pointer-events: none;
-    z-index: 0; 
+    z-index: 0;
     animation: expandShadow2 3s ease-out forwards;
 }
 
@@ -152,6 +153,7 @@ html {
         right: 0;
         bottom: 0;
     }
+
     100% {
         border-radius: 32px;
         top: -32px;
@@ -169,6 +171,7 @@ html {
         right: 0;
         bottom: 0;
     }
+
     100% {
         top: -80px;
         left: -80px;
@@ -178,7 +181,7 @@ html {
 }
 
 
-.DD{
+.DD {
     margin-top: 40px;
     margin-bottom: 80px;
 }
@@ -191,7 +194,7 @@ html {
 
 }
 
-.DD-header{
+.DD-header {
     font-weight: 700;
     display: flex;
     font-size: 18px;
@@ -214,17 +217,21 @@ html {
     font-size: 16px;
 }
 
-.design-activity:last-of-type{
+.design-activity:last-of-type {
     border-bottom: none;
 }
 
 
-.inline-image{
+.inline-image {
     width: 100%;
     border-radius: .75rem;
 }
 
-.inline-image-2-container{
+
+
+
+
+.inline-image-2-container {
     padding: 24px 24px;
     border-radius: .75rem;
     display: flex;
@@ -233,18 +240,31 @@ html {
     height: 100%;
 }
 
-.inline-image-2{
+.inline-image-2 {
     align-self: center;
     justify-self: center;
     max-height: 600px;
     border-radius: .5rem;
 }
 
-#capital-logo-lottie{
+.inline-image-3 {
+    width: 100%;
+    border-radius: .75rem;
+    background-position: center;
+    background-size: cover;
+    min-height: 416px;
+}
+
+
+
+
+
+
+#capital-logo-lottie {
     background-color: var(--bg-dark-1);
 }
 
-.capital-fca{
+.capital-fca {
     border-radius: .75rem;
     background-color: #f2f3f4;
     height: 200px;
@@ -256,11 +276,12 @@ html {
     height: auto;
 }
 
-.capital-fca, .capital-eq div{
+.capital-fca,
+.capital-eq div {
     min-width: 120px;
 }
 
-.capital-eq{
+.capital-eq {
     border-radius: .75rem;
     background-color: #001248;
     height: 200px;
@@ -272,54 +293,57 @@ html {
     height: auto;
 }
 
-.quasar-image-1{
+.quasar-image-1 {
     max-width: 80%;
 }
 
-.quasar-image-2{
+.quasar-image-2 {
     padding-right: 12px !important;
     padding-top: 24px !important;
 }
 
-.quasar-image-3{
+.quasar-image-3 {
     max-height: 80%;
     padding-left: 12px !important;
     padding-top: 24px !important;
 }
 
 @media (max-width: 992px) {
-    .DD{
+    .DD {
         margin-top: 16px;
         margin-bottom: 16px;
     }
-    
-    .quasar-image-1{
+
+    .quasar-image-1 {
         max-width: 100%;
     }
 
 
 
-    .role-description{
+    .role-description {
         padding-right: 16px;
     }
-    .DD-phase{
+
+    .DD-phase {
         margin-bottom: 16px;
     }
-    .design-activity{
+
+    .design-activity {
         min-height: auto;
     }
-    .inline-image{
+
+    .inline-image {
         border-radius: 8px;
     }
 }
 
 
 @media (max-width: 768px) {
-    .quasar-image-2{
+    .quasar-image-2 {
         padding-right: 0px !important;
     }
 
-    .quasar-image-3{
+    .quasar-image-3 {
         padding-left: 0px !important;
     }
 }

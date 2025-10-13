@@ -1,0 +1,291 @@
+{
+    "front": {
+      "text": {
+        "Event_Dates": "",
+        "ErrorPage_404_Text": "There is no Sonoma Harvest Music Festival in this universe",
+        "HomePage_MediaCards": [
+          {
+            "Text": "Connect your friend's orders in one place so we can best accommodate all of you",
+            "Buttons": [
+              "Pre-Register for Tickets",
+              "View details"
+            ],
+            "Heading": "Go with friends"
+          },
+          {
+            "Text": "Sonoma Harvest Music Festival benefits the Sonoma County Regional Parks Foundation. The Sonoma Count Regional Parks Foundation raises funds, fosters partnerships and advocates on behalf of Sonoma County Regional Parks.",
+            "Buttons": [
+              "Pre-Register for Tickets",
+              "View details"
+            ],
+            "Heading": "Join Us in supporting our community"
+          }
+        ],
+        "HomePage_Text_Start": "Beat the crowd! Join pre-registration to request Sonoma Harvest Music Festival tickets before they go on sale.",
+        "HomePage_TicketCards": [
+          {
+            "Items": [
+              {
+                "Text": "Once tickets are confirmed, send or sell your tickets directly to another fan of your choosing. Send via text, socials, you name it. Everybody wins.",
+                "Title": "Send Tickets to Friends"
+              }
+            ],
+            "Button": "GET STARTED",
+            "Heading": ""
+          },
+          {
+            "Items": [
+              {
+                "Text": "Opportunity to return your ticket at market value once the event sells out.",
+                "Title": "Access to the Exchange"
+              }
+            ],
+            "Button": "GET STARTED",
+            "Heading": ""
+          }
+        ],
+        "HomePage_Button_Start": "Pre-Register for Tickets",
+        "General_Title_PageTitle": "Lyte — Pre-registration",
+        "SummaryPage_Text_Fulfillment": "Congratulations, you've locked in tickets for the event! The credit card we have on file will be charged and your tickets will ship a few weeks prior to the event. From here, you can kick back and relax. See you at the festival!",
+        "General_Title_PageDescription": "Lyte — Pre-registration",
+        "SummaryPage_Header_Fulfillment": "Your tickets to the event!",
+        "SummaryPage_Text_PostCountdown": "Due to overwhelming demand, we were unable to secure tickets on your behalf. But all is not lost. The regular on sale is very soon. If you miss out there, head on back and sign-up on the Official Lyte Ticket Exchange. ",
+        "SummaryPage_Text_ChargeCaptured": "Congratulations, you’ve locked in tickets for the event! We already charged you, enjoy the show!",
+        "SummaryPage_Header_PostCountdown": "Your Order Status",
+        "SummaryPage_Header_ChargeCaptured": "You’re Going to the event",
+        "JoinPage_Link_PostCountdownRedirect": ""
+      },
+      "images": {
+        "logo": "https://lyte.imgix.net/uf/QYOedebOSWFzDQRJOfuynJSjGMIJxRde.png",
+        "error_screen_logo": "https://lyte.imgix.net/uf/ysJpop3UIWsvVxpNVic3b8JlDTPs1mfe.png",
+        "error_screen_image": "",
+        "homepage_background_mobile": "https://lyte.imgix.net/uf/xCbl649RXFemYE34I8CuaOVv7j2oB7g2.png",
+        "homepage_background_desktop": "https://lyte.imgix.net/uf/MFfQ6d8DlFTkRYXJa4qwNAxGoVQTeohY.png"
+      },
+      "styles": {
+        "tabTextColor": "0,0,0",
+        "tabTextColorRGB": "0, 0, 0",
+        "primaryDarkColor": "12, 12, 12",
+        "primaryMainColor": "0, 0, 0",
+        "homePageLightImage": true,
+        "secondaryDarkColor": "191, 83, 160",
+        "secondaryMainColor": "0,0,0",
+        "primaryContrastText": "255, 255, 255",
+        "primaryDarkColorRGB": "161, 197, 99",
+        "primaryMainColorRGB": "0, 0, 0",
+        "secondaryLightColor": "0, 0, 0",
+        "secondaryContrastText": "255, 255, 255",
+        "secondaryDarkColorRGB": "191, 83, 160",
+        "secondaryMainColorRGB": "0,0,0",
+        "customHeaderBackground": "#BF53A0",
+        "primaryContrastTextRGB": "255, 255, 255",
+        "secondaryLightColorRGB": "0, 0, 0",
+        "secondaryContrastTextRGB": "255, 255, 255",
+        "customHeaderMobileBackground": "#BF53A0"
+      },
+      "content": {
+        "mediaCards": [
+          {
+            "links": [
+              {
+                "link": "/116089/party/tickets",
+                "type": "primary",
+                "event": "qs-entry-middle-click"
+              },
+              {
+                "link": "",
+                "type": "secondary",
+                "event": "qs-entry-middle-click"
+              }
+            ],
+            "heroImage": "https://lyte.imgix.net/uf/kpUzC153oLyFmKTqUDnky8VQU3niehCn.jpg",
+            "badgeImage": "https://lyte.imgix.net/image/606aab46d287315ef68ad959e8fba188.svg"
+          },
+          {
+            "links": [
+              {
+                "link": "/116089/party/tickets",
+                "type": "primary",
+                "event": "qs-entry-middle-click"
+              },
+              {
+                "link": "",
+                "type": "secondary",
+                "event": "qs-entry-middle-click"
+              }
+            ],
+            "heroImage": "https://lyte.imgix.net/uf/amWfALipYfbdu9PjfCYCYbJOToRoEOcS.jpg",
+            "badgeImage": "https://lyte.imgix.net/image/606aab46d287315ef68ad959e8fba188.svg"
+          }
+        ],
+        "ticketCards": [
+          {
+            "link": "/116089/party/tickets",
+            "event": "qs-entry-bottom-click",
+            "icons": [
+              "https://lyte.imgix.net/uf/84NfGNY5pRbPvLHC3wQ1Lng9HdjbNl0s.svg",
+              "https://lyte.imgix.net/uf/OoSpYs1eFP8o3SA4bPS0HNAxKKSwFyb3.svg"
+            ],
+            "colors": [
+              "#BF53A0",
+              "#B4E3F1"
+            ]
+          },
+          {
+            "link": "/116089/party/tickets",
+            "color": "secondary",
+            "event": "qs-entry-bottom-click",
+            "icons": [
+              "https://lyte.imgix.net/uf/EKPfn3nwIoIBGAxF8xi6GsueSQsNwRLE.png",
+              "https://lyte.imgix.net/uf/yVNdnCsStC3A5sO0CIXK1qUn3ry0vLui.png",
+              "https://lyte.imgix.net/uf/ugG60QUVMxhvuuJj8lnPVoEYNqJ5pI1H.svg"
+            ],
+            "colors": [
+              "#A1C563",
+              "#f37735",
+              "#ffc425"
+            ]
+          }
+        ]
+      }
+    },
+    "mailing": {
+      "images": {
+        "header": "https://lyte.imgix.net/uf/QYOedebOSWFzDQRJOfuynJSjGMIJxRde.png"
+      },
+      "styles": {
+        "link_color": "#1aaebd",
+        "button_color": "#335b90",
+        "header_background": "https://lyte.imgix.net/uf/HDw32VWi35EgEYqlNG9FlXA4PeCCRPA4.png"
+      },
+      "content": {
+        "common": {
+          "footer": {
+            "sn": [
+              {
+                "link": "",
+                "text": "INSTAGRAM"
+              },
+              {
+                "link": "",
+                "text": "TW"
+              },
+              {
+                "link": "",
+                "text": "FB"
+              }
+            ],
+            "sign": "Team Lyte",
+            "button": {
+              "link": "mailto:support@lyte.com",
+              "text": "CONTACT US"
+            },
+            "copyright": "Lyte"
+          }
+        },
+        "charge_fail": {
+          "title": "There was an error processing your payment.",
+          "button": {
+            "text": "UPDATE PAYMENT INFO"
+          },
+          "subject": "Your Reservation Charge Fail",
+          "intro_text": "We received an error processing your payment for Sonoma Harvest Music Festival ticket(s). No need to worry! It will not impact your chances of getting a ticket.<br><br>All you need to do is update your payment information within 24 hours and we will complete your purchase. "
+        },
+        "fulfillment": {
+          "title": "Congratulations!",
+          "button": {
+            "link": "",
+            "text": ""
+          },
+          "subject": "You’re going to Sonoma Harvest Music Festival!",
+          "intro_text": "Your ticket request for Sonoma Harvest Music Festival has been granted. Your credit card will be charged. \n\nTickets will be shipped closer to the festival. Sit back & relax! We’ll see you at the show. \n",
+          "more_section": [
+            {
+              "link": "",
+              "text": "A government-issued ID is required to pick up your tickets at the festival if you selected will call.",
+              "title": "Identification",
+              "link_text": ""
+            },
+            {
+              "link": "https://sonomaharvestmusicfestival.com/",
+              "text": "For more event details, visit the event web-site",
+              "title": "Explore more",
+              "link_text": "https://sonomaharvestmusicfestival.com/"
+            },
+            {
+              "link": "https://support.lyte.com/",
+              "text": "See our FAQs or contact our customer service team at support@lyte.com.",
+              "title": "Find answers",
+              "link_text": "https://support.lyte.com/"
+            }
+          ],
+          "action_blocks": [
+            {
+              "link": "https://lyte.com",
+              "text": "Go to the exchange!",
+              "title": "Need to return a ticket?"
+            },
+            {
+              "link": "",
+              "text": "Invite friends to Onsale",
+              "title": "Have buds who missed the pre-reg?"
+            }
+          ],
+          "cancel_section": {
+            "text": "Return tickets through the event Exchange powered by Lyte.",
+            "title": "Plans changed? ",
+            "button": {
+              "link": "https://lyte.com/",
+              "text": "GO TO EXCHANGE"
+            }
+          }
+        },
+        "ticket_request_return": {
+          "subject": "Your ticket was returned"
+        },
+        "ticket_request_cancellation": {
+          "subject": "Your ticket was cancelled"
+        },
+        "preregistration_cancellation": {
+          "title": "Your ticket request has been canceled.",
+          "button": {
+            "link": "",
+            "text": "CREATE NEW ORDER"
+          },
+          "subject": "Your Request Canceled",
+          "intro_text": "Thank you for your participation in the pre-registration program. Your order has been canceled. If you change your mind or cancelled by mistake, just come on back and make a new request."
+        },
+        "preregistration_confirmation": {
+          "title": "We've Got Your Ticket Request!🙌<br>",
+          "subject": "Your Pre-Registration Request",
+          "action_blocks": [
+            {
+              "link": "",
+              "text": "We’ve received your request for tickets and will take it from here. You’ll be notified before the onsale if your request has been granted. If we cannot fulfill your request, we’ll notify you about other options for tickets.",
+              "title": "Let us take it from here!"
+            },
+            {
+              "link": "",
+              "text": "Inviting your crew ensures everyone has a chance to go to the event. Don’t be shy!",
+              "title": "Invite Friends"
+            },
+            {
+              "link": "",
+              "text": "Edit or cancel your pre-registration request at any time before tickets are released.",
+              "title": "Edit or Cancel Your Order"
+            },
+            {
+              "link": "",
+              "text": "Feel free to come back & check on your request at any time!",
+              "title": "Check Your Pre-Registration Status"
+            }
+          ]
+        }
+      }
+    },
+    "fulfillment": {
+      "sms": {
+        "before_order_url": "Lyte: Congrats! Your tickets to Sonoma Harvest Music Festival 2020 are confirmed! View order:"
+      }
+    }
+  }
