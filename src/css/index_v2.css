@@ -1,4 +1,4 @@
-@import './typography.css';
+/* typography.css was removed during cleanup; font-fallbacks are defined below */
 
 html, body {
   height: 100%;
