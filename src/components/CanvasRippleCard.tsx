@@ -127,10 +127,14 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
     const radius = 12 + ease(t) * maxRadius;
 
     const glowGradient = ctx.createRadialGradient(state.originX, state.originY, 0, state.originX, state.originY, Math.max(40, radius * 0.3));
-    glowGradient.addColorStop(0, 'rgba(255,255,255,0.00)');
-    glowGradient.addColorStop(0.5, 'rgba(255, 0, 0, 0)');
-
-    glowGradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+  // use rippleColor for gradient stops if provided
+  const rgbNorm = rippleColorRef.current ?? [1, 0, 0];
+  const r255 = Math.round(rgbNorm[0] * 255);
+  const g255 = Math.round(rgbNorm[1] * 255);
+  const b255 = Math.round(rgbNorm[2] * 255);
+  glowGradient.addColorStop(0, `rgba(255,255,255,0.00)`);
+  glowGradient.addColorStop(0.5, `rgba(${r255}, ${g255}, ${b255}, 0)`);
+  glowGradient.addColorStop(1, `rgba(${r255}, ${g255}, ${b255}, 0)`);
     ctx.fillStyle = glowGradient;
     ctx.beginPath();
     ctx.arc(state.originX, state.originY, Math.max(40, radius * 0.3), 0, Math.PI * 2);
