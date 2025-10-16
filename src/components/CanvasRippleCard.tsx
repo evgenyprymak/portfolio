@@ -9,6 +9,8 @@ type CanvasRippleCardProps = {
   className?: string;
   pointerOrigin?: boolean;
   backgroundImageUrl?: string;
+  // rippleColor as hex string, e.g. '#ff0000' or 'ff0000'
+  rippleColor?: string;
   width?: string;
   height?: string;
 };
@@ -21,6 +23,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
   // Use Vite base URL so assets in `public/assets/...` resolve correctly in dev and after build
   // Default set to an existing image under public/assets/quasar/
   backgroundImageUrl = `${import.meta.env.BASE_URL}assets/moonfolio/moonfolio_5.jpg`,
+  rippleColor = '#ff0000',
 
 }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
@@ -36,6 +39,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
   const glProgramRef = useRef<WebGLProgram | null>(null);
   const glTextureRef = useRef<WebGLTexture | null>(null);
   const glUniformsRef = useRef<{ [k: string]: WebGLUniformLocation | null }>({});
+  const rippleColorRef = useRef<[number, number, number] | null>(null);
   const rafRef = useRef<number | null>(null);
   const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia
     ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -124,6 +128,8 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
 
     const glowGradient = ctx.createRadialGradient(state.originX, state.originY, 0, state.originX, state.originY, Math.max(40, radius * 0.3));
     glowGradient.addColorStop(0, 'rgba(255,255,255,0.00)');
+    glowGradient.addColorStop(0.5, 'rgba(255, 0, 0, 0)');
+
     glowGradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
     ctx.fillStyle = glowGradient;
     ctx.beginPath();
@@ -143,7 +149,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
     if (!fadeOutState.current.startTime) fadeOutState.current.startTime = timestamp;
     const elapsed = timestamp - fadeOutState.current.startTime;
     const t = Math.min(elapsed / fadeOutDuration, 1);
-    const opacity = 1 - t;
+    const opacity = 2 - t;
 
     if (overlayRef.current) {
       overlayRef.current.style.opacity = opacity.toString();
@@ -201,7 +207,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
         img.src = backgroundImageUrl!;
       });
     } else {
-      ctx.fillStyle = '#111318';
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, width, height);
     }
 
@@ -233,6 +239,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
       uniform vec2 u_resolution;
       uniform float u_strength;
       uniform float u_fade;
+      uniform vec3 u_color;
       void main() {
         vec2 uv = v_uv;
         vec2 px = uv * u_resolution;
@@ -247,8 +254,8 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
         float displacement = wave * u_strength * u_fade;
         vec2 displaced = uv + dir * displacement / u_resolution;
         vec4 color = texture2D(u_tex, displaced);
-        float glow = wave * 0.3 * u_fade;
-        color.rgb += glow * vec3(0.0, 1.0, 1.0);
+        float glow = wave * 0.1 * u_fade;
+        color.rgb += glow * u_color;
         gl_FragColor = color;
       }
     `;
@@ -285,6 +292,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
       u_resolution: gl.getUniformLocation(program, 'u_resolution'),
       u_strength: gl.getUniformLocation(program, 'u_strength'),
       u_fade: gl.getUniformLocation(program, 'u_fade'),
+      u_color: gl.getUniformLocation(program, 'u_color'),
     };
 
     const tex = gl.createTexture()!;
@@ -295,6 +303,26 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     glTextureRef.current = tex;
   };
+
+  const parseHexToRgb = (hex: string): [number, number, number] => {
+    const cleaned = hex.replace('#', '').trim();
+    let r = 255, g = 0, b = 0;
+    if (cleaned.length === 3) {
+      r = parseInt(cleaned[0] + cleaned[0], 16);
+      g = parseInt(cleaned[1] + cleaned[1], 16);
+      b = parseInt(cleaned[2] + cleaned[2], 16);
+    } else if (cleaned.length === 6) {
+      r = parseInt(cleaned.substring(0, 2), 16);
+      g = parseInt(cleaned.substring(2, 4), 16);
+      b = parseInt(cleaned.substring(4, 6), 16);
+    }
+    return [r / 255, g / 255, b / 255];
+  };
+
+  // update rippleColorRef when prop changes
+  useEffect(() => {
+    rippleColorRef.current = parseHexToRgb(rippleColor);
+  }, [rippleColor]);
 
   const uploadSnapshotToTexture = (snap: HTMLCanvasElement) => {
     const gl = glRef.current;
@@ -324,6 +352,10 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
     gl.uniform1f(u.u_strength, Math.max(0.0, 1.0 - t) * 25.0);
     const fade = Math.max(0.0, 1.0 - t);
     if (u.u_fade) gl.uniform1f(u.u_fade, fade);
+    if (u.u_color && rippleColorRef.current) {
+      const [r, g, b] = rippleColorRef.current;
+      gl.uniform3f(u.u_color, r, g, b);
+    }
     gl.drawArrays(gl.TRIANGLES, 0, 6);
   };
 
