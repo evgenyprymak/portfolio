@@ -1,6 +1,6 @@
 // @ts-ignore
 import React, { useEffect, useRef, useState } from 'react';
-
+import { motion } from "motion/react"
 
 
 
@@ -8,8 +8,9 @@ import React, { useEffect, useRef, useState } from 'react';
 // import { create } from '@lottiefiles/lottie-interactivity';
 
 
-import './css/index_v2.css';
+import './css/index.css';
 import CanvasRippleCard from './components/CanvasRippleCard';
+import CustomCursor from './components/CustomCursor';
 
 
 const MainPage = () => {
@@ -51,28 +52,35 @@ const MainPage = () => {
 
 
   return (
-    <div>
+    <div className='main'>
+      <CustomCursor />
       <div className="grid-center">
+
         <div className="grid-12x4">
-          <div className="grid-card card-LT bg-accent-About"></div>
-          <div className="grid-card card-TML bg-me2"></div>
-          <div className="grid-card card-TMR bg-accent-WG">6,7,8,9,10</div>
-          <CanvasRippleCard className="grid-card card-RT-wide">11,12</CanvasRippleCard>
-
-          <CanvasRippleCard className="grid-card card-C1" backgroundImageUrl='assets/capital/project_hero_capital_2560w.jpg'>16-22<br />28-34</CanvasRippleCard>
-          <CanvasRippleCard className="grid-card card-C2">19-21<br />31-33</CanvasRippleCard>
-
-          <CanvasRippleCard className="grid-card card-RM">20-22<br />32-34</CanvasRippleCard>
-
-          <CanvasRippleCard className="grid-card card-LB">25,26,27<br />37,38,39</CanvasRippleCard>
-          <CanvasRippleCard className="grid-card card-BML">40,41,42</CanvasRippleCard>
-          <div className="grid-card card-BMC1">43,44,45</div>
-          <CanvasRippleCard className="grid-card card-BMC2">43,44,45</CanvasRippleCard>
-          <CanvasRippleCard className="grid-card card-BR">46,47,48</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-LT" data-cursor data-cursor-icon="view" rippleColor='#47c5ffff' backgroundImageUrl='assets/v2/about-bg-1.png'></CanvasRippleCard>
+          <div className="grid-card card-TML" data-cursor data-cursor-icon="link"></div>
+          <div className="grid-card card-TMR" data-cursor data-cursor-icon="view" >UX/UI Team Lead <br />Universal, Web Streams @ Wargaming</div>
+          <CanvasRippleCard className="grid-card card-RT-wide" data-cursor data-cursor-icon="view" rippleColor='#FF0000' backgroundImageUrl='assets/v2/procedural-bg-1.png'>Procedural & <br />Generative Art</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-C1" data-cursor data-cursor-icon="view" backgroundImageUrl='assets/capital/project_hero_capital_2560w.jpg'>Platforms & Dashboards</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-C2" data-cursor data-cursor-icon="view" rippleColor='#ffd000' backgroundImageUrl='assets/v2/games-bg-1.png'>UX for Games</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-RM" data-cursor data-cursor-icon="view" ></CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-LB" data-cursor data-cursor-icon="view" >Mobile Apps</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-BML" data-cursor data-cursor-icon="view" backgroundImageUrl='assets/xenolyte/xenolyte_3.jpg'>Design Systems</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-BMC1" data-cursor data-cursor-icon="view" rippleColor='#47c5ffff' backgroundImageUrl='assets/v2/leadership-bg-1.png'>Design <br /> Leadership</CanvasRippleCard>
+          <CanvasRippleCard className="grid-card card-BMC2" data-cursor data-cursor-icon="view" backgroundImageUrl='assets/v2/random-bg-1.png'></CanvasRippleCard>
+          <div className="grid-card card-BR" data-cursor data-cursor-icon="view" >CV</div>
         </div>
       </div>
     </div>
   );
 };
+
+
+const box = {
+    width: 100,
+    height: 100,
+    backgroundColor: "#ff0088",
+    borderRadius: 5,
+}
 
 export default MainPage;

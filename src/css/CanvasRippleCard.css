@@ -4,9 +4,9 @@
 :root {
   --crc-bg: rgba(22, 22, 24, 0.6);
   --crc-border: rgba(255, 255, 255, 0.12);
-  --crc-text: #b13d04;
+  --crc-text: #FFF;
   --crc-subtext: rgba(255, 255, 255, 0.7);
-  --crc-radius: 20px;
+  --crc-radius: 1rem;
   --crc-pad: 0px;
   /* --crc-shadow: 0 10px 30px rgba(56, 189, 248, 0.25), 0 2px 8px rgba(0, 0, 0, 0.25); */
   --crc-ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -15,7 +15,7 @@
 .canvas-ripple-card {
   position: relative;
   overflow: hidden;
-  /* border-radius: var(--crc-radius); */
+  border-radius: var(--crc-radius);
   padding: var(--crc-pad);
   color: var(--crc-text);
   background:
@@ -24,9 +24,16 @@
   backdrop-filter: blur(12px) saturate(120%);
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   isolation: isolate;
-  transition: transform 300ms var(--crc-ease), box-shadow 300ms var(--crc-ease), filter 300ms var(--crc-ease);
+  /* animate transform on hover-in and hover-out (zoom) */
+  transition: transform 1300ms var(--crc-ease), box-shadow 300ms var(--crc-ease), filter 300ms var(--crc-ease);
   will-change: transform, box-shadow, filter;
+  padding: 16px;
+  user-select: none;
+  cursor: pointer;
 }
+
+
+
 
 .canvas-ripple-bg {
   position: absolute;
@@ -35,7 +42,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
-  filter: saturate(100%) contrast(95%);
+  /* filter: saturate(100%) contrast(95%); */
 }
 
 /* subtle background transform and opacity transitions */
@@ -58,9 +65,9 @@
 
 .canvas-ripple-card:hover,
 .canvas-ripple-card:focus {
-  /* Ensure position stays fixed; no transform on hover */
-  transform: none;
-  box-shadow: var(--crc-shadow);
+  /* zoom in on hover; leaving will smoothly transition back (zoom out) */
+  transform: scale(1);
+  transition: filter 300ms var(--crc-ease);
   filter: none;
 }
 
@@ -91,7 +98,9 @@
   will-change: transform, opacity;
 }
 
-/* During animation, avoid layout shifts by keeping dimensions and position fixed */
+/* During ripple processing we previously reset the root transform which blocked hover-scale.
+   Instead, avoid layout shifts by freezing only the visual layers (background / webgl)
+   so the card root can still respond to :hover (scale) immediately. */
 .crc-anim {
   transform: none !important;
   will-change: auto;

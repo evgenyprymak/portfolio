@@ -1,7 +1,7 @@
 import React, { useEffect, useId, useRef } from 'react';
 import '../css/CanvasRippleCard.css';
 
-type CanvasRippleCardProps = {
+type CanvasRippleCardProps = React.HTMLAttributes<HTMLDivElement> & {
   title?: string;
   subtitle?: string;
   children?: React.ReactNode;
@@ -22,8 +22,10 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
   pointerOrigin = true, // default true to trigger ripple at mouse
   // Use Vite base URL so assets in `public/assets/...` resolve correctly in dev and after build
   // Default set to an existing image under public/assets/quasar/
-  backgroundImageUrl = `${import.meta.env.BASE_URL}assets/moonfolio/moonfolio_5.jpg`,
-  rippleColor = '#ff0000',
+  backgroundImageUrl = `${import.meta.env.BASE_URL}assets/quasar/tickets_edited2.jpg`,
+  rippleColor = '#33ff00',
+
+  ...rest
 
 }) => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
@@ -109,7 +111,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
     const elapsed = timestamp - state.startTime;
     const t = Math.min(elapsed / state.durationMs, 1);
 
-    const followDuration = 0.3;
+    const followDuration = 0.5;
     if (t < followDuration) {
       const followT = t / followDuration;
       const followEase = (x: number) => 1 - Math.pow(1 - x, 3);
@@ -133,7 +135,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
   const g255 = Math.round(rgbNorm[1] * 255);
   const b255 = Math.round(rgbNorm[2] * 255);
   glowGradient.addColorStop(0, `rgba(255,255,255,0.00)`);
-  glowGradient.addColorStop(0.5, `rgba(${r255}, ${g255}, ${b255}, 0)`);
+  glowGradient.addColorStop(0.9, `rgba(${r255}, ${g255}, ${b255}, 0)`);
   glowGradient.addColorStop(1, `rgba(${r255}, ${g255}, ${b255}, 0)`);
     ctx.fillStyle = glowGradient;
     ctx.beginPath();
@@ -412,6 +414,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
       className={`canvas-ripple-card ${className ?? ''}`.trim()}
       role="group"
       aria-label={ariaLabel}
+      {...rest}
       // style={{
       //   '--card-width': width,
       //   '--card-height': height,
@@ -439,6 +442,7 @@ const CanvasRippleCard: React.FC<CanvasRippleCardProps> = ({
           aria-hidden="true"
         />
       )}
+      <div className="border-glow" aria-hidden="true" />
       <div ref={overlayRef} className="canvas-ripple-overlay" aria-hidden="true" />
       <canvas ref={canvasRef} className="canvas-ripple-layer" />
       <canvas ref={webglCanvasRef} className="canvas-ripple-webgl" style={{ opacity: 0 }} />

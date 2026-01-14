@@ -1,0 +1,97 @@
+.custom-cursor-portal {
+  position: relative;
+  z-index: 9999;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 160ms ease, transform 160ms ease;
+  opacity: 0;
+  display: block;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+}
+
+.custom-cursor.hidden {
+  opacity: 0;
+}
+
+.cursor-inner {
+  width: 40px;
+  height: 40px;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+/* hide native cursor when custom cursor active */
+body.has-custom-cursor, body.has-custom-cursor * {
+  /* cursor: none !important; */
+}
+.custom-cursor {
+  position: fixed;
+  left: 32px;
+  top: 40px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  width: auto;
+  height: 20rem;
+  color: #fff;
+  z-index: 9999;
+  /* translate only here; scale will be animated on the inner element */
+  transform: translate(-50%, -50%);
+  transition: opacity 160ms ease, background-color 160ms ease;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+}
+
+.custom-cursor .cursor-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 16rem;
+  transform-origin: center center;
+  transform: scale(0.1);
+  transition: transform 1620ms cubic-bezier(.2,.9,.3,1);
+  will-change: transform, width, height, background-color;
+  border-radius: 0.5rem;
+}
+
+.custom-cursor .cursor-icon {
+  font-size: 0.8rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.custom-cursor.visible .cursor-inner {
+  background-color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(40px);
+  transform: scale(1);
+}
+
+/* When the body has this class, hide the native cursor so users see only the custom one */
+body.has-custom-cursor, body.has-custom-cursor * {
+  /* cursor: none !important; */
+}
