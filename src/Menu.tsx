@@ -18,7 +18,7 @@ const Menu: React.FC<MenuProps> = ({ productDesign, proceduralArt, contact, tran
   return (
     <div className={`top-bar-wrapper ${transparent ? 'transparent' : ''}`} id="menu">
       <div className="top-bar container-xxl px-3" ref={topBarRef}>
-        <div className='logo'><a href='#/'>Evgeny Prymak</a></div>
+        <div className='logo'><a href='#/'>Evgeny Prymak | Product Designer</a></div>
         <div className='menu'>
           <div className={`'menu-item link ${productDesign ? 'active' : ''}`}><Link to="/" className=''>Product Design & Web</Link></div>
           <div className={`'menu-item link ${proceduralArt ? 'active' : ''}`}><Link to="/project/100" className=''>Procedural Art</Link></div>
