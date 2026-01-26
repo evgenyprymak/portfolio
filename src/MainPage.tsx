@@ -186,7 +186,9 @@ const MainPage = () => {
             wrapperclassName=''
             title='Latest Projects'
             size='small'
-          /> onClick={() => setIsWoTWinterRaidOpen(true)}>
+          />
+          <div className='row row-gap-10 pt-40 pb-80'>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsWoTWinterRaidOpen(true)}>
               <ModalWoTWinterRaid
                 isOpen={isWoTWinterRaidOpen}
                 onClose={() => setIsWoTWinterRaidOpen(false)}
@@ -212,8 +214,6 @@ const MainPage = () => {
                 description="A complete overhaul of the tech tree, designed to improve navigation, clarity, and user experience."
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'
-          <div className='row row-gap-10 pt-40 pb-80'>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
                 link='/project/1'
