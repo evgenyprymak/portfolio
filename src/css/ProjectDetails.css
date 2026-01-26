@@ -221,12 +221,12 @@ html {
 
 .inline-image{
     width: 100%;
-    border-radius: .75rem;
+    /* border-radius: .75rem; */
 }
 
 .inline-image-2-container{
     padding: 24px 24px;
-    border-radius: .75rem;
+    /* border-radius: .75rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,7 +309,7 @@ html {
         min-height: auto;
     }
     .inline-image{
-        border-radius: 8px;
+        /* border-radius: 8px; */
     }
 }
 

@@ -44,6 +44,9 @@
     top: 54px;
     right: 24px;
     transform: rotate(45deg);
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 1002;
 }
 
 .dialog-header{

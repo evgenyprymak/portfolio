@@ -19,6 +19,7 @@ interface PageHero {
 const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, description, alignment, color, colorDescription, imageDesktop = "/portfolio/assets/quasar/project_hero_quasar_2560w.jpg" }) => {
   return (
     <motion.div
+      id="pageHero"
       animate={{
         opacity: [0, 1],
       }}
@@ -28,9 +29,9 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, 
       }}
     >
       <div className={`page-hero-main ${wrapperclassName}`}>
-        <div className={`page-hero-header-wrapper container-xxl ${headerwrapper}`}>
+        <div className={`page-hero-header-wrapper container-xxl px-4 ${headerwrapper}`}>
           <Header
-            wrapperclassName="header z-3 px-1"
+            wrapperclassName="header z-3"
             alignment={alignment}
             size="large"
             title={title}

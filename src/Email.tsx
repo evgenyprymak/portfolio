@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
             contact
             transparent />
             <PointsBackground />
-            <div className='container-xxl px-4 mt-80'>
+            <div className='container-xxl px-4 mt-80 pt-80'>
                 <Header
                     title={<span>Get in Touch</span>}
                     description={<span>I'm here to chat about design ideas, projects, or any questions you might have.</span>}

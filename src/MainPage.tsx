@@ -15,24 +15,42 @@ import './css/index.css';
 import ModalXeno from './components/ModalXenolyte';
 import Divider from './components/Divider';
 import ModalNDA from './components/ModalNDA';
-import { motion } from 'framer-motion';
+import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import ModalMoonfolio from './components/ModalMoonfolio';
 import ModalWoTWinterRaid from './components/ModalWoTWinterRaid';
 import ModalWoTTree from './components/ModalWoTTree';
 
 
+
+
+
+
 const MainPage = () => {
+
+const { scrollY } = useScroll()
+const [, setScrollDirection] = useState("down")
+
+useMotionValueEvent(scrollY, "change", (current) => {
+  const previous = scrollY.getPrevious()
+  if (previous !== undefined) {
+    const diff = current - previous
+    setScrollDirection(diff > 0 ? "down" : "up")
+    console.log("scroll direction:", diff > 0 ? "down" : "up")
+  }
+})
+
+
 
   const lottieRef = useRef<HTMLElement | null>(null);
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMoonfolioOpen, setIsMoonfolioOpen] = useState(false);
-  const [isNDAOpen, setIsNDAOpen] = useState(false);
   const [isWoTWinterRaidOpen, setIsWoTWinterRaidOpen] = useState(false);
+  const [isMoonfolioOpen, setIsMoonfolioOpen] = useState(false);
   const [isWoTTreeOpen, setIsWoTTreeOpen] = useState(false);
+  const [isNDAOpen, setIsNDAOpen] = useState(false);
   // const [isModalCS_conversion1, setIsModalCS_conversion1] = useState(false);
-
+  // const { scrollYProgress } = useScroll();
 
 
   useEffect(() => {
@@ -66,11 +84,11 @@ const MainPage = () => {
 
   return (
     <div>
+
       <Menu
         productDesign
       />
-      <div className="container-xxl px-3">
-
+      <div className="container-xxl px-4">
         <motion.div
           animate={{
             opacity: [0, 1],
@@ -164,14 +182,13 @@ const MainPage = () => {
               link='https://pitch.com/v/lyte---quasar---conversion-rate-improve-1-fs6px7'
               image='assets/case_boosting_CR.jpg'
               noHeader
-              // projectNDA
+            // projectNDA
             /></div>
-          <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
+          <div className='col-md-12 col-lg-6 card-gap-10'>
             <Project
-              link='#'
+              link='https://pitch.com/v/lyte---admin---customization-txgy5n'
               image='assets/case_operations.jpg'
               noHeader
-              projectNDA
             />
           </div>
           <ModalNDA
@@ -192,13 +209,14 @@ const MainPage = () => {
               <ModalWoTWinterRaid
                 isOpen={isWoTWinterRaidOpen}
                 onClose={() => setIsWoTWinterRaidOpen(false)}
-              />
+              >
+              </ModalWoTWinterRaid>
               <Project
                 link='#'
                 image='assets/wargaming/project_winter_raid.png'
                 title="World of Tanks: Winter Raid Event"
                 year={<span>2025 · B2C</span>}
-                description="Enhanced the ticketing platform's usability, leading to significant boosts in conversion and adoption rates."
+                description="A festive in-game event featuring unique missions, rewards, and winter-themed content to engage players during the holiday season."
               />
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsWoTTreeOpen(true)}>
@@ -211,7 +229,7 @@ const MainPage = () => {
                 image='assets/wargaming/project_tech_tree.png'
                 title="World of Tanks: Tech Tree 2.0"
                 year={<span>2025 · B2C</span>}
-                description="A complete overhaul of the tech tree, designed to improve navigation, clarity, and user experience."
+                description="An updated tech tree system providing enhanced navigation and detailed information to improve player experience."
               />
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10'>

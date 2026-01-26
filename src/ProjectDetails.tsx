@@ -74,7 +74,7 @@ const ProjectDetails = () => {
       />
       <ResultsSummary />
       <div className='container-fluid ephasized_section pt-40 px-0'>
-        <div className='container-xxl px-3'>
+        <div className='container-xxl px-4'>
           <Header
             wrapperclassName="py-4"
             size="medium"
@@ -91,22 +91,21 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          <motion.div {...sectionColorChange({ bgfrom: '#FFF', bgto: '#1B0431' })} className='f-width my-40'>
-            <div className='container-xxl my-40 py-40 px-1'>
+          <motion.div {...sectionColorChange({ bgfrom: '#FFF', bgto: '#111' })} className='f-width mt-40'>
+            <div className='container-xxl my-40 py-40 px-4'>
               <div className='row'>
                 <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
-                  <img src='/portfolio/assets/quasar/tickets_edited2.jpg' className='col-12 inline-image quasar-image-1' />
+                  <img src='/portfolio/assets/quasar/tickets_edited2.jpg' className='col-12 inline-image' />
                 </motion.div>
-                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-12 col-md-6 col-lg-7 px-0 quasar-image-2'>
+                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-7 pt-4 px-0 pe-2'>
                   <img src='/portfolio/assets/quasar/tickets_2.jpg' className='inline-image' />
                 </motion.div>
-                <motion.div {...imageSlide({ delay: 0.24 })} className='col-sm-12 col-md-6 col-lg-5 px-0 quasar-image-3'>
+                <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-5 pt-4 px-0 ps-2'>
                   <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
                 </motion.div>
               </div>
             </div>
           </motion.div>
-
           <Header
             wrapperclassName="pt-4"
             size="medium"
@@ -175,7 +174,7 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
-      <div className="features dark_section container-xxl px-3" id='features'>
+      <div className="features dark_section container-xxl px-4" id='features'>
         <Header
           wrapperclassName="pt-160 d-flex flex-column justify-content-center"
           size="medium"

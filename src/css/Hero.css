@@ -6,6 +6,7 @@
   justify-content: center;
   min-height: 760px;
   transition: all 0s;
+  margin-top: 40px;
 }
 
 .hero p{
