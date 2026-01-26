@@ -28,14 +28,23 @@ Write-Host "Preparing gh-pages..." -ForegroundColor Blue
 $currentBranch = git rev-parse --abbrev-ref HEAD
 Write-Host "Current branch: $currentBranch"
 
+# Save dist to temp folder before switching branches
+$tempDir = Join-Path $env:TEMP "portfolio_dist_$(Get-Date -Format 'yyyyMMddHHmmss')"
+Write-Host "Copying dist to temp: $tempDir" -ForegroundColor Cyan
+Copy-Item -Path "dist" -Destination $tempDir -Recurse -Force
+
 # Switch to gh-pages
 git checkout gh-pages
 
 # Remove old files (keep .git and node_modules)
 Get-ChildItem -Path "." -Exclude ".git", "node_modules", ".gitignore" -Force | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
 
-# Copy new files from dist
-Copy-Item -Path "dist\*" -Destination "." -Recurse -Force
+# Copy new files from temp
+Write-Host "Deploying files from temp..." -ForegroundColor Cyan
+Copy-Item -Path "$tempDir\*" -Destination "." -Recurse -Force
+
+# Clean up temp
+Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue
 
 # Commit and push
 git add .
