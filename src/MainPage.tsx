@@ -17,6 +17,8 @@ import Divider from './components/Divider';
 import ModalNDA from './components/ModalNDA';
 import { motion } from 'framer-motion';
 import ModalMoonfolio from './components/ModalMoonfolio';
+import ModalWoTWinterRaid from './components/ModalWoTWinterRaid';
+import ModalWoTTree from './components/ModalWoTTree';
 
 
 const MainPage = () => {
@@ -27,6 +29,8 @@ const MainPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMoonfolioOpen, setIsMoonfolioOpen] = useState(false);
   const [isNDAOpen, setIsNDAOpen] = useState(false);
+  const [isWoTWinterRaidOpen, setIsWoTWinterRaidOpen] = useState(false);
+  const [isWoTTreeOpen, setIsWoTTreeOpen] = useState(false);
   // const [isModalCS_conversion1, setIsModalCS_conversion1] = useState(false);
 
 
@@ -182,7 +186,33 @@ const MainPage = () => {
             wrapperclassName=''
             title='Latest Projects'
             size='small'
-          />
+          /> onClick={() => setIsWoTWinterRaidOpen(true)}>
+              <ModalWoTWinterRaid
+                isOpen={isWoTWinterRaidOpen}
+                onClose={() => setIsWoTWinterRaidOpen(false)}
+              />
+              <Project
+                link='#'
+                image='assets/wargaming/project_winter_raid.png'
+                title="World of Tanks: Winter Raid Event"
+                year={<span>2025 · B2C</span>}
+                description="Enhanced the ticketing platform's usability, leading to significant boosts in conversion and adoption rates."
+              />
+            </div>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsWoTTreeOpen(true)}>
+              <ModalWoTTree
+                isOpen={isWoTTreeOpen}
+                onClose={() => setIsWoTTreeOpen(false)}
+              />
+              <Project
+                link='#'
+                image='assets/wargaming/project_tech_tree.png'
+                title="World of Tanks: Tech Tree 2.0"
+                year={<span>2025 · B2C</span>}
+                description="A complete overhaul of the tech tree, designed to improve navigation, clarity, and user experience."
+              />
+            </div>
+            <div className='col-md-12 col-lg-6 card-gap-10'
           <div className='row row-gap-10 pt-40 pb-80'>
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
