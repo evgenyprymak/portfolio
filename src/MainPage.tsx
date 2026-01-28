@@ -113,24 +113,25 @@ useMotionValueEvent(scrollY, "change", (current) => {
           <Divider type='light' />
           <div className='row contribution'>
             <Header
-              wrapperclassName='col-lg-4 col-md-12'
+              wrapperclassName='col-lg-4 col-md-12 px-0 pe-4'
               title='Capabilities'
-              description={<span>Refined over 18+ years of commercial experience.</span>}
+              description={<span>20+ years in commercial product design</span>}
               size='small'
               colorDescription='var(--txt-light-3)'
             />
-            <div className='col-lg-4 col-md-6'>
+            <div className='col-lg-4 col-md-6 px-0  pe-4'>
+              <div className='skill'>AAA-Scale Game UX</div>
               <div className='skill'>Design Leadership</div>
               <div className='skill'>Streamlining Design Processes</div>
-              <div className='skill'>Empowering Company and Team Culture</div>
-              <div className='skill'>0<img src='/portfolio/assets/icons/arrow.svg' style={{ height: '14px', marginLeft: '4px', marginRight: '4px', }}></img>1 Products</div>
+              <div className='skill'>Strengthening Team Culture</div>
+              <div className='skill'>End-to-End Product Design </div> {/* (0<img src='/portfolio/assets/icons/arrow.svg' style={{ height: '14px', marginLeft: '4px', marginRight: '4px', }}></img>1 and Iteration) */}
               <div className='skill'>User-Centric Design</div>
-              <div className='skill'>Data-Driven Design Strategies</div>
+              <div className='skill'>Data-Informed Design</div>
               <div className='skill'>Leveraging User Behavior by Analytics</div>
               <div className='skill'>Critical Thinking</div>
               <div className='skill'>Cross-Functional Collaboration</div>
             </div>
-            <div className='col-lg-4 col-md-6'>
+            <div className='col-lg-4 col-md-6 px-0  pe-4'>
               <div className='skill'>Enhancing Product Usability</div>
               <div className='skill'>Scalable Design Solutions</div>
               <div className='skill'>Iterative Prototyping and User Testing</div>

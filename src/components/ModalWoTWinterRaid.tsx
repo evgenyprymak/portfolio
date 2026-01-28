@@ -3,6 +3,9 @@ import '../css/Modal.css';
 import Header from './Header';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import NDABlock from './NDABlock';
+import Divider from './Divider';
+import Task from './Task';
+import { motion } from 'framer-motion';
 
 interface ModalProps {
   isOpen: boolean;                // Explicitly define the type as boolean
@@ -24,6 +27,28 @@ const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
+    const imageSlide = ({ delay = 0 } = {}) => ({
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: { margin: "0px 0px -100px 0px" },
+    variants: {
+      offscreen: {
+        opacity: 0,
+        y: 50,
+      },
+      onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 1,
+          delay,
+        },
+      },
+    },
+  });
+
   if (!isOpen) return null;
 
   return (
@@ -38,7 +63,7 @@ const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
           </div>
           <iframe className='youtube-player' src="https://www.youtube.com/embed/xKq8Y297SP8?si=PS5RH-HJdU3MFrTg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-          <p className='mt-40'>
+          <p className='my-40'>
             Winter Raid is a limited-time Holiday Ops 2026 PvP mode (Dec 11–22) set in a charming miniature winter world, where three teams of five battle on compact snowy maps. Players collect gifts across the battlefield and deliver them to their base to score, while also being able to steal gifts from enemy bases and adapt to special events like snowstorms and high-value “big gifts.” By playing matches and completing mode-specific daily quests, players earn Gift Coins to progress through the event and unlock rewards, including new “Uncharted Territory” 3D attachments.
           </p>
           <div className='mt-20 mb-20'>
@@ -47,10 +72,26 @@ const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               itemTwo={<ReactCompareSliderImage src="assets/wargaming/winter_raid_0.jpg" alt="Image two" />}
             />
           </div>
-          <div className='row row-gap-10'>
-            <div className='col-lg-6 col-sm-12 card-gap-10 mt-20' ><div style={{ borderRadius: '.75rem', overflow: 'hidden' }}><img style={{ width: '100%', height: 'auto' }} src='assets/wargaming/winter_raid_2.jpg'></img></div></div>
-            <div className='col-lg-6 col-sm-12 card-gap-10 mt-20' ><video style={{ width: '100%', height: 'auto', borderRadius: '.75rem', overflow: 'hidden' }} src="assets/wargaming/winter_raid_rewards.mp4" autoPlay controls></video></div>
-          </div>
+
+            <div className='container-xxl my-20 py-20 px-0'>
+              <div className='row'>
+                <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
+                  <img src='assets/wargaming/wg_UI_render_1.jpg' className='col-12 inline-image' />
+                </motion.div>
+                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-6 pt-4 px-0 pe-2'>
+                  <video style={{ width: '100%', height: 'auto', overflow: 'hidden' }} className='inline-image' src="assets/wargaming/winter_raid_rewards.mp4" autoPlay loop></video>
+                </motion.div>
+                <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-6 pt-4 px-0 ps-2'>
+                  <img src='assets/wargaming/winter_raid_2.jpg' className='inline-image' />
+                </motion.div>
+              </div>
+            </div>
+
+          <Divider type='light' className='pb-20' smallMargin />
+
+          <NDABlock />
+
+
           <div className='row row-gap-2 pb-40 pt-20'>
             <div className='col-12 col-lg-12 card-gap-2'>
               <div className='numbered-list' style={{ borderRadius: '.5rem', overflow: 'hidden', backgroundColor: '#242424', color: '#EEEEF1' }}><div className='numbered-list-number'>1.</div><div><strong>Turned 60–70s board game references into a usable UI</strong> so the mode felt like a real tabletop experience, while interactions stayed clear and easy to read.</div></div>
@@ -69,7 +110,6 @@ const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
 
           </div>
-          <NDABlock />
 
         </div>
       </div>
