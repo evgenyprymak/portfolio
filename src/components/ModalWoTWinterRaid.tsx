@@ -4,7 +4,6 @@ import Header from './Header';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import NDABlock from './NDABlock';
 import Divider from './Divider';
-import Task from './Task';
 import { motion } from 'framer-motion';
 
 interface ModalProps {
