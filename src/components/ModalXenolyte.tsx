@@ -3,6 +3,7 @@ import '../css/Modal.css';
 import Header from './Header';
 import Metric1 from './Metric1';
 import NDABlock from './NDABlock';
+import { motion } from 'framer-motion';
 
 interface ModalProps {
   isOpen: boolean;                // Explicitly define the type as boolean
@@ -11,20 +12,41 @@ interface ModalProps {
 
 const ModalXeno: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
-    // Toggle the modal-open class on the body when the modal opens or closes
     if (isOpen) {
       document.body.classList.add('modal-open');
     } else {
       document.body.classList.remove('modal-open');
     }
 
-    // Cleanup on component unmount
     return () => {
       document.body.classList.remove('modal-open');
     };
   }, [isOpen]);
 
   if (!isOpen) return null;
+
+  const imageSlide = ({ delay = 0 } = {}) => ({
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: { margin: "0px 0px -100px 0px" },
+    variants: {
+      offscreen: {
+        opacity: 0,
+        y: 50,
+      },
+      onscreen: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          bounce: 0.2,
+          duration: 1,
+          delay,
+        },
+      },
+    },
+  });
+
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -48,10 +70,28 @@ const ModalXeno: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <Metric1 className='col-6 col-lg-6 card-gap-10' above='Time saving (approx.)' mainmetric='50%' color='rgba(255,255,255,1)' below='For a Design Teams' />
           </div>
           <NDABlock />
-          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_4.jpg'></img>
+          {/* <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_4.jpg'></img>
           <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_3.jpg'></img>
-          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_2.jpg'></img>
-
+          <img className='inline-image mt-40' src='/portfolio/assets/xenolyte/xenolyte_2.jpg'></img> */}
+          <div className='container-xxl my-20 py-20 px-0'>
+            <div className='row'>
+              <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
+                <img src='/portfolio/assets/xenolyte/xenolyte_4.jpg' className='col-12 inline-image' />
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.12 })} className='col-6 pt-4 px-0 pe-3'>
+                <img style={{ width: '100%', aspectRatio: 'auto', height: '100%', overflow: 'hidden' }} src='/portfolio/assets/xenolyte/xenolyte_3.jpg' className='inline-image' />
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.24 })} className='col-6 pt-4 px-0'>
+                <img style={{ width: '100%', aspectRatio: 'auto', height: '100%', overflow: 'hidden' }} src='/portfolio/assets/xenolyte/xenolyte_6.jpg' className='inline-image' />
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.36 })} className='col-4 pt-4 px-0 pe-3'>
+                <img style={{ width: '100%', aspectRatio: 'auto', height: '100%', overflow: 'hidden' }} src='/portfolio/assets/xenolyte/fast_checkout_052.jpg' className='inline-image' />
+              </motion.div>
+              <motion.div {...imageSlide({ delay: 0.48 })} className='col-8 pt-4 px-0'>
+                <img style={{ width: '100%', aspectRatio: 'auto', height: '100%', overflow: 'hidden' }} src='/portfolio/assets/xenolyte/xenolyte_2.jpg' className='inline-image' />
+              </motion.div>
+            </div>
+          </div>
 
 
         </div>

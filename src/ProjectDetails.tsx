@@ -91,7 +91,7 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          <motion.div {...sectionColorChange({ bgfrom: '#FFF', bgto: '#111' })} className='f-width mt-40'>
+          <motion.div {...sectionColorChange({ bgfrom: '#FFF', bgto: '#111' })} className='f-width'>
             <div className='container-xxl my-40 py-40 px-4'>
               <div className='row'>
                 <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
@@ -176,7 +176,7 @@ const ProjectDetails = () => {
           
         </div>
       </div>
-                <motion.div {...sectionColorChange({ bgfrom: '#ffffff00', bgto: '#fff' })} className='f-width mt-40'>
+                <motion.div {...sectionColorChange({ bgfrom: '#ffffff00', bgto: '#fff' })} className='f-width'>
             <div className='container-xxl py-40 px-4'>
               <div className='row'>
 

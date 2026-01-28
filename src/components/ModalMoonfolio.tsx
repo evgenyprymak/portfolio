@@ -9,14 +9,12 @@ interface ModalProps {
 
 const ModalMoonfolio: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
-    // Toggle the modal-open class on the body when the modal opens or closes
     if (isOpen) {
       document.body.classList.add('modal-open');
     } else {
       document.body.classList.remove('modal-open');
     }
 
-    // Cleanup on component unmount
     return () => {
       document.body.classList.remove('modal-open');
     };

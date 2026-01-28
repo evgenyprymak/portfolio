@@ -12,7 +12,6 @@ interface ModalProps {
 const ModalWoTTree: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
-    // console.log('ModalWoTTree isOpen changed:', isOpen);
     if (isOpen) {
       document.body.classList.add('modal-open');
     } else {

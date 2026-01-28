@@ -14,7 +14,6 @@ interface ModalProps {
 const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
-    // console.log('ModalWoTWinterRaid isOpen changed:', isOpen);
     if (isOpen) {
       document.body.classList.add('modal-open');
     } else {
