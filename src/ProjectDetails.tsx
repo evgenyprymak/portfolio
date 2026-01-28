@@ -101,7 +101,7 @@ const ProjectDetails = () => {
                   <img src='/portfolio/assets/quasar/tickets_2.jpg' className='inline-image' />
                 </motion.div>
                 <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-5 pt-4 px-0 ps-2'>
-                  <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
+                  <img src='/portfolio/assets/quasar/printable.jpg' className='inline-image' />
                 </motion.div>
               </div>
             </div>
@@ -171,9 +171,27 @@ const ProjectDetails = () => {
                 <div className='design-activity'>Creating guides for clients for event customizations</div>
               </div>
             </div>
+
           </div>
+          
         </div>
       </div>
+                <motion.div {...sectionColorChange({ bgfrom: '#ffffff00', bgto: '#fff' })} className='f-width mt-40'>
+            <div className='container-xxl py-40 px-4'>
+              <div className='row'>
+
+                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-4 pb-4 px-0 pe-2'>
+                  <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
+                </motion.div>
+                <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-8 pb-4 px-0 ps-2'>
+                  <img src='/portfolio/assets/quasar/403-02.jpg' className='inline-image' />
+                </motion.div>
+                                <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
+                  <img src='/portfolio/assets/quasar/Activation.jpg' className='col-12 inline-image' />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
       <div className="features dark_section container-xxl px-4" id='features'>
         <Header
           wrapperclassName="pt-160 d-flex flex-column justify-content-center"

@@ -81,6 +81,12 @@ body.modal-open {
     padding: 40px 40px;
 }
 
+@media (max-width: 550px) {
+    .dialog-content {
+        padding: 20px 20px;
+    }
+}
+
 .dialog-content.noXpadding {
     padding: 40px 0px;
 }

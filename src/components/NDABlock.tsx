@@ -14,7 +14,7 @@ const NDABlock: React.FC<NDABlockProps> = () => {
         create({
             player: lottieRef.current,
             container: targetRef.current,
-            mode: 'scroll',
+            mode: 'auto',
             actions: [
                 {
                     type: "play",

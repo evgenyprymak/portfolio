@@ -228,7 +228,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
               <Project
                 link='#'
                 image='assets/wargaming/project_tech_tree.png'
-                title="World of Tanks: Tech Tree 2.0"
+                title="World of Tanks 2.0: Tech Tree"
                 year={<span>2025 · B2C</span>}
                 description="An updated tech tree system providing enhanced navigation and detailed information to improve player experience."
               />
@@ -236,7 +236,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
             <div className='col-md-12 col-lg-6 card-gap-10'>
               <Project
                 link='/project/1'
-                image='assets/projectTitleImages/quasar_title_5.jpg'
+                image='assets/projectTitleImages/project_quasar2_tiny.jpg'
                 title="Quasar Ticketing Platform"
                 year={<span>2020–2024 · B2C</span>}
                 description="Enhanced the ticketing platform's usability, leading to significant boosts in conversion and adoption rates."

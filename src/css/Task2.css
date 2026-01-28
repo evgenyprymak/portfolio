@@ -1,0 +1,194 @@
+/* Task2.css */
+
+.task2 {
+    /* width: 300px; */
+    height: 680px;
+    /* Фиксированная высота карточки */
+    border-radius: .75rem;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg-dark-3);
+    color: var(--txt-light-2);
+    margin-bottom: 32px;
+    text-wrap: pretty;
+    transition: box-shadow 0.6s ease;
+
+}
+
+.task2.expanded .tags{
+    opacity: 0;
+    transform: translateY(5);
+}
+
+.task2:hover {
+    cursor: pointer;
+    color: var(--txt-light-1);
+}
+
+.task2:hover .task2-description{
+    background-color: #1d1d1f;
+}
+
+.task2:hover .task2-btn{
+    background-color: #7e7e7e;
+}  
+
+.task2.expanded .task2-image{
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+.task2-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: transform 0.42s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.task2-image {
+    height: 600px;
+    background-color: var(--bg-dark-3);
+    transition: transform 0.9s cubic-bezier(0.33, 1, 0.68, 1), opacity 0.9s ease;
+    /* overflow: hidden; */
+}
+
+.task2-image img {
+    width: 100%;
+    height: auto;
+    /* Высота изображения */
+    object-fit: cover;
+}
+
+
+.task2-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    padding-right: 32px;
+    /* transition: transform 0.3s ease; */
+}
+
+.task2-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: #424244;
+    color: rgb(92, 92, 92);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    /* Увеличиваем z-index, чтобы кнопка всегда была сверху */
+}
+
+.task2-btn:hover {
+    background-color: #262424;
+}
+
+:root{
+    --my-ease: 0.4s cubic-bezier(0.32, 1, 0.68, 1);
+}
+
+/* Описание */
+.task2-description {
+    position: absolute;
+    top: 450px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    max-height: 680px;
+    overflow: hidden;
+    padding: 0 24px;
+    transition: max-height var(--my-ease), bottom var(--my-ease), top var(--my-ease), background-color 0.3s ease;
+    z-index: 1;
+    background-color: var(--bg-dark-3);
+}
+
+.task2-description-text {
+    color: rgba(0, 0, 0, 0);
+    transition: color 0.3s ease;
+    padding-bottom: 40px;
+}
+
+.task2-description-text.expanded {
+    color: var(--txt-light-3);
+}
+
+.task2-description-text.expanded strong{
+    color: var(--txt-light-2);
+}
+
+.task2-description.expanded {
+    top: 0px;
+    height: 100%;
+    max-height: 680px;
+    z-index: 1;
+}
+
+/* .task2-content.expanded {
+
+} */
+
+.icon{
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.icon.expanded{
+    transform: rotate(135deg);
+}
+
+.tags{
+    position: absolute;
+    z-index: 2;
+    bottom: 24px;
+    left: 24px;
+    color: var(--txt-light-3);
+    font-size: clamp(14px, 1vw, 14px);
+    font-weight: 500;
+}
+
+.tags span{
+    padding-right: 16px;
+}
+
+
+@media (max-width: 420px) {
+    .task2-image img {
+        width: 100%;
+        height: calc(100% - 148px);
+        object-fit: cover;
+    }
+     
+}
+
+@media (max-width: 992px) {
+    .task2-description{
+        max-height: 292px;
+    }
+    .task2-title{
+     padding-right: 16px;   
+    }
+}
+
+@media (max-width: 1280px) {
+    .task2-description{
+        max-height: 320px;
+    }
+    .task2-title{
+     padding-right: 16px;   
+    }
+}

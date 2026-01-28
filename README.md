@@ -1,11 +1,58 @@
-# React + TypeScript + Vite
+# Portfolio React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite portfolio website.
 
-Currently, two official plugins are available:
+## 🚀 Деплой на GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Шаг 1: Подготовка изменений
+```bash
+# Добавьте все изменения
+git add .
+
+# Закоммитьте изменения
+git commit -m "Your commit message"
+
+# Запушьте на GitHub
+git push origin main
+```
+
+### Шаг 2: Сборка проекта
+```bash
+npm run build
+```
+
+### Шаг 3: Деплой
+```bash
+npx gh-pages -d dist -b gh-pages
+```
+
+**Или используйте одну команду для сборки и деплоя:**
+```bash
+npm run deploy
+```
+
+### ⚠️ Важно
+- **НЕ используйте** скрипт `deploy.ps1` - он может удалить ваши файлы
+- **Всегда оставайтесь** на ветке `main` при деплое
+- Команда `npx gh-pages` автоматически создаёт/обновляет ветку `gh-pages`
+- Вы остаётесь на ветке `main`, переключение веток не требуется
+
+## 🛠 Development
+
+### Install dependencies
+```bash
+npm install
+```
+
+### Run development server
+```bash
+npm run dev
+```
+
+### Build for production
+```bash
+npm run build
+```
 
 ## Expanding the ESLint configuration
 

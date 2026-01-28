@@ -1,7 +1,7 @@
-.hero{
+.hero {
   display: flex;
   height: 90%;
-  align-items:start;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
   min-height: 760px;
@@ -9,7 +9,7 @@
   margin-top: 40px;
 }
 
-.hero p{
+.hero p {
   color: #e4e4e4;
   font-family: ObjectSans;
   font-weight: 500;
@@ -18,7 +18,7 @@
   text-align: left;
 }
 
-.me{
+.me {
   width: 100px;
   border-radius: 12px;
   margin-bottom: 40px;
@@ -33,4 +33,10 @@
   font-family: Inter;
   color: var(--txt-light-3);
   font-style: Italic;
+}
+
+@media (max-width: 550px) {
+  .hero {
+    margin-top: 80px;
+  }
 }

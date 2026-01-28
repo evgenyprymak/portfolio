@@ -78,10 +78,10 @@ const ModalWoTWinterRaid: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   <img src='assets/wargaming/wg_UI_render_1.jpg' className='col-12 inline-image' />
                 </motion.div>
                 <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-6 pt-4 px-0 pe-2'>
-                  <video style={{ width: '100%', height: 'auto', overflow: 'hidden' }} className='inline-image' src="assets/wargaming/winter_raid_rewards.mp4" autoPlay loop></video>
+                  <video style={{ width: '100%', height: 'auto', overflow: 'hidden', objectFit: 'cover' }} className='inline-image' src="assets/wargaming/winter_raid_rewards.mp4" autoPlay loop></video>
                 </motion.div>
                 <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-6 pt-4 px-0 ps-2'>
-                  <img src='assets/wargaming/winter_raid_2.jpg' className='inline-image' />
+                  <img style={{ width: '100%', aspectRatio: 'auto', height: '100%', overflow: 'hidden' }}  src='assets/wargaming/winter_raid_2.jpg' className='inline-image' />
                 </motion.div>
               </div>
             </div>
