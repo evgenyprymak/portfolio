@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     position: sticky;
-    top: 20px;
+    top: 16px;
     backdrop-filter: blur(16px);
     transform: translateY(16px);
 }
@@ -19,11 +19,23 @@
 
 #menu {
     position: fixed;
-    top: 20px;
+    top: 16px;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 20;
     margin: 0 auto;
+}
+
+#menu-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.221);
+    margin-bottom: 12px;
+    display: none;
+}
+
+#menu-divider.compact {
+    display: block;
 }
 
 .menu-dropdown {
@@ -31,20 +43,39 @@
     flex-direction: column;
     gap: 16px;
     position: absolute;
-    background-color: var(--bg-dark-2);
-    padding: 16px;
-    border-radius: 1.5rem;
+    background-color: rgba(181, 181, 181, 0.6);
+    padding: 16px 24px;
+    border-radius: 0rem 0rem 2rem 2rem;
     margin-top: 48px;
-    margin-left: -24px;
-    z-index: 1000;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 20;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+    box-sizing: border-box;
 }
 
-.menu-item.link:hover .menu-dropdown {
+.menu-dropdown.compact {
+    top: -48px;
+    padding-top: 64px;
+    border-radius: 2rem;
+}
+
+.menu-dropdown.open {
     opacity: 1;
     visibility: visible;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+}
+
+.menu-dropdown.open.compact {
+    background-color: rgba(181, 181, 181, 0.6);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
 }
 
 .top-bar {
@@ -53,7 +84,6 @@
     padding: 0px 0px;
     margin: 0px auto;
     transition: all 0.3s ease;
-    /* Плавная анимация */
     border-radius: 0.2rem;
     width: 100%;
     height: 100px;
@@ -66,7 +96,7 @@
 
 .top-bar a {
     color: var(--txt-light-1);
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
 .menu-wrapper {
@@ -78,19 +108,33 @@
     background-color: rgba(27, 27, 27, 0);
     border-radius: 0rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.221);
+    position: relative;
 }
 
 .menu-wrapper.compact {
     padding: 16px 24px;
-    backdrop-filter: blur(24px);
     border-radius: 20rem;
     background-color: rgba(181, 181, 181, 0.6);
     border-bottom: none;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.menu-wrapper.compact.menu-open {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.menu-wrapper.compact:not(.menu-open) {
+}
+
+.menu-wrapper.compact.menu-open {
+    border-radius: 2rem 2rem 0rem 0rem;
 }
 
 a {
-    font-weight: 700;
-    /* color: #b7b7b7; */
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -100,17 +144,56 @@ a:hover {
 
 
 
+.menu-container {
+    color: var(--txt-light-1);
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    z-index: 10;
+}
+
+.menu-icon-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon-wrapper.open {
+    transform: rotate(90deg);
+}
+
 .menu {
     display: flex;
     font-family: ObjectSans;
     gap: 24px;
     margin: 0px 0px;
+    position: relative;
+    z-index: 10;
 }
 
 
 .menu-item {
-    align-items: start;
+    opacity: 0.7;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
 }
+
+.menu-item.active,
+.menu-item:hover {
+    opacity: 1;
+    color: var(--txt-light-1);
+}
+
+.nav-link {
+
+}
+
+.nav-link:hover {
+}
+
+
 
 .link {
     cursor: pointer;
@@ -123,57 +206,24 @@ a:hover {
     color: var(--txt-light-1);
 }
 
-.active a::before,
-.active a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    top: 100%;
-    left: 0;
-    pointer-events: none;
-    transform-origin: 0% 150%;
-    transform: scale3d(1, 2, 1);
-    transition: transform 0.5s;
-}
-
-
-
-
-.link::before,
-.link::after {
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-    top: 100%;
-    left: 0;
-    pointer-events: none;
-    transform-origin: 100% 100%;
-    transform: scale3d(0, 2, 1);
-    transition: transform 0.5s;
-}
-
-.link::before {
-    content: '';
-}
-
-.link:hover::before {
-    transform-origin: 0% 150%;
-    transform: scale3d(1, 2, 1);
-}
 
 .logo {
     font-size: 16px;
-    font-weight: 500 !important;
+    font-weight: 600;
     color: #fff !important;
     opacity: 1 !important;
     margin-bottom:1px;
+    position: relative;
+    z-index: 10;
 }
 
 .logo a {
     color: #fff;
+}
+
+.cta-button {
+    position: relative;
+    z-index: 10;
 }
 
 
