@@ -119,7 +119,7 @@ const ProjectDetailsDashboard = () => {
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
       />
-      <div className='container-xxl px-3'>
+      <div className='container-xxl px-4'>
         <div className='row row-gap-10'>
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='1M+' color='rgba(255,255,255,1)' below='Active users in 2019' />
           <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='$13B+' color='rgba(255,255,255,1)' below='Trading volume' />
@@ -128,7 +128,7 @@ const ProjectDetailsDashboard = () => {
       </div>
 
       <div className='container-fluid ephasized_section mt-40 pt-40'>
-        <div className='container-xxl px-3'>
+        <div className='container-xxl px-4'>
           <div className='row row-gap-2'>
             <Metric2 className='col-6 col-lg-6 card-gap-2' above='My role' mainmetric='Product Designer' color='var(--txt-dark-2)' />
             <Metric2 className='col-6 col-lg-6 card-gap-2' above='Timeline' mainmetric='2016–2019' color='var(--txt-dark-2)' />
@@ -157,11 +157,11 @@ const ProjectDetailsDashboard = () => {
       </div>
 
       <div className='dark_section'>
-        <div className='container-xxl px-3'>
+        <div className='container-xxl px-4'>
           <Header
             wrapperclassName="pt-80"
             size="medium"
-            title="Fetures"
+            title="Features"
             description={<span>During my time at Capital.com, I contributed to numerous features that enhance the trading experience and platform usability. My work included designing elements for branding, streamlining the registration process, and adapting account options for different regulatory requirements. I focused on making essential trading functions—such as portfolio management, instant and pending orders, reporting, and trading directly from charts—intuitive and accessible. I also developed clear call-to-action elements to guide users on where and how to start, making the platform welcoming for newcomers while offering robust tools for experienced traders.</span>}
             color='var(--txt-light-2)'
             colorDescription='var(--txt-light-3)'

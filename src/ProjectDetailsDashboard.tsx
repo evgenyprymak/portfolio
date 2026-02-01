@@ -27,7 +27,7 @@ const ProjectDetailsDashboard = () => {
         colorDescription='var(--txt-light-3)'
       />
       <div className='container-fluid ephasized_section mt-40 pt-40'>
-        <div className='container-xxl'>
+        <div className='container-xxl px-4'>
           <div className='row row-gap-2'>
             <Metric2 className='col-6 col-lg-4 card-gap-2' above='My role' mainmetric='Lead Product Designer' color='var(--txt-dark-2)' />
             <Metric2 className='col-6 col-lg-4 card-gap-2' above='Timeline' mainmetric='Sep–Dec, 2019' color='var(--txt-dark-2)' />
@@ -54,7 +54,7 @@ const ProjectDetailsDashboard = () => {
       </div>
 
         <div className='dark_section'>
-          <div className='container-xxl px-2'>
+          <div className='container-xxl px-4'>
             <Header
               wrapperclassName="pt-80"
               size="medium"
