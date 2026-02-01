@@ -110,7 +110,7 @@ const ProjectDetailsDashboard = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Capital.com<br />Reinventing the Future<br />of Trading</span>}
+        title={<span>Capital.com</span>}
         description={<span>Capital.com is a CFD trading platform designed to be both intuitive for beginners and feature-rich for experienced traders. With a focus on accessibility and user-friendly design, it offers a seamless experience that makes trading straightforward for all users, regardless of their level of expertise.</span>}
         wrapperclassName="container-fluid"
         headerwrapper='pb-40 px-3'

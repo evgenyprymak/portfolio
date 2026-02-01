@@ -18,7 +18,7 @@ const ProjectDetailsDashboard = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Client Dashboard.<br />Enhancing Client Experience.</span>}
+        title={<span>Lyte Client Dashboard.</span>}
         description={<span>This project focused on improving communication between Lyte and its clients by reimagining solutions, enabling self-service capabilities, and delivering the best-in-class reporting for ticketing services on the market.</span>}
         wrapperclassName="container-fluid"
         imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg"

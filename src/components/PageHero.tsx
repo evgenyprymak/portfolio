@@ -31,7 +31,7 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, 
       <div className={`page-hero-main ${wrapperclassName}`}>
         <div className={`page-hero-header-wrapper container-xxl px-4 ${headerwrapper}`}>
           <Header
-            wrapperclassName="header z-3"
+            wrapperclassName="header z-3 my-40 pt-80"
             alignment={alignment}
             size="large"
             title={title}
@@ -39,21 +39,24 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, 
             colorDescription={colorDescription}
             description={description}
           />
+          <div>
+            <img
+              className="page-hero-image"
+              src={`${imageDesktop}`}
+              alt='Quasar'
+            />
+          </div>
         </div>
-        <div className="page-hero-imageWrapper">
+        {/* <div className="page-hero-imageWrapper">
           <div className="page-hero-shade">
           </div>
-          {/* <div
+          <div
             className="page-hero-image"
             style={{ backgroundImage: `url(${imageDesktop})` }}
           >
-          </div> */}
-          <img
-            className="page-hero-image"
-            src={`${imageDesktop}`}
-            alt='Quasar'
-          />
-        </div>
+          </div>
+
+        </div> */}
       </div>
     </motion.div>
   );
