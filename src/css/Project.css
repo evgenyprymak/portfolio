@@ -93,7 +93,7 @@ a.project_card:hover {
 }
 
 .d_none {
-    display: none;
+    display: none !important;
 }
 
 .h-100 {

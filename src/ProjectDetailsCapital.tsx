@@ -110,7 +110,7 @@ const ProjectDetailsDashboard = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Capital.com<br />Reinventing the Future<br />of Trading</span>}
+        title={<span>Capital.com<br />Reinventing the Future of Trading.</span>}
         description={<span>Capital.com is a CFD trading platform designed to be both intuitive for beginners and feature-rich for experienced traders. With a focus on accessibility and user-friendly design, it offers a seamless experience that makes trading straightforward for all users, regardless of their level of expertise.</span>}
         wrapperclassName="container-fluid"
         headerwrapper='pb-40 px-3'
@@ -118,6 +118,7 @@ const ProjectDetailsDashboard = () => {
         imageDesktop="/portfolio/assets/capital/project_hero_capital_2560w.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
+        logoUrl='/portfolio/assets/logos/product_logo=capital.svg'
       />
       <div className='container-xxl px-4'>
         <div className='row row-gap-10'>

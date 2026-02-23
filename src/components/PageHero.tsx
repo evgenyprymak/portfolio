@@ -14,9 +14,10 @@ interface PageHero {
   colorDescription?: string;
   imageMobile?: string;
   imageDesktop?: string;
+  logoUrl?: string;
 }
 
-const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, description, alignment, color, colorDescription, imageDesktop = "/portfolio/assets/quasar/project_hero_quasar_2560w.jpg" }) => {
+const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, description, alignment, color, colorDescription, imageDesktop = "/portfolio/assets/quasar/project_hero_quasar_2560w.jpg", logoUrl  }) => {
   return (
     <motion.div
       id="pageHero"
@@ -28,26 +29,18 @@ const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, 
         ease: "easeInOut",
       }}
     >
-      <div className={`page-hero-main ${wrapperclassName}`}>
-        <div className={`page-hero-header-wrapper container-xxl px-4 ${headerwrapper}`}>
-          <Header
-            wrapperclassName="header z-3"
-            alignment={alignment}
-            size="large"
-            title={title}
-            color={color}
-            colorDescription={colorDescription}
-            description={description}
-          />
-        </div>
+      <div className={`page-hero-wrapper container-xxl px-4 ${wrapperclassName}`}>
+        <Header
+          wrapperclassName="header z-3 pb-4"
+          alignment={alignment}
+          size="large"
+          title={title}
+          color={color}
+          colorDescription={colorDescription}
+          description={description}
+          logoUrl={logoUrl}
+        />
         <div className="page-hero-imageWrapper">
-          <div className="page-hero-shade">
-          </div>
-          {/* <div
-            className="page-hero-image"
-            style={{ backgroundImage: `url(${imageDesktop})` }}
-          >
-          </div> */}
           <img
             className="page-hero-image"
             src={`${imageDesktop}`}

@@ -1,6 +1,7 @@
 // @ts-ignore
 import React, { useEffect, useRef, useState } from 'react';
 import './css/Hero.css';
+import Divider from './components/Divider';
 
 const Hero: React.FC = () => {
 
@@ -37,10 +38,9 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className='hero pt-80'>
+    <div className='hero'>
       <div className='row'>
-        
-        <div className='col-md-8 px-0 pe-4'>
+        <div className='col-md-8 px-0 pe-4 pt-80'>
         <img src='assets/me.jpg' className='me' />
 
           <p>

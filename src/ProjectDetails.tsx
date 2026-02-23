@@ -14,6 +14,7 @@ import NDABlock from './components/NDABlock';
 import Project from './Project';
 import ResultsSummary from './components/ResultsSummary';
 import { motion } from 'framer-motion';
+import Metric1 from './components/Metric1';
 
 
 const ProjectDetails = () => {
@@ -63,15 +64,24 @@ const ProjectDetails = () => {
     <div className="container-fluid px-0 justify-content-center">
       <Menu productDesign />
       <PageHero
-        title={<span>Quasar. <br />The Ticketing Platform.</span>}
+        title={<span>Quasar. <br />Ticketing Platform For Fans.</span>}
         description={<span>The Quasar project focused on creating a top-tier fan experience in ticketing, supporting diverse event states like Demand Aggregation, On Sale, and P2P exchanges. Adopted by major clients such as Coachella and Burning Man, it boosted sales and fan satisfaction.</span>}
         wrapperclassName="container-fluid"
         headerwrapper=''
-        imageMobile="/portfolio/assets/quasar/project_hero_quasar_960w.jpg"
-        imageDesktop="/portfolio/assets/quasar/project_hero_quasar_2560w.jpg"
+        imageMobile="/portfolio/assets/projectTitleImages/quasar_title_5.jpg"
+        imageDesktop="/portfolio/assets/projectTitleImages/quasar_title_5.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
+        logoUrl='/portfolio/assets/logos/product_logo=lyte.svg'
       />
+      <div className='container-xxl px-4 pb-20'>
+        <div className='row row-gap-10'>
+          <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='1,200' color='rgba(255,255,255,1)' below='Music events per year' />
+          <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='1M+' color='rgba(255,255,255,1)' below='Tickets sold growth per year' />
+          <Metric1 className='col-6 col-lg-4 card-gap-10' above='' mainmetric='$750M+' color='rgba(255,255,255,1)' below='Secured in ticket reservations' />
+        </div>
+      </div>
+
       <ResultsSummary />
       <div className='container-fluid ephasized_section pt-40 px-0'>
         <div className='container-xxl px-4'>
@@ -173,36 +183,34 @@ const ProjectDetails = () => {
             </div>
 
           </div>
-          
+
         </div>
       </div>
-                <motion.div {...sectionColorChange({ bgfrom: '#ffffff00', bgto: '#fff' })} className='f-width'>
-            <div className='container-xxl py-40 px-4'>
-              <div className='row'>
+      <motion.div {...sectionColorChange({ bgfrom: '#ffffff00', bgto: '#fff' })} className='f-width'>
+        <div className='container-xxl py-40 px-4'>
+          <div className='row'>
 
-                <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-4 pb-4 px-0 pe-2'>
-                  <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
-                </motion.div>
-                <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-8 pb-4 px-0 ps-2'>
-                  <img src='/portfolio/assets/quasar/403-02.jpg' className='inline-image' />
-                </motion.div>
-                                <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
-                  <img src='/portfolio/assets/quasar/Activation.jpg' className='col-12 inline-image' />
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
+            <motion.div {...imageSlide({ delay: 0.12 })} className='col-sm-6 col-md-6 col-lg-4 pb-4 px-0 pe-2'>
+              <img src='/portfolio/assets/quasar/tickets_3_2.jpg' className='inline-image' />
+            </motion.div>
+            <motion.div {...imageSlide({ delay: 0.36 })} className='col-sm-6 col-md-6 col-lg-8 pb-4 px-0 ps-2'>
+              <img src='/portfolio/assets/quasar/403-02.jpg' className='inline-image' />
+            </motion.div>
+            <motion.div {...imageSlide()} className='d-flex justify-content-center px-0'>
+              <img src='/portfolio/assets/quasar/Activation.jpg' className='col-12 inline-image' />
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
       <div className="features dark_section container-xxl px-4" id='features'>
         <Header
-          wrapperclassName="pt-160 d-flex flex-column justify-content-center"
+          wrapperclassName="pt-80"
           size="medium"
-          title="Projects, features & flows delivered"
+          title="Features delivered"
           description="Since joining the product team, I have contributed to the development of numerous features, creating some from scratch and enhancing many others. My approach consistently balances time to market, feasibility, and the win-win-win principle (client, business, and user), ensuring optimal design solutions that benefit all stakeholders."
           color='var(--txt-light-2)'
           colorDescription='var(--txt-light-3)'
-          alignment='center'
         />
-        <NDABlock />
         <div className='' style={{ height: 'auto' }} >
           <div className='row row-gap-10 pt-40'>
             <Task

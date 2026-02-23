@@ -40,7 +40,7 @@
 }
 
 .metric3_main_number{
-    font-family: 'Neue Machina Plain', sans-serif;
+    /* font-family: 'Neue Machina Plain', sans-serif; */
     font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
     font-weight: 500;
     font-size: clamp(32px, 5vw, 40px);

@@ -21,7 +21,7 @@
     font-size: 18px;
 }
 .metric2_main_number{
-    font-family: 'Neue Machina Plain', sans-serif;
+    /* font-family: 'Neue Machina Plain', sans-serif; */
     font-feature-settings: 'ss12' on, 'liga' off, 'clig' off;
     font-weight: 600;
     margin-top: 20px;

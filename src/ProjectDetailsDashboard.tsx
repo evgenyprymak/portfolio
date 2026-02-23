@@ -25,6 +25,7 @@ const ProjectDetailsDashboard = () => {
         imageDesktop="/portfolio/assets/dashboard/project_hero_dashboard_2560w.jpg"
         color='var(--txt-light-1)'
         colorDescription='var(--txt-light-3)'
+        logoUrl='/portfolio/assets/logos/product_logo=lyte.svg'
       />
       <div className='container-fluid ephasized_section mt-40 pt-40'>
         <div className='container-xxl px-4'>
