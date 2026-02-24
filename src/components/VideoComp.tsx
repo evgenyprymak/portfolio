@@ -1,6 +1,6 @@
 // @ts-ignore
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../css/VideoComp.css'; // импортируйте CSS, если нужно
 
 interface VideoCompProps {
@@ -22,11 +22,8 @@ interface VideoCompProps {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Проверяем, если это не мобильное устройство
-                        if (!/Mobi|Android/i.test(navigator.userAgent)) {
-                            // Если видео стало видимым, начинаем воспроизведение
-                            videoRef.current?.play();
-                        }
+                    // Если видео стало видимым, начинаем воспроизведение
+                    videoRef.current?.play().catch(() => {});
                     } else {
                         // При прокрутке вверх, ставим на паузу
                         videoRef.current?.pause();
@@ -53,8 +50,11 @@ interface VideoCompProps {
         <video
           ref={videoRef}
           src={videoSrc}
+          muted
+          playsInline
+          loop
+          preload="metadata"
         //   onLoadedData={handleLoad}
-          controls
         //   className={isLoading ? 'hidden' : ''}
         />
       </div>

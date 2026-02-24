@@ -110,6 +110,14 @@ a.project_card:hover {
     padding: 0px 0px 40px 0px;
 }
 
+.procedural-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
 @media (min-width: 992px) {
     .nextProject .project_description{
         flex-grow: 1;

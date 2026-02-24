@@ -17,7 +17,7 @@ interface PageHero {
   logoUrl?: string;
 }
 
-const PageHero: React.FC<PageHero> = ({ wrapperclassName, headerwrapper, title, description, alignment, color, colorDescription, imageDesktop = "/portfolio/assets/quasar/project_hero_quasar_2560w.jpg", logoUrl  }) => {
+const PageHero: React.FC<PageHero> = ({ wrapperclassName, title, description, alignment, color, colorDescription, imageDesktop = "/portfolio/assets/quasar/project_hero_quasar_2560w.jpg", logoUrl  }) => {
   return (
     <motion.div
       id="pageHero"

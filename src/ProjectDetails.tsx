@@ -10,7 +10,6 @@ import PageHero from './components/PageHero';
 import './css/ProjectDetails.css';
 import Menu from './Menu';
 import Footer from './components/Footer';
-import NDABlock from './components/NDABlock';
 import Project from './Project';
 import ResultsSummary from './components/ResultsSummary';
 import { motion } from 'framer-motion';

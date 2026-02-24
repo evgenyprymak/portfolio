@@ -22,11 +22,11 @@ const squareVariants = {
     scaleX: 1,
     transition: {
       duration: 1,
-      delay: index * 0.25, // Задержка анимации в зависимости от индекса
+      delay: index * 1.25, // Задержка анимации в зависимости от индекса
       ease: "easeInOut",
     },
   }),
-  hidden: { opacity: 0, scale: 1, scaleX: 1.5, y: 50 }, // Добавление начального вращения
+  hidden: { opacity: 0, scale: 1, scaleX: 1, y: 250 }, // Добавление начального вращения
 };
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({

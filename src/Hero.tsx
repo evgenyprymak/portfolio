@@ -1,7 +1,6 @@
 // @ts-ignore
 import React, { useEffect, useRef, useState } from 'react';
 import './css/Hero.css';
-import Divider from './components/Divider';
 
 const Hero: React.FC = () => {
 
