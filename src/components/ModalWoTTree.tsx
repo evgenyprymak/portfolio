@@ -35,10 +35,8 @@ const ModalWoTTree: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
           </div>
           <iframe className='youtube-player' src="https://www.youtube.com/embed/FTEkzHeiafg?si=K0Np9A2dyHHuAsJE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                             <Divider type='light' className='py-20' smallMargin />
-
-                    <NDABlock />
-
+          <Divider type='light' className='py-20' smallMargin />
+          <NDABlock />
           <p className='mt-40'>
             Tech Tree in 2.0 is a complete overhaul of the World of Tanks tech tree, designed to improve navigation, clarity, and user experience. The redesign introduces a more intuitive layout, enhanced visual hierarchy, and streamlined access to vehicle information.
           </p>

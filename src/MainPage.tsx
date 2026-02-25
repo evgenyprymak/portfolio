@@ -110,6 +110,8 @@ useMotionValueEvent(scrollY, "change", (current) => {
             duration: 0.7,
             ease: "easeInOut",
           }}>
+          {/* <Divider type='light' /> */}
+          
           <Divider type='light' />
           <div className='row contribution'>
             <Header

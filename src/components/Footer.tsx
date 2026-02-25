@@ -5,6 +5,12 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Divider from "./Divider";
 
+type FooterProps = {
+  showDivider?: boolean;
+  showLinkedIn?: boolean;
+  showResume?: boolean;
+};
+
 const squareVariants = {
   visible: () => ({
     opacity: 1,
@@ -13,14 +19,14 @@ const squareVariants = {
     scaleX: 1,
     transition: {
       duration: 1,
-      delay: 0,
+      delay: 0, 
       ease: "easeInOut",
     },
   }),
   hidden: { opacity: 0, scale: 1, scaleX: 1, y: 0 },
 };
 
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterProps> = ({ showDivider = true, showLinkedIn = true, showResume = true }) => {
   const controls = useAnimation(); // Initialize controls for animation
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -42,12 +48,12 @@ const Footer: React.FC = () => {
         animate={controls}
         custom={1} // Adding an index value for delayed animation
       >
-        <Divider type="light" />
+        {showDivider && <Divider type="light" />}
         <div className="footer-wrapper row-gap-2">
           <Link to="/" className="return-home card-gap-2">Return Home</Link>
           <div className="footer-btns">
-          <a href="https://www.linkedin.com/in/evgenyprymak/" className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_linkedin.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>My LinkedIn</a>
-          <a href="https://drive.google.com/file/d/1u-RuCyojZ77YW-6CqajPDBz1JkzBudT7/view"  className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_pdf.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>Resume</a>
+          {showLinkedIn && <a href="https://www.linkedin.com/in/evgenyprymak/" className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_linkedin.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>My LinkedIn</a>}
+          {showResume && <a href="https://drive.google.com/file/d/1u-RuCyojZ77YW-6CqajPDBz1JkzBudT7/view"  className="col-6 btn-linkedin"><img src='/portfolio/assets/icons/icon_pdf.svg' style={{ height: '24px', marginLeft: '8px', marginRight: '8px', marginTop: '-2px'}}></img>Resume</a>}
           </div>
         </div>
       </motion.div>
