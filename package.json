@@ -26,6 +26,7 @@
     "gsap": "^3.12.5",
     "lucide-react": "^0.563.0",
     "motion": "^11.18.2",
+    "pry-card-ripple": "file:../pryCardRipple",
     "react": "^18.3.1",
     "react-compare-image": "^3.5.14",
     "react-compare-slider": "^3.1.0",

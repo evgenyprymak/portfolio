@@ -27,17 +27,17 @@ import ModalWoTTree from './components/ModalWoTTree';
 
 const MainPage = () => {
 
-const { scrollY } = useScroll()
-const [, setScrollDirection] = useState("down")
+  const { scrollY } = useScroll()
+  const [, setScrollDirection] = useState("down")
 
-useMotionValueEvent(scrollY, "change", (current) => {
-  const previous = scrollY.getPrevious()
-  if (previous !== undefined) {
-    const diff = current - previous
-    setScrollDirection(diff > 0 ? "down" : "up")
-    console.log("scroll direction:", diff > 0 ? "down" : "up")
-  }
-})
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious()
+    if (previous !== undefined) {
+      const diff = current - previous
+      setScrollDirection(diff > 0 ? "down" : "up")
+      console.log("scroll direction:", diff > 0 ? "down" : "up")
+    }
+  })
 
 
 
@@ -111,7 +111,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
             ease: "easeInOut",
           }}>
           {/* <Divider type='light' /> */}
-          
+
           <Divider type='light' />
           <div className='row contribution'>
             <Header
@@ -180,18 +180,19 @@ useMotionValueEvent(scrollY, "change", (current) => {
           size='small'
         />
         <div className='row row-gap-10 pt-40 pb-40'>
-          <div className='col-md-12 col-lg-6 card-gap-10'>
+          <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
             <Project
-              link='https://pitch.com/v/lyte---quasar---conversion-rate-improve-1-fs6px7'
+              link='#'
               image='assets/case_boosting_CR.jpg'
               noHeader
-            // projectNDA
+              projectNDA
             /></div>
-          <div className='col-md-12 col-lg-6 card-gap-10'>
+          <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
             <Project
-              link='https://pitch.com/v/lyte---admin---customization-txgy5n'
+              link='#'
               image='assets/case_operations.jpg'
               noHeader
+              projectNDA
             />
           </div>
           <ModalNDA
@@ -208,7 +209,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
             size='small'
           />
           <div className='row row-gap-10 pt-40 pb-80'>
-            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsWoTWinterRaidOpen(true)}>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <ModalWoTWinterRaid
                 isOpen={isWoTWinterRaidOpen}
                 onClose={() => setIsWoTWinterRaidOpen(false)}
@@ -220,9 +221,10 @@ useMotionValueEvent(scrollY, "change", (current) => {
                 title="World of Tanks: Winter Raid Event"
                 year={<span>2025 · B2C</span>}
                 description="A festive in-game event featuring unique missions, rewards, and winter-themed content to engage players during the holiday season."
+                projectNDA
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsWoTTreeOpen(true)}>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <ModalWoTTree
                 isOpen={isWoTTreeOpen}
                 onClose={() => setIsWoTTreeOpen(false)}
@@ -233,24 +235,27 @@ useMotionValueEvent(scrollY, "change", (current) => {
                 title="World of Tanks 2.0: Tech Tree"
                 year={<span>2025 · B2C</span>}
                 description="An updated tech tree system providing enhanced navigation and detailed information to improve player experience."
+                projectNDA
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
-                link='/project/1'
+                link='#'
                 image='assets/projectTitleImages/project_quasar2_tiny.jpg'
                 title="Quasar Ticketing Platform"
                 year={<span>2020–2024 · B2C</span>}
                 description="Enhanced the ticketing platform's usability, leading to significant boosts in conversion and adoption rates."
+                projectNDA
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
-                link='/project/2'
+                link='#'
                 image='assets/project_dashboard.jpg'
                 title="Lyte Client Dashboard"
                 year={<span>2019 · B2B</span>}
                 description="Unlocking data and events management for clients through intuitive product design and a comprehensive UI kit for the web."
+                projectNDA
               />
             </div>
             <ModalXeno
@@ -258,36 +263,39 @@ useMotionValueEvent(scrollY, "change", (current) => {
               onClose={() => setIsModalOpen(false)}
             >
             </ModalXeno>
-            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsModalOpen(true)}>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
                 link='#'
                 image='assets/project_xenolyte.jpg'
                 title="Xenolyte Design System"
                 year={<span>2020–2024 · Internal Project</span>}
                 description="Creating a cohesive design language and reusable components to enhance collaboration and streamline product development."
+                projectNDA
               />
             </div>
 
-            <div className='col-md-12 col-lg-6 card-gap-10'>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
-                link='/project/8'
+                link='#'
                 image='assets/capital/project_capital.jpg'
                 title="Capital.com Trading Platform"
                 year={<span>2018 · B2C</span>}
                 description="Developing the platform from scratch and enhancing the trading experience through user-centered design."
+                projectNDA
               />
             </div>
             <ModalMoonfolio
               isOpen={isMoonfolioOpen}
               onClose={() => setIsMoonfolioOpen(false)}
             />
-            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsMoonfolioOpen(true)}>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
                 link='#'
                 image='assets/projectTitleImages/moonfolio_project_title_tiny.jpg'
                 title="Moonfolio Crypto Wallet App"
                 year={<span>2018 · B2C</span>}
                 description="A Currency.com project enabling wallet and exchange integration. Focused on design, branding, and prototyping."
+                projectNDA
               />
             </div>
             <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
@@ -343,13 +351,14 @@ useMotionValueEvent(scrollY, "change", (current) => {
                 projectNDA
               />
             </div>
-            <div className='col-md-12 col-lg-6 card-gap-10'>
+            <div className='col-md-12 col-lg-6 card-gap-10' onClick={() => setIsNDAOpen(true)}>
               <Project
-                link='/project/99'
+                link='#'
                 image='assets/project_old.jpg'
                 title="Old Projects"
                 description="Early work in UX/UI design, web design, and game design, marking the start of my design journey."
                 year={<span>2005–2016 · Various</span>}
+                projectNDA
               />
             </div>
           </div>
